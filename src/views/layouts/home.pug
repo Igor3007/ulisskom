@@ -1,4 +1,5 @@
 block variables
+include ../helpers/mixins
 
 doctype html
 html(lang="ru")
@@ -27,5 +28,12 @@ html(lang="ru")
 		link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
 		link(rel="stylesheet" href="styles/main.css")
 	body
+	header
+		block header
+			include ../../blocks/modules/header/header.pug
+	main
 		block content
-		block scripts
+	footer
+		block footer
+			include ../../blocks/modules/footer/footer.pug
+			block scripts

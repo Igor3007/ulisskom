@@ -3,10 +3,41 @@ h1, h2, h3, h4, h5, h6, ul {
     padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+html{
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
 .container {
     @include container();
     @include sm(max-width, rem(510));
     @include md(max-width, rem(690));
     @include lg(max-width, rem(930));
     @include xl(max-width, rem(1110));
+}
+
+
+
+.container-1770{
+    max-width: rem(1770);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 rem(30);
 }
