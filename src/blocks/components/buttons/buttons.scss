@@ -1,0 +1,15 @@
+.btn{
+
+    height: rem(40);
+    color: #fff;
+    border: none;
+    padding: 0 rem(30);
+    color: $dark;
+    background: $lgray;
+    cursor: pointer;
+
+    &.btn-red{
+        color: #fff;
+        background-color: $red;
+    }
+}
