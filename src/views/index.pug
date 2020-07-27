@@ -2,7 +2,10 @@ extends layouts/home
 include ../blocks/modules/banner-home/banner-home
 include ../blocks/modules/slider-home/slider-home
 include ../blocks/modules/product-slider-home/product-slider-home
+include ../blocks/modules/top-product/top-product
 include ../blocks/modules/about-company/about-company
+include ../blocks/modules/last-news/last-news
+include ../blocks/modules/top-brands/top-brands
 
 
 block variables
@@ -71,10 +74,10 @@ block variables
 block content
   +banner-home(arr)
   +slider-home(slide)
-  section.top-product
-    .container-1510
-      +product-slider-home(slide)
+  +top-product(data)
   +about-company(about)
+  +last-news(data)
+  +top-brands(data)
 
 block scripts
   script(src="js/main.js")
