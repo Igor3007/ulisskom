@@ -1,0 +1,10 @@
+include ../about-item/about-item
+
+mixin about-company(data)
+    section.about-company
+        .container-1510
+            +h1('О компании')
+            .about-company__list
+                each item in data
+                    .about-company__item
+                        +about-item(item)

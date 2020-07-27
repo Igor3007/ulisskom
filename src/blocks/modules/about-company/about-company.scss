@@ -1,0 +1,20 @@
+.about-company{
+
+    margin-top: rem(50);
+
+    &__list{
+        @include row-flex();
+        @include md(justify-content, space-between);
+    }
+
+    &__item{
+        @include col();
+        @include size(4);
+        @include size-lg(4);
+        @include size-md(5);
+        @include size-xs(12);
+
+        margin-top: rem(30);
+    }
+}
+

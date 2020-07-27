@@ -50,7 +50,7 @@
 
     &__image{
         & span{
-            @include box-square
+            @include box-square;
             & img {
                 @include img-contain;
             }

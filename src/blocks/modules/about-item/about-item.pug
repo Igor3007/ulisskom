@@ -1,0 +1,7 @@
+mixin about-item(data)
+    .about-item
+        .about-item__icons
+            span(style="background-image: url("+data.icon+")")
+        .about-item__desc
+            .about-item__title= data.title
+            .about-item__text= data.text
