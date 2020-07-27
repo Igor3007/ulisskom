@@ -1,16 +1,14 @@
-
 import $ from "jquery";
 import 'owl.carousel2';
 
 
+
 $(document).ready(function () {
 
-
-
-
-    /* $('.header-main__logo').owlCarousel({
-        items: 2
-    }) */
+    $('.banner-home__slider.owl-carousel').owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut'
+    })
 
 
     // function showProjectsbyCat(cat) {

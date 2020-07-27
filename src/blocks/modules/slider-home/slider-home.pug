@@ -1,0 +1,14 @@
+mixin slider-home(data)
+  .slider-home.owl-carousel
+    each item in data
+      .slider-home__slide(style={'background-color': item.bgColor, 'color': item.textColor})
+        .slider-home__slide-wrp
+          .slider-home__text
+            .slider-home__title= item.title
+            .slider-home__subtitle= item.subtitle
+            .slider-home__btn
+              span
+                a(href="#")
+                  +icons('#ic_slide-btn', 38)
+          .slider-home__image
+            span(style='background-image: url('+item.img+')')

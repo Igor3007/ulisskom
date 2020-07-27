@@ -1,0 +1,22 @@
+mixin product-slider-home(data)
+  .product-slider__tabs
+    .product-slider__list
+      ul
+        each link in ['Хит продаж', 'Новинка', 'Распродажа']
+          li= link
+    .product-slider__nav
+      .product-slider__nav-prev
+        +icons('#ic_arr-left', 12)
+      .product-slider__nav-next
+        +icons('#ic_arr-right', 12)
+  .product-slider__tabscontainer.owl-carousel
+    each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+      if item <= 5
+        .product-slider__slide(data-filter="0")
+          span(style="padding-top: 350px")
+      if item >=5 && item <=10
+        .product-slider__slide(data-filter="1")
+          span(style="padding-top: 350px")
+      if item >=10
+        .product-slider__slide(data-filter="2")
+          span(style="padding-top: 350px")
