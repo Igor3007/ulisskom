@@ -1,0 +1,75 @@
+.minicard{
+
+    border: 1px solid $lgray;
+    padding: rem(20) rem(20);
+
+    &__header{
+        display: flex;
+        align-items: center;
+    }
+
+    &__status{
+        flex-basis: 60%;
+        width: 60%;
+        max-width: 60%;
+       
+
+        &--toorder{
+            color: $mgray;
+
+            & span {
+                display: flex;
+                align-items: center;
+
+                &::before{
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    content: '';
+                    background-color: $mgray;
+                    border-radius: 50%;
+                    margin-right: rem(10);
+                }
+            }
+        }
+    }
+
+    &__brand{
+        flex-basis: 40%;
+        width: 40%;
+        max-width: 40%;
+
+        & span{
+            display: block;
+            background-size: contain;
+            background-position: right center;
+            height: rem(25);
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__image{
+        & span{
+            @include box-square
+            & img {
+                @include img-contain;
+            }
+        }
+    }
+
+    &__title{
+        height: rem(40);
+        margin-bottom: rem(15);
+        overflow: hidden;
+
+        & a {
+            color: $gray;
+        }
+    }
+
+    &__price{
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
