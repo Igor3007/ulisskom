@@ -1,0 +1,40 @@
+.item-news{
+    &__image{
+
+        overflow: hidden;
+
+        & span {
+            padding-top: 65%;
+            @include bgimage_cover;
+        }
+    }
+
+    &__date{
+
+        padding: rem(15) 0 0 0;
+
+        & span {
+            color: $gray;
+            border: 1px solid $lgray;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: rem(3) rem(13);
+            font-size: 13px;
+        }
+    }
+
+    &__title{
+
+        padding: rem(15) 0;
+
+        & a {
+            @include h2
+        }
+    }
+
+    &__desc{
+        color: $gray;
+    }
+
+   
+}

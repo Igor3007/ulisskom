@@ -18,7 +18,13 @@ html{
     font-weight: normal;
     font-size: 14px;
     line-height: 140%;
+
+    @media screen and (max-width: $w1280) {
+        font-size: 13px;
+    }
 }
+
+
 
 img{
     display: block;
@@ -34,10 +40,14 @@ img{
 }
 
 .container-1770{
-    max-width: rem(1770);
+    max-width: rem(1815);
     margin: 0 auto;
     width: 100%;
     padding: 0 rem(30);
+
+    @media screen and (max-width: $w480) {
+        padding: 0 rem(15);
+    }
 }
 
 .container-1510{
@@ -45,4 +55,8 @@ img{
     margin: 0 auto;
     width: 100%;
     padding: 0 rem(30);
+
+    @media screen and (max-width: $w480) {
+        padding: 0 rem(15);
+    }
 }

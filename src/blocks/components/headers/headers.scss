@@ -1,5 +1,9 @@
 .section-h1{
     font-weight: bold;
     font-size: 36px;
-    line-height: 180%;
+    line-height: 110%;
+
+    @media screen and (max-width: $w1376) {
+        font-size: 28px;
+    }
 }

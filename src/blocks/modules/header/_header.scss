@@ -1,6 +1,10 @@
 .header-top{
     border-bottom: 1px solid $lgray;
 
+    @media screen and (max-width: $w360) {
+        display: none;
+    }
+
     & .container-1770{
         display: flex;
         height: 40px;
@@ -19,8 +23,22 @@
     &__info,
     &__phones{
         display: flex;
-        @media screen and (max-width: 1210px) {
+        /* @media screen and (max-width: 1210px) {
             flex-direction: column;
+        } */
+    }
+
+    &__info {
+        & .header-info{
+            &:first-child{
+                @media screen and (max-width: $w1280) {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: rem(680)) {
+                display: none;
+            }
         }
     }
 
@@ -57,7 +75,7 @@
         }
 
         &:first-child {
-            margin-left: rem(227);
+            margin-left: rem(265);
             transition: 0.4s ease;
 
             @media screen and (max-width: $w1500) {
@@ -82,7 +100,7 @@
 
         @media screen and (max-width: 1210px) {
             justify-content: flex-end;
-            margin-right: 0;
+            margin-right: rem(15);
         }
 
         & > div {
@@ -93,6 +111,10 @@
         &__text{
             margin-right: 10px;
             color: $gray;
+
+            @media screen and (max-width: $w940) {
+                display: none !important;
+            }
         }
 
         &:last-child{
@@ -116,12 +138,13 @@
         
         max-width: rem(150);
         flex-grow: 1;
-        margin-right: rem(70);
+        margin-right: rem(110);
         transition: 0.4s ease;
 
         @media screen and (max-width: $w1500) {
             max-width: rem(100);
             padding: rem(10) 0;
+            margin-right: rem(74);
         }
 
         @media screen and (max-width: $w1440) {
@@ -131,6 +154,12 @@
         @media screen and (max-width: $w1280) {
             max-width: rem(80);
             min-width: rem(70); 
+        }
+
+        @media screen and (max-width: $w940) {
+            max-width: rem(55);
+            min-width: rem(55); 
+            margin-right: rem(20);
         }
 
         & img {
@@ -156,8 +185,14 @@
         align-items: center;
         flex-grow: 1;
 
+        
+
         & nav {
             display: flex;
+
+            @media screen and (max-width: $w580) {
+                display: none;
+            }
 
             & ul {
                 display: flex;
@@ -167,6 +202,19 @@
                 & li{
 
                     margin-right: rem(40);
+                    @media screen and (max-width: $w940) {
+                        margin-right: rem(20);
+                    }
+
+                    @media screen and (max-width: $w760) {
+                        display: none;
+                    }
+
+                    &:first-child{
+                        @media screen and (max-width: $w760) {
+                            display: block;
+                        }
+                    }
 
                    & a{
                     font-style: normal;
@@ -203,8 +251,14 @@
             height: 100%;
             padding: 0 rem(20);
 
+            @media screen and (max-width: $w580) {
+                padding: 0 rem(15);
+            }
+
             &:first-child{
-                border-left: 0;
+                @media screen and (min-width: $w580) {
+                    border-left: 0;
+                }
             }
 
             &:last-child{
@@ -234,14 +288,51 @@
             & svg{
                 margin-right: 10px;
             }
+
+            & span{
+                @media screen and (max-width: $w480) {
+                    display: none;
+                }
+            }
         }
     }
 
     .nav__search{
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $w760) {
+            margin-left: auto;
+        }
+
+        @media screen and (max-width: $w580) {
+            padding-right: rem(15);
+        }
     }
-    
+
+    .text__hamburger{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.cart-text,
+.cart-price{
+    @media screen and (max-width: $w1024) {
+        display:  none;
+    }
+}
+
+.cart-count{
+    @media screen and (max-width: 370px) {
+        display:  none;
+    }
 }
 
 /* burger */

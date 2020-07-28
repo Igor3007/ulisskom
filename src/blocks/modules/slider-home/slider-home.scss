@@ -1,8 +1,20 @@
 .slider-home{
 
+    transition: 0.3s ease;
+
     &__slide{
         position: relative;
         padding-top: 40%;
+
+        @media screen and (min-width: $w480) and (max-width: 1100px) {
+            padding-top: 50%;
+        }
+
+        @media screen and (max-width: $w480) {
+            padding: 0;
+            min-height: 128px;
+        }
+
     }
 
     &__slide-wrp{
@@ -13,17 +25,21 @@
         bottom: 0;
         margin-left: rem(60);
         display: flex;
+
+        @media screen and (max-width: 1200px) {
+            margin-left: rem(30);
+        }
     }
 
     &__text{
-        flex-basis: 65%;
+        flex-basis: 60%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     &__image{
-        flex-basis: 35%;
+        flex-basis: 40%;
         position: relative;
 
         & span {
@@ -39,21 +55,65 @@
             margin-left: auto;
             margin-top: auto;
             display: block;
-            background-position: left bottom;
+            background-position: right bottom;
             background-repeat: no-repeat;
             background-size: contain;
         }
     }
 
     &__title{
-        font-weight: bold;
-        font-size: 36px;
+
+        & a {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 100%;
+
+            @media screen and (max-width: 1650px) {
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: $w1376) {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width: $w1024) {
+                font-size: 18px;
+            }
+        }
     }
 
     &__subtitle{
         font-size: 16px;
         line-height: 150%;
         margin: rem(25) 0;
+
+        @media screen and (max-width: 1650px) {
+            margin: rem(15) 0;
+        }
+
+        @media screen and (max-width: $w1376) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            font-size: 13px;
+        }
+
+        @media screen and (max-width: $w1024) {
+            font-size: 12px;
+        }
+        
+    }
+
+    &__btn {
+        & svg {
+            width: rem(25);
+            height: rem(25);
+        }
+
+        @media screen and (max-width: 1100px) {
+            display: none;
+        }
     }
 
 }

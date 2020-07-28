@@ -1,6 +1,6 @@
 .about-company{
 
-    margin-top: rem(50);
+    margin-top: rem(35);
 
     &__list{
         @include row-flex();
@@ -14,7 +14,7 @@
         @include size-md(5);
         @include size-xs(12);
 
-        margin-top: rem(30);
+        margin-top: rem(50);
     }
 }
 

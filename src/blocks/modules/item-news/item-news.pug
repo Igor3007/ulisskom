@@ -1,0 +1,9 @@
+mixin item-news(data)
+  .item-news
+    .item-news__image
+      +bgimage(""+data.image+"")
+    .item-news__date
+      span= data.date
+    .item-news__title 
+      a(href="news-details.html")= data.title
+    .item-news__desc= data.desc 

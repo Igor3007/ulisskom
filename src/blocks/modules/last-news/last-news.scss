@@ -1,4 +1,7 @@
 .last-news{
+
+    margin-top: rem(50);
+
     &__list{
         @include row-flex();
         @include md(justify-content, space-between);
@@ -11,6 +14,6 @@
         @include size-md(6);
         @include size-xs(12);
 
-        margin-top: rem(30);
+        margin-top: rem(25);
     }
 }

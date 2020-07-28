@@ -3,7 +3,7 @@
     &__tabs {
         display: flex;
         justify-content: space-between;
-        padding: rem(40) 0;
+        padding: rem(50) 0;
     } 
 
     &__list{
@@ -54,22 +54,4 @@
         border: 1px solid $lgray;
         border-radius: 50%; 
     }
-}
-
-.product-slider__slide > span {
-    display: block;
-    background: #eee;
-    border: 1px solid #ccc;
-  }
-
-.product-slider__slide[data-filter="0"] > span{
-    background-color: #f00;
-}
-
-.product-slider__slide[data-filter="1"] > span{
-    background-color: #f0f;
-}
-
-.product-slider__slide[data-filter="2"] > span{
-    background-color: #00f;
 }

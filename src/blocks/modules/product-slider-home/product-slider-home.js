@@ -17,13 +17,13 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            580: {
+            360: {
                 items: 2
             },
-            760: {
+            650: {
                 items: 3
             },
-            1200: {
+            1024: {
                 items: 4
             },
             1440: {
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 
 })
-modules.define('product-slider-home', ['i-bem-dom'], function (provide, bemDom) {
+/* modules.define('product-slider-home', ['i-bem-dom'], function (provide, bemDom) {
 
     provide(bemDom.declBlock(this.name, {
         onSetMod: {
@@ -86,4 +86,4 @@ modules.define('product-slider-home', ['i-bem-dom'], function (provide, bemDom) 
         }
     }));
 
-});
+}); */

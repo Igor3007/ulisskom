@@ -67,16 +67,38 @@ block variables
         'title': 'Приятные цены на всю продукцию',
         'text': 'Прямые поставки из Китая, Турции, России позволяют нам предложить наиболее привлекательные цены. Мы открыты для сотрудничества, ценим своих постоянных партнеров и всегда рады новым клиентам.'
       },
-      
+
     ];
-    
+
+    const news = [
+      {
+        "image": "/img/news/img1.jpg",
+        "title": "Встречайте новый бренд - VELA",
+        "desc": 'Именно тот случай, когда качество доступно!',
+        "date": '17 мая 2020'
+      },
+      {
+        'image': '/img/news/img2.jpg',
+        'title': 'Открыта вакансия!',
+        'desc': 'Требуется талантливый офис-менеджера по продаже дверей',
+        "date": '3 мая 2020'
+      },
+      {
+        'image': '/img/news/img3.jpg',
+        'title': 'С Днем Победы!',
+        'desc': 'Вдохновения Вам на собственные победы!',
+        "date": '25 мая 2020'
+      },
+
+    ];
+
 
 block content
   +banner-home(arr)
   +slider-home(slide)
   +top-product(data)
   +about-company(about)
-  +last-news(data)
+  +last-news(news)
   +top-brands(data)
 
 block scripts

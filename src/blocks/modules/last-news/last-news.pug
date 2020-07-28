@@ -1,11 +1,10 @@
+include ../item-news/item-news 
+
 mixin last-news(data)
-    section.last-news
-        .container-1510
-            +h1('Новости')
-            .last-news__list
-                .last-news__item
-                    div(style={"padding-top": "60%", "background-color": "#ccc"})
-                .last-news__item
-                    div(style={"padding-top": "60%", "background-color": "#ccc"})
-                .last-news__item
-                    div(style={"padding-top": "60%", "background-color": "#ccc"})
+  section.last-news
+    .container-1510
+      +h1('Новости')
+      .last-news__list
+        each item in data
+          .last-news__item
+            +item-news(item)

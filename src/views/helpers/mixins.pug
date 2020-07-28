@@ -5,3 +5,6 @@ mixin icons(id, size)
   else
     svg(width="25" height="25")
       use(xlink:href="/img/sprites/sprite.svg"+id)
+
+mixin bgimage(url)
+  span(style="background-image: url("+url+")")

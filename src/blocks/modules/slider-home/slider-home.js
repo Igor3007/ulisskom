@@ -5,7 +5,20 @@ $(document).ready(function () {
 
     $('.slider-home.owl-carousel').owlCarousel({
         items: 3,
-        loop: true
+        loop: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            800: {
+                items: 3
+            }
+        }
+
     })
 })
 
