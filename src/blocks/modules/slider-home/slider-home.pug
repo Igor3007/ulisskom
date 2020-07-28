@@ -10,6 +10,7 @@ mixin slider-home(data)
             .slider-home__btn
               span
                 a(href="#")
-                  +icons('#ic_slide-btn', 38)
+                  svg(width='38' height='38' stroke=""+item.textColor+"")
+                    use(xlink:href="/img/sprites/sprite.svg#ic_slide-btn") 
           .slider-home__image
             span(style='background-image: url('+item.img+')')

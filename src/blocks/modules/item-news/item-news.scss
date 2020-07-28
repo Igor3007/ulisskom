@@ -29,6 +29,10 @@
 
         & a {
             @include h2
+
+            &:hover{
+                color: $red
+            }
         }
     }
 

@@ -6,10 +6,11 @@ include ../blocks/modules/top-product/top-product
 include ../blocks/modules/about-company/about-company
 include ../blocks/modules/last-news/last-news
 include ../blocks/modules/top-brands/top-brands
+include ../blocks/modules/menu-catalog/menu-catalog
 
 
 block variables
-  - const title = "Ulisskom"
+  - const title = "Ulisskom";
   - const arr = [ 'data1',  'data2' ];
   - 
     const slide = [ 
@@ -92,6 +93,19 @@ block variables
 
     ];
 
+    const menu =[
+      'Дверные ручки',
+      'Дверные замки',
+      'Петли',
+      'Цилиндровые механизмы',
+      'Фурнитура',
+      'Уплотнитель самоклеющийся',
+      'Доводчики',
+      'Межкомнатные механизмы',
+      'Фурнитура для раздвижных дверей',
+      'Сопутствующие товары',
+    ];
+
 
 block content
   +banner-home(arr)
@@ -100,6 +114,8 @@ block content
   +about-company(about)
   +last-news(news)
   +top-brands(data)
+
+  +menu-catalog(menu)
 
 block scripts
   script(src="js/main.js")

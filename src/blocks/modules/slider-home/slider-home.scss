@@ -107,8 +107,13 @@
 
     &__btn {
         & svg {
-            width: rem(25);
-            height: rem(25);
+
+            fill: none;
+
+            @media screen and (max-width: $w1376) {
+                width: rem(25);
+                height: rem(25);
+            }
         }
 
         @media screen and (max-width: 1100px) {

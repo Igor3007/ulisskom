@@ -220,6 +220,10 @@
                     font-style: normal;
                     font-weight: bold;
                     font-size: 16px;
+
+                        &:hover{
+                            color: $red;
+                        }
                     }
                 }
             }
@@ -234,7 +238,6 @@
 
             &:hover{
                 fill: $red;
-                background: $red;
             }
         }
     }
@@ -300,6 +303,12 @@
     .nav__search{
         display: flex;
         align-items: center;
+
+        &:hover{
+            & svg {
+                fill: $red;
+            }
+        }
 
         @media screen and (max-width: $w760) {
             margin-left: auto;

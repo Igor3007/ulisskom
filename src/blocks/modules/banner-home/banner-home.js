@@ -3,7 +3,9 @@ import 'owl.carousel2';
 
 $(document).ready(function () {
 
-    $('.banner-home__slider.owl-carousel').owlCarousel({
+    const owlBannerHome = $('.banner-home__slider.owl-carousel');
+
+    owlBannerHome.owlCarousel({
         items: 1,
         animateOut: 'fadeOut'
     })

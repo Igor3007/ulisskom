@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         padding: rem(50) 0;
+        overflow-y: auto;
     } 
 
     &__list{
@@ -24,6 +25,7 @@
            border-radius: rem(40);
            transition: 0.3s ease;
            cursor: pointer;
+           white-space: nowrap;
            
 
            &:hover,
@@ -42,6 +44,10 @@
         &>div:last-child{
             margin-left: rem(10);
         }
+
+        @media screen and (max-width: $w480){
+            display: none;
+        }
     }
 
     &__nav-prev,
@@ -53,5 +59,10 @@
         height: rem(40);
         border: 1px solid $lgray;
         border-radius: 50%; 
+        cursor: pointer;
+
+        &:hover{
+            border-color: $red;
+        }
     }
 }

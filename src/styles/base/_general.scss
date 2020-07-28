@@ -3,6 +3,8 @@ h1, h2, h3, h4, h5, h6, ul {
     padding: 0;
 }
 
+
+
 *{
     box-sizing: border-box;
 }
@@ -58,5 +60,19 @@ img{
 
     @media screen and (max-width: $w480) {
         padding: 0 rem(15);
+    }
+}
+
+main{
+    transition: margin 0.3s ease;
+}
+
+.menuOpen .header-main__logo {
+	@media screen and (min-width: 1024px) and (max-width: 1500px){ 
+        margin-right: rem(175);
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px){ 
+        margin-right: rem(195);
     }
 }

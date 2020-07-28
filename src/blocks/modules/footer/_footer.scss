@@ -7,6 +7,10 @@
         display: flex;
         align-items: center;
         padding: rem(40) 0;
+
+        @media screen and (max-width: $w760) {
+            flex-direction: column;
+        }
     }
 
     &__catalog{
@@ -14,6 +18,12 @@
         align-items: center;
         color: $white;
         margin-right: rem(30);
+        white-space: nowrap;
+
+        @media screen and (max-width: $w760) {
+            margin-bottom: rem(30);
+        }
+
 
         & .nav__hamburger i{
             background: #fff;
@@ -23,6 +33,7 @@
     &__link{
 
         flex-grow: 1;
+        width: 100%;
 
         & ul {
             display: flex;
@@ -30,6 +41,14 @@
             list-style-type: none;
             width: 100%;
             justify-content: space-between;
+            width: 100%;
+
+            @media screen and (max-width: $w760) {
+                display: block;
+                column-count: 2;
+                width: 100%;
+                text-align: center;
+            }
 
 
             & a {
@@ -53,7 +72,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: rem(10) 0;
+        padding-top: rem(10) ;
+        padding-bottom: rem(10) ;
+
+        @media screen and (max-width: $w760) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     & a {
@@ -71,6 +96,9 @@
             }
         }
 
+        @media screen and (max-width: $w760) {
+            margin-top: rem(10);
+        }
 
 
     }
