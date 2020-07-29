@@ -76,3 +76,20 @@ main{
         margin-right: rem(195);
     }
 }
+
+.main-container{
+    display: flex;
+    align-items: stretch;
+    
+
+    &__aside{
+        background: #f9f9f9;
+        width: rem(300);
+        padding: rem(50);
+    }
+
+    &__content{
+        flex-grow: 1;
+    }
+
+}

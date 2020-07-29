@@ -1,0 +1,17 @@
+extends ../layouts/catalog
+
+include ../../blocks/modules/catalog-filter/catalog-filter
+
+block variables
+  - const title = "Ulisskom - Catalog";
+
+
+block aside
+  +catalog-filter(data) 
+block content
+  div content  
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

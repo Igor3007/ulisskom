@@ -12,4 +12,11 @@
         color: #fff;
         background-color: $red;
     }
+
+    &.btn-line{
+        border: 1px solid #000000;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 }

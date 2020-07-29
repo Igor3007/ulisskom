@@ -1,0 +1,9 @@
+.catalog-filter{
+    background: #f9f9f9;
+
+    &__aside {
+        & button {
+            width: 100%;
+        }
+    }
+}
