@@ -1,8 +1,18 @@
 mixin catalog-filter-checkbox(data)
   .catalog-filter-checkbox
-    .catalog-filter-checkbox__title Производитель
+    .catalog-filter-checkbox__title= data.title
+      span.tooltip(title='Подсказка')
+        +icons('#ic_tooltip', 12)
     .catalog-filter-checkbox__list
       ul
-        li 
+        each item, index in data.list
+          if index < 7
+            li
+              +checkbox(item, 'fff')
+          else
+            li(style="display: none")
+              +checkbox(item)
+      if data.title == 'Производитель'
+        .catalog-filter-checkbox__all Показать все
 
 

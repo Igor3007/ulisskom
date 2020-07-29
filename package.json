@@ -70,6 +70,7 @@
     },
     "dependencies": {
         "jquery": "^3.5.1",
+        "nouislider": "^14.6.0",
         "owl.carousel2": "^2.2.1",
         "smart-grid": "^2.1.2",
         "svg4everybody": "^2.1.9"

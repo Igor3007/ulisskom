@@ -4,10 +4,58 @@ include ../../blocks/modules/catalog-filter/catalog-filter
 
 block variables
   - const title = "Ulisskom - Catalog";
+  - 
+    const filter = [
+      {
+        'title': 'Производитель',
+        'list': [
+            'Apecs',
+            'Avers',
+            'Border',
+            'Evrolock',
+            'Fuardo',
+            'Kale Kilit',
+            'Mottura',
+            'Viro',
+            'Apecs',
+            'Avers',
+            'Border',
+            'Evrolock',
+            'Fuardo',
+            'Kale Kilit',
+            'Mottura',
+            'Viro',
+        ]
+      },
+      {
+        'title': 'Назначение',
+        'list': [
+            'Двери и калитки',
+            'Двери из алюминиевого профиля',
+            'Двери ПВХ профиля',
+            'Замки для роллет',
+            'Китайские двери',
+            'Общее Kilit',
+            'Противопожарные двери',
+            'Узкопрофильные двери',
+        ]
+      },
+      {
+        'title': 'Тип упаковки',
+        'list': [
+            'Блистер',
+            'Коробка',
+            'Открытая упаковка',
+            'Пакет',
+            'Хедер',
+        ]
+      },
+      ]
+    
 
 
 block aside
-  +catalog-filter(data) 
+  +catalog-filter(filter) 
 block content
   div content  
 

@@ -6,3 +6,6 @@ import "%modules%/slider-home/slider-home";
 import "%modules%/product-slider-home/product-slider-home";
 import "%modules%/minicard/minicard";
 import "%modules%/top-brands/top-brands"; 
+
+/* catalog */
+import "%modules%/catalog-filter/catalog-filter"; 

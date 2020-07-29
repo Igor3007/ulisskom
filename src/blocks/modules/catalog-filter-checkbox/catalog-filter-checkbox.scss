@@ -1,3 +1,41 @@
 .catalog-filter-checkbox{
-    
+
+    &__title{
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: rem(10);
+
+        & .tooltip{
+            margin-left: rem(5);
+        }
+    }
+
+    &__list{
+        & ul {
+
+            & li {
+                list-style-type: none;
+                padding: rem(5) 0;
+            }
+
+        }
+
+        & ul.open li {
+            display: list-item !important;
+        }
+    }
+
+    &__all{
+        border-bottom: 1px dashed $red;
+        color: $red;
+        display: inline-block;
+        margin-left: 25px;
+        margin-top: rem(5);
+        cursor: pointer;
+    }
+
+    & .checkbox__text:hover{
+        text-decoration: underline;
+    }
+
 }

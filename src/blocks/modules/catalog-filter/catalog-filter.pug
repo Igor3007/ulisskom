@@ -1,3 +1,5 @@
+include ../catalog-filter-checkbox/catalog-filter-checkbox
+
 mixin catalog-filter(data)
   .catalog-filter
     .catalog-filter__wrp
@@ -5,5 +7,13 @@ mixin catalog-filter(data)
         a(href="#")
           button.btn.btn-line Уточнить раздел
       .catalog-filter__aside
-        .catalog-filter-checkbox
-          .catalog-filter-checkbox__title 
+        .catalog-filter-slider
+          .catalog-filter-slider__title Цена 
+          div#slider-price(data-nouislider-start="1000, 8000" data-nouislider-range="0, 8000")
+          .catalog-filter-slider__val
+            span#min-price
+            span#max-price
+
+      each item in data
+        .catalog-filter__aside
+          +catalog-filter-checkbox(item)
