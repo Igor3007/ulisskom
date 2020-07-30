@@ -1,13 +1,42 @@
-extends ../layouts/catalog
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
 
 block variables
-  - const title = "Ulisskom - Catalog";
+  - const title = "Ulisskom";
 
-
-block aside
-  div aside
 block content
-  div content  
+  .container-1310
+    .page-cart
+      .page-cart__bareadcrumb
+        +breadcrumb(['Главная','Каталог фурнитуры','Замок врезной Kale 152 3MR'])
+      .page-cart__info
+        .page-cart__image
+          div(style="padding-top: 100%; background: #ccc")
+        .page-cart__details
+          .cart-details
+            .cart-details__h1: h1 Замок врезной Kale 152 3MR
+            .cart-details__rating
+              ul
+                li: +icons('#ic_heart', 15)
+                li: +icons('#ic_heart', 15)
+                li: +icons('#ic_heart', 15)
+                li: +icons('#ic_heart', 15)
+                li: +icons('#ic_heart', 15)
+              a(href="#review") 3 отзыва
+            .cart-details__info
+              ul
+                li Артикул: 
+                  span 02498986
+                li Производитель:  
+                  span Kale Kilit:
+
+            .cart-details__state
+              +icons('#ic_arrow-ok')
+              |В наличии
+            .cart-details__price 21.10 BYN
+            .cart-details__action
+            .cart-details__desc
 
 
 block scripts

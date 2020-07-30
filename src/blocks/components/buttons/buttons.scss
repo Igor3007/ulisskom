@@ -7,6 +7,8 @@
     color: $dark;
     background: $lgray;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 
     &.btn-red{
         color: #fff;

@@ -1,4 +1,4 @@
-mixin minicard(data)
+mixin minicard(data, action)
   .minicard
     .minicard__wrp
       .minicard__header
@@ -6,7 +6,11 @@ mixin minicard(data)
           span Под заказ
         .minicard__brand
           span(style="background-image: url("+data.brand+")")
+
       .minicard__image
+        ul.stickers
+          li.stickers__new Новинка
+          //- li.stickers__top хит продаж
         a(href="/card.html")
           span
             img(src=""+data.image+"")
@@ -14,3 +18,12 @@ mixin minicard(data)
         a(href="/card.html")= data.title
       .minicard__price= data.price
         span.currency BYN
+      if action
+        .minicard__action
+          .minicard__action-tofav
+            +icons('#ic_heart', 17)
+            span В избранное
+          .minicard__action-tobasket
+            button.btn.btn-red
+              +icons('#ic_cart', 21)
+              |В корзину
