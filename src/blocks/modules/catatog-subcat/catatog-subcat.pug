@@ -1,0 +1,10 @@
+mixin catatog-subcat(data)
+  .catatog-subcat
+    .catatog-subcat__list
+      each item, index in data
+        .catatog-subcat__item
+          .subcat-item
+            .subcat-item__img
+              a(href="#"): img(src="/img/catalog/cat"+index+".png")
+            .subcat-item__title
+              a(href="#")= item   

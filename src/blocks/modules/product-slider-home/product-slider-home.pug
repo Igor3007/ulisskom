@@ -12,14 +12,14 @@ mixin product-slider-home(data)
       .product-slider__nav-next
         +icons('#ic_arr-right', 12)
   .product-slider__tabscontainer.owl-carousel
-    each item, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-      if item <= 5
+    each item, index in data
+      if index <= 4
         .product-slider__slide(data-filter="0")
-          +minicard(data)
-      if item >=5 && item <=10
+          +minicard(item)
+      if index >=4 && index <=9
         .product-slider__slide(data-filter="1")
-          +minicard(data)
-      if item >=10
+          +minicard(item)
+      if index >=9
         .product-slider__slide(data-filter="2")
-          +minicard(data)
+          +minicard(item)
   .slider-hidden

@@ -1,0 +1,39 @@
+.catatog-subcat{
+
+    &__list{
+        @include row-flex();
+        @include md(justify-content, flex-start);
+    }
+    
+
+    &__item{
+        @include col();
+        @include size(1.5);
+        @include size-lg(1.5);
+        @include size-md(2);
+        @include size-sm(10);
+        @include size-xs(10);
+    }
+}
+
+.subcat-item {
+    &__img {
+        a {
+            @include box-square;
+        }
+
+        img{
+            @include img-contain;
+        }
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+    &:hover{
+        & a {
+            text-decoration: underline;
+        }
+    }
+}

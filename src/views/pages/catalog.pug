@@ -1,6 +1,13 @@
 extends ../layouts/catalog
 
 include ../../blocks/modules/catalog-filter/catalog-filter
+include ../../blocks/modules/catatog-subcat/catatog-subcat
+include ../../blocks/modules/minicard/minicard
+include ../../blocks/modules/pagination/pagination
+include ../../blocks/modules/pagedesc/pagedesc
+
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/components/select/select
 
 block variables
   - const title = "Ulisskom - Catalog";
@@ -9,55 +16,184 @@ block variables
       {
         'title': 'Производитель',
         'list': [
-            'Apecs',
-            'Avers',
-            'Border',
-            'Evrolock',
-            'Fuardo',
-            'Kale Kilit',
-            'Mottura',
-            'Viro',
-            'Apecs',
-            'Avers',
-            'Border',
-            'Evrolock',
-            'Fuardo',
-            'Kale Kilit',
-            'Mottura',
-            'Viro',
+          'Apecs',
+          'Avers',
+          'Border',
+          'Evrolock',
+          'Fuardo',
+          'Kale Kilit',
+          'Mottura',
+          'Viro',
+          'Apecs',
+          'Avers',
+          'Border',
+          'Evrolock',
+          'Fuardo',
+          'Kale Kilit',
+          'Mottura',
+          'Viro',
         ]
       },
       {
         'title': 'Назначение',
         'list': [
-            'Двери и калитки',
-            'Двери из алюминиевого профиля',
-            'Двери ПВХ профиля',
-            'Замки для роллет',
-            'Китайские двери',
-            'Общее Kilit',
-            'Противопожарные двери',
-            'Узкопрофильные двери',
+          'Двери и калитки',
+          'Двери из алюминиевого профиля',
+          'Двери ПВХ профиля',
+          'Замки для роллет',
+          'Китайские двери',
+          'Общее Kilit',
+          'Противопожарные двери',
+          'Узкопрофильные двери',
         ]
       },
       {
         'title': 'Тип упаковки',
         'list': [
-            'Блистер',
-            'Коробка',
-            'Открытая упаковка',
-            'Пакет',
-            'Хедер',
+          'Блистер',
+          'Коробка',
+          'Открытая упаковка',
+          'Пакет',
+          'Хедер',
         ]
       },
       ]
-    
+
+      const subcat = [
+        'Врезные замки',
+        'Замки в сборе',
+        'Врезные замки',
+        'Замки для дверей из ПВХ профиля',
+        'Навесные замки',
+        'Противопожарные замки',
+        'Узкопрофильные замки',
+        'Накладные замки',
+        'Кодовые замки',
+        'Замки для роллет',
+        'Электромеханические замки',
+        'Прочие врезные замки',
+        'Почтовые замки',
+      ];
+
+      const catalog = [
+      {
+        'brand':'/img/brands/img1.png',
+        'image':'/img/minicard/img1.png',
+        'title':'Замок врезной Kale 152 3MR',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img2.png',
+        'image':'/img/minicard/img2.png',
+        'title':'Замок врезной сувальдный Эльбор Гранит 1.06.02',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img3.png',
+        'image':'/img/minicard/img3.png',
+        'title':'Замок врезной сувальдный Эльбор',
+        'price':'21.50',
+      }, 
+      {
+        'brand':'/img/brands/img4.png',
+        'image':'/img/minicard/img4.png',
+        'title':'Замок врезной сувальдный Эльбор Кремень',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img1.png',
+        'image':'/img/minicard/img1.png',
+        'title':'Замок врезной Kale 152 3MR',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img2.png',
+        'image':'/img/minicard/img2.png',
+        'title':'Замок врезной сувальдный Эльбор Гранит 1.06.02',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img3.png',
+        'image':'/img/minicard/img3.png',
+        'title':'Замок врезной сувальдный Эльбор',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img4.png',
+        'image':'/img/minicard/img4.png',
+        'title':'Замок врезной сувальдный Эльбор Кремень',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img1.png',
+        'image':'/img/minicard/img1.png',
+        'title':'Замок врезной Kale 152 3MR',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img2.png',
+        'image':'/img/minicard/img2.png',
+        'title':'Замок врезной сувальдный Эльбор Гранит 1.06.02',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img3.png',
+        'image':'/img/minicard/img3.png',
+        'title':'Замок врезной сувальдный Эльбор',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img4.png',
+        'image':'/img/minicard/img4.png',
+        'title':'Замок врезной сувальдный Эльбор Кремень',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img1.png',
+        'image':'/img/minicard/img1.png',
+        'title':'Замок врезной Kale 152 3MR',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img2.png',
+        'image':'/img/minicard/img2.png',
+        'title':'Замок врезной сувальдный Эльбор Гранит 1.06.02',
+        'price':'21.50',
+      },
+      {
+        'brand':'/img/brands/img3.png',
+        'image':'/img/minicard/img3.png',
+        'title':'Замок врезной сувальдный Эльбор',
+        'price':'21.50',
+      }
+
+
+    ];
 
 
 block aside
   +catalog-filter(filter) 
 block content
-  div content  
+  .page-catalog
+    .page-catalog__h1
+      h1 Дверные замки
+    .page-catalog__breadcrumb
+      +breadcrumb(['Главная', 'Каталог фурнитуры'])
+    .page-catalog__catig
+      +catatog-subcat(subcat)
+    .page-catalog__sort
+      .page-catalog__sort-item
+        span Сортировать:
+        +select(['по умолчанию', 'по цене(по возростанию)', 'по цене(по убыванию)'])
+    .page-catalog__list
+      each item in catalog
+        .page-catalog__item
+          +minicard(item)
+    .page-catalog__pagination
+      +pagination()
+    .page-catalog__desc
+      +pagedesc()
+
 
 
 block scripts

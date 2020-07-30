@@ -1,0 +1,25 @@
+.breadcrumb{
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        overflow-x: auto;
+    }
+
+    & li {
+
+        & a {
+            color: $gray;
+        }
+
+        &::after{
+            content: '-';
+            padding: 0 rem(10);
+        }
+
+        &:last-child::after{
+            display: none;
+        }
+
+    }
+}
