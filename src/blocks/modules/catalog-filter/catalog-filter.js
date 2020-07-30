@@ -1,9 +1,10 @@
 import noUiSlider from 'nouislider/distribute/nouislider.min';
 
-const handlesSlider = document.getElementById('slider-price');
-
-const startSider = handlesSlider.getAttribute('data-nouislider-start').split(',');
-const rangeSider = handlesSlider.getAttribute('data-nouislider-range').split(',');
+if(document.getElementById('slider-price')){
+    
+    const handlesSlider = document.getElementById('slider-price');
+    const startSider = handlesSlider.getAttribute('data-nouislider-start').split(',');
+    const rangeSider = handlesSlider.getAttribute('data-nouislider-range').split(',');
 
 
     noUiSlider.create(handlesSlider, {
@@ -23,12 +24,16 @@ const rangeSider = handlesSlider.getAttribute('data-nouislider-range').split(','
         document.querySelector('#max-price').innerText = Number(res[1])
     });
 
-/* button view all */
+    /* button view all */
 
-document.querySelector('.catalog-filter-checkbox__all').addEventListener('click', (elem)=>{
-    if(elem.target.parentElement.children[0].classList.toggle('open') ){
-        elem.target.innerText = 'Свернуть';
-    }else{
-        elem.target.innerText = 'Показать все';
-    }
-})
+    document.querySelector('.catalog-filter-checkbox__all').addEventListener('click', (elem)=>{
+        if(elem.target.parentElement.children[0].classList.toggle('open') ){
+            elem.target.innerText = 'Свернуть';
+        }else{
+            elem.target.innerText = 'Показать все';
+        }
+    })
+}
+
+
+

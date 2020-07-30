@@ -1,0 +1,20 @@
+mixin cart-moreinfo()
+    .cart-moreinfo
+        .cart-moreinfo__tabs
+            ul
+                li(data-filter-id="0") Характеристики
+                li(data-filter-id="1") Отзывы
+                li(data-filter-id="2") Доставка и оплата
+        .cart-moreinfo__tabcontainer
+            .cart-moreinfo__slider.owl-carousel
+                .cart-moreinfo__itemtab(data-filter="0") 
+                    .cart-moreinfo__props
+                        .moreinfo-props
+                            ul
+                                each item in [1,2,3,4,5,6,8,8,8,8,8,8,8,8,8,8]
+                                    li 
+                                        span.moreinfo-props__name Артикул
+                                        span.moreinfo-props__dots 
+                                        span.moreinfo-props__val JHJH12
+                .cart-moreinfo__itemtab(data-filter="1") Отзывы
+                .cart-moreinfo__itemtab(data-filter="2") Доставка и оплата

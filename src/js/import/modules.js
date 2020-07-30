@@ -9,3 +9,6 @@ import "%modules%/top-brands/top-brands";
 
 /* catalog */
 import "%modules%/catalog-filter/catalog-filter"; 
+
+/* cart */
+import "%modules%/cart-moreinfo/cart-moreinfo"; 

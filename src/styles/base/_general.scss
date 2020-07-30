@@ -1,7 +1,10 @@
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
+    line-height: 130%;
 }
+
+
 
 
 
@@ -168,23 +171,3 @@ main{
     }
 }
 
-/* page cart */
-
-.page-cart{
-    &__bareadcrumb{
-        padding: rem(20) 0;
-    }
-
-    &__info{
-        @include row-flex();
-        @include md(justify-content, flex-start);
-    }
-    &__image{
-        @include size-xl(6);
-        @include size-md(12);
-    }
-    &__details{
-        @include size-xl(6);
-        @include size-md(12);
-    }
-}
