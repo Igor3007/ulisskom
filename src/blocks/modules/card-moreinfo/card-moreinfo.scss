@@ -1,0 +1,139 @@
+.card-moreinfo{
+    &__itemtab{
+        padding: rem(40) 0 0 0;
+        display: none;
+        max-height: 500px;
+    }
+
+    & .owl-item.active .card-moreinfo__itemtab{
+        display: block;
+        max-height: none;
+    }
+}
+
+.moreinfo-props {
+    & ul {
+        @include row-flex();
+        @include md(justify-content, flex-start);
+
+        list-style-type: none;
+
+        & li{
+            @include col();
+            @include size-xl(6);
+            @include size-lg(6);
+            @include size-md(6);
+            @include size-sm(12);
+            @include size-xs(12);
+
+            display: flex !important;
+            align-items: flex-end;
+            color: $gray;
+            padding: rem(7) 0;
+
+            
+        }
+
+    }
+   
+    &__dots{
+        flex-grow: 1;
+        border-bottom: 1px dotted $gray;
+        position: relative;
+        top: rem(-4);
+        margin: 0 rem(4);
+    }
+
+    &__val{
+        color: #000;
+    }
+}
+
+/* card-review */
+
+.card-review{ 
+
+    @include row-flex();
+    @include md(justify-content, flex-start);
+
+    &__list{
+        @include col();
+        @include size-xl(9);
+        @include size-lg(9);
+        @include size-md(8);
+        @include size-sm(12);
+        @include size-xs(12);
+    }
+    &__add{
+
+        @include col();
+            @include size-xl(3);
+            @include size-lg(3);
+            @include size-md(4);
+            @include size-sm(12);
+            @include size-xs(12);
+
+    }
+}
+
+/* review-item */
+
+.review-item{
+
+    border: 1px solid $lgray;
+    padding: rem(20) rem(25); 
+    margin-bottom: rem(30);
+
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating{
+        margin-left: rem(15);
+        @include rating
+    }
+
+    &__name{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__date{
+        color: $mgray;
+        padding: rem(8) 0;
+    }
+}
+
+/* review-add */
+
+.review-add{
+    &__info{
+        color: $gray;
+        margin-bottom: rem(20);
+    }
+
+    &__form {
+        & .form__item.column{
+            @media screen and (min-width: $w360) and (max-width: $w760) {
+                flex-direction: row;
+                & .form__subitem{
+                    margin-right: rem(10);
+                }
+            }
+        }
+    }
+}
+
+/* card-delivery */
+
+.card-devivery{
+    & ul {
+        padding-left: rem(30);
+
+        & li {
+            padding: rem(5) 0;
+            list-style-image: url(/img/svg/ic_dot-red.svg);
+        }
+    }
+}

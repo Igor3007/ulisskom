@@ -1,63 +1,83 @@
 extends ../layouts/card
 
 include ../../blocks/components/breadcrumb/breadcrumb
-include ../../blocks/modules/cart-moreinfo/cart-moreinfo
+include ../../blocks/modules/card-moreinfo/card-moreinfo
+include ../../blocks/modules/cart-similar/cart-similar 
+
+
 
 block variables
   - const title = "Ulisskom";
+  include ../../data/catalog 
 
 block content
-  
-    .page-cart
-      .container-1310
-        .page-cart__bareadcrumb
-          +breadcrumb(['Главная','Каталог фурнитуры','Замок врезной Kale 152 3MR'])
-        .page-cart__info
-          .page-cart__image
-            div(style="padding-top: 100%; background: #ccc")
-          .page-cart__details
-            .cart-details
-              .cart-details__h1
-                h1 Замок врезной Kale 152 3MR
-                span.details_fav
-                  +icons('#ic_heart', 17)
-              .cart-details__rating
-                ul
-                  li: +icons('#ic_star-solid', 15)
-                  li: +icons('#ic_star-solid', 15)
-                  li: +icons('#ic_star-solid', 15)
-                  li: +icons('#ic_star-solid', 15)
-                  li: +icons('#ic_star', 15)
-                a(href="#review") 3 отзыва
-              .cart-details__info
-                ul
-                  li Артикул: 
-                    span 02498986
-                  li Производитель:  
-                    span Kale Kilit:
 
-              .cart-details__state
-                span.cart-details__state-present 
-                  +icons('#ic_arrow-ok', 12)
-                  |В наличии
-                //- span.cart-details__state-toorder - под заказ
-              .cart-details__price 21.10 BYN
-              .cart-details__action
-                .details-action__count
-                  span.details-action__count-dec -
-                  span.details-action__count-num 
-                    input(type="text" value="1")
-                  span.details-action__count-inc +
-                .details-action__tobasket
-                  button.btn.btn-red В корзину
-                .details-action__quest
-                  button.btn.btn-line Задать вопроос
-              .cart-details__desc Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
-      .page-cart__moreinfo
-        .container-1310
-          +cart-moreinfo()
-        
-            
+  .page-card
+    .container-1310
+      .page-card__bareadcrumb
+        +breadcrumb(['Главная','Каталог фурнитуры','Замок врезной Kale 152 3MR'])
+      .page-card__info
+        .page-card__image
+          div
+            .card-slider
+              .card-slider__thumb
+                .scroll-overlay
+                  ul
+                    each item in [1,2,3,4,1,2,3,4]
+                      li: span: img(src="/img/minicard/img"+item+".png")
+              .card-slider__main
+                .card-slider__list.owl-carousel
+                  each item in [1,2,3,4,1,2,3,4]
+                    .card-slider__item
+                      span: img(src="/img/minicard/img"+item+".png")
+
+        .page-card__details
+          .card-details
+            .card-details__h1
+              h1 Замок врезной Kale 152 3MR
+              span.details_fav
+                +icons('#ic_heart', 17)
+            .card-details__rating
+              ul
+                li: +icons('#ic_star-solid', 15)
+                li: +icons('#ic_star-solid', 15)
+                li: +icons('#ic_star-solid', 15)
+                li: +icons('#ic_star-solid', 15)
+                li: +icons('#ic_star', 15)
+              a(href="#review") 3 отзыва
+            .card-details__info
+              ul
+                li Артикул: 
+                  span 02498986
+                li Производитель:  
+                  span Kale Kilit:
+
+            .card-details__state
+              span.card-details__state-present 
+                +icons('#ic_arrow-ok', 12)
+                |В наличии
+              //- span.card-details__state-toorder - под заказ
+            .card-details__price 21.10 BYN
+            .card-details__action
+              .details-action__count
+                span.details-action__count-dec -
+                span.details-action__count-num 
+                  input(type="text" value="1")
+                span.details-action__count-inc +
+              .details-action__tobasket
+                button.btn.btn-red В корзину
+              .details-action__quest
+                button.btn.btn-line Задать вопроос
+            .card-details__desc Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
+    .page-card__moreinfo
+      .container-1310
+        +card-moreinfo()
+    .page-card__similar
+      .container-1310
+        .page-card__similar-h2 Похожие товары
+        +card-similar(catalog)
+
+
 
 block scripts
   script(src="js/main.js")

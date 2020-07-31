@@ -40,3 +40,17 @@
     }
 }
 
+@mixin rating {
+    display: flex;
+    align-items: center;
+
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    & li{
+        margin-right: rem(5);
+    }
+}

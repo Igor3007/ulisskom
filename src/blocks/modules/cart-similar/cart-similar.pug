@@ -1,0 +1,7 @@
+include ../minicard/minicard 
+
+mixin card-similar(data) 
+  .card-similar.owl-carousel
+    each item in data
+      .card-similar__item
+        +minicard(item)

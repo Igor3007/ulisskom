@@ -1,0 +1,58 @@
+include ../../components/form/form 
+
+mixin card-moreinfo()
+  .card-moreinfo
+    .card-moreinfo__tabs
+      ul
+        li(data-filter-id="0") Характеристики
+        li(data-filter-id="1") Отзывы
+          sup (15)
+        li(data-filter-id="2") Доставка и оплата
+    .card-moreinfo__tabcontainer
+      .card-moreinfo__slider.owl-carousel
+        .card-moreinfo__itemtab(data-filter="0") 
+          .moreinfo-props
+            ul
+              each item in [1,2,3,4,5,6,8,8,8,8,8,8,8,8,8,8]
+                li 
+                  span.moreinfo-props__name Артикул
+                  span.moreinfo-props__dots 
+                  span.moreinfo-props__val JHJH12
+        .card-moreinfo__itemtab(data-filter="1") 
+          .card-review
+            .card-review__list
+              .card-review__item
+                each item in [1,1,1,1,1,1,1]
+                  .review-item
+                    .review-item__head
+                      .review-item__name Дмитрий
+                      .review-item__rating
+                        ul
+                          li: +icons('#ic_star-solid', 15)
+                          li: +icons('#ic_star-solid', 15)
+                          li: +icons('#ic_star-solid', 15)
+                          li: +icons('#ic_star-solid', 15)
+                          li: +icons('#ic_star', 15)
+                    .review-item__date 17.12.2020
+                    .review-item__text Замок хорош, но одна неточность в комплектации есть. Указано ключ/вертушка, а в комплекте ключ/ключ.
+
+
+            .card-review__add
+              .review-add
+                .review-add__info Если вы заказывали этот товар, поделитесь своим впечатлением о нём.
+                .review-add__form.hide
+                  +form()
+                .review-add__btn
+                  button.btn.btn-red(type="submit" id="reviewSend") Оставить отзыв
+
+        .card-moreinfo__itemtab(data-filter="2")
+          .card-devivery
+            h2 Бесплатная доставка по всей Беларуси
+            p Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. <br> Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
+            h3 Условия
+            ul  
+              li условие доставки
+              li условие доставки
+              li условие доставки
+              li условие доставки
+              li условие доставки
