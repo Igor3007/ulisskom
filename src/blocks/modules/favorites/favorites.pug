@@ -1,0 +1,8 @@
+include ../../modules/minicard/minicard
+
+mixin favorites(data)
+    .favorites
+        .favorites__list
+            each item in data
+                .favorites__item
+                    +minicard(item) 

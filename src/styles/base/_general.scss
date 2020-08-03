@@ -38,11 +38,14 @@ img{
 }
 
 .container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1110));
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 rem(30);
+
+    @media screen and (max-width: $w480) {
+        padding: 0 rem(15);
+    }
 }
 
 .container-1770{

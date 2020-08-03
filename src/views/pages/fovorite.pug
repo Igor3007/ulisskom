@@ -1,0 +1,17 @@
+extends ../layouts/home
+
+include ../../blocks/modules/favorites/favorites
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+    - const title = "Ulisskom";
+    include ../../data/catalog 
+
+block content
+    .container
+        .page-favorit
+            .page-favorit__h1
+                h1 Дверные замки
+            .page-favorit__breadcrumb
+                +breadcrumb(['Главная', 'Каталог фурнитуры'])
+            +favorites(catalog)
