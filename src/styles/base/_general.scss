@@ -82,15 +82,7 @@ main{
     transition: margin 0.3s ease;
 }
 
-.menuOpen .header-main__logo {
-	@media screen and (min-width: 1024px) and (max-width: 1500px){ 
-        margin-right: rem(175);
-    }
 
-    @media screen and (min-width: 1024px) and (max-width: 1280px){ 
-        margin-right: rem(195);
-    }
-}
 
 .main-container{
     display: flex;
@@ -125,85 +117,12 @@ main{
     &__content{
         flex-grow: 1;
         padding: rem(50) rem(40);
+
+        @media screen and (max-width: $w580) {
+            padding: rem(30) rem(15);
+        }
     }
 
 }
 
-/* page catalog */
-
-.page-catalog{
-
-    max-width: rem(1490);
-    width: 100%;
-
-    &__h1{
-        margin-bottom: rem(30);
-    }
-
-    &__breadcrumb{
-        padding-bottom: rem(15);
-    }
-
-    &__sort{
-        display: flex;
-        align-items: center;
-        height: rem(80);
-    }
-
-    &__sort-item{
-        display: flex;
-        align-items: center;
-
-        & span {
-            margin-right: rem(10);
-            color: $gray;
-        }
-    }
-
-    &__list{
-        @include row-flex();
-        @include md(justify-content, flex-start);
-
-        margin: 0;
-    }
-    &__item{
-        @include col();
-        @include size-full(2.4);
-
-        @media screen and (max-width: 1770px) {
-            @include size-full(3);
-        }
-
-        @media screen and (max-width: 1620px) {
-            & .minicard__action-tofav span {
-                display: none;
-            }
-        }
-
-        @media screen and (max-width: $w1280) {
-            @include size-full(4);
-        }
-
-        @media screen and (max-width: $w1024) {
-            @include size-full(6);
-        }
-
-        @media screen and (max-width: $w480) {
-            @include size-full(12);
-        }
-    
-
-        margin-left: -1px;
-        margin-right: 0;
-        margin-top: -1px;
-        margin-bottom: 0;
-        position: relative;
-
-        
-
-        &:hover{
-            z-index: 111;
-        }
-    }
-}
 

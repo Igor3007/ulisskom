@@ -14,29 +14,31 @@ button.addEventListener('click', event => {
     elemBody.classList.toggle('menuOpen');
     elemMenu.classList.toggle('open');
 
-    if(document.querySelector('body').clientWidth > 1024){
-        if(elemMenu.classList.contains('open')){
-            elemMain.style.marginLeft = elemMenu.clientWidth+'px'
-            elemFooter.style.marginLeft = elemMenu.clientWidth+'px'
+
+
+    if (document.querySelector('body').clientWidth > 1024 && !document.querySelector('.main-container__aside')) {
+        if (elemMenu.classList.contains('open')) {
+            elemMain.style.marginLeft = elemMenu.clientWidth + 'px'
+            elemFooter.style.marginLeft = elemMenu.clientWidth + 'px'
             // elemMenu.style.top = 0
-        }else{
+        } else {
             elemMain.style.marginLeft = '0'
             elemFooter.style.marginLeft = '0'
         }
-    }else{
+    } else {
         elemMain.style.marginLeft = '0'
 
         // elemMenu.style.top = document.querySelector('header').clientHeight+'px'
 
     }
 
-    $(function(){
-        setTimeout(function(){
+    $(function () {
+        setTimeout(function () {
             // $('.banner-home__slider.owl-carousel').trigger('refresh.owl.carousel')
             // $('.slider-home.owl-carousel').trigger('refresh.owl.carousel')
         }, 300)
     })
- 
+
 
 });
 

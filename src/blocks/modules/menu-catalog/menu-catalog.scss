@@ -58,3 +58,13 @@
     }
         
 }
+
+.menuOpen .header-main__logo {
+	@media screen and (min-width: 1024px) and (max-width: 1500px){ 
+        margin-right: rem(175);
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px){ 
+        margin-right: rem(195);
+    }
+}

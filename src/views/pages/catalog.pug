@@ -5,6 +5,7 @@ include ../../blocks/modules/catatog-subcat/catatog-subcat
 include ../../blocks/modules/minicard/minicard
 include ../../blocks/modules/pagination/pagination
 include ../../blocks/modules/pagedesc/pagedesc
+include ../../blocks/modules/menu-catalog/menu-catalog
 
 include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/components/select/select
@@ -170,6 +171,19 @@ block variables
 
     ];
 
+    const menu =[
+      'Дверные ручки',
+      'Дверные замки',
+      'Петли',
+      'Цилиндровые механизмы',
+      'Фурнитура',
+      'Уплотнитель самоклеющийся',
+      'Доводчики',
+      'Межкомнатные механизмы',
+      'Фурнитура для раздвижных дверей',
+      'Сопутствующие товары',
+    ];
+
 
 block aside
   +catalog-filter(filter) 
@@ -193,6 +207,7 @@ block content
       +pagination()
     .page-catalog__desc
       +pagedesc()
+  +menu-catalog(menu)
 
 
 
