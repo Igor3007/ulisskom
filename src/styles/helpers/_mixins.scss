@@ -54,3 +54,8 @@
         margin-right: rem(5);
     }
 }
+
+@mixin size-full($n){
+    $val: 100% / $columns * $n;
+    width: #{calc(#{$val} )};
+}

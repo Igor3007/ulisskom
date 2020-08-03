@@ -267,6 +267,10 @@
         position: relative;
         padding-right: rem(27);
 
+        @media screen and (max-width: $w760) {
+            padding-right: rem(12);
+        }
+
         & .scroll-overlay {
             height: 100%;
             overflow-x: hidden;
@@ -304,6 +308,10 @@
             right: -17px;
             bottom: 0;
             overflow-y: scroll;
+
+            @media screen and (max-width: 1024px) {
+                right: 0;
+            }
         }
 
         & li {

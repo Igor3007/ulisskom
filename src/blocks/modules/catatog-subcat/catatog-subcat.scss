@@ -9,10 +9,11 @@
     &__item{
         @include col();
         @include size(1.5);
-        @include size-lg(1.5);
-        @include size-md(2);
-        @include size-sm(10);
-        @include size-xs(10);
+        @include size-xl(1.5);
+        @include size-lg(2.2);
+        @include size-md(3);
+        @include size-sm(4);
+        @include size-xs(6);
     }
 }
 

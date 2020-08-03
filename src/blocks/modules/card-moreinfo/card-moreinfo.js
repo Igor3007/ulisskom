@@ -120,6 +120,11 @@ $(document).ready(function () {
         cardSlider.trigger('to.owl.carousel', [indexThumb, 300, true]);
     })
 
+    $('.card-slider__thumb ul').on('scroll', function (e) {
+        e.preventDefault()
+        e.stopPropagation();
+    })
+
 
 })//ready
 

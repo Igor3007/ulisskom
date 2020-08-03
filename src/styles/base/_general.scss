@@ -102,6 +102,24 @@ main{
         width: rem(300);
         min-width: rem(300);
         padding: rem(50);
+
+        @media screen and (max-width: $w760) {
+            display: none;
+        }
+
+        & .open{
+            position: fixed;
+            background: #f9f9f9;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            max-width: auto;
+            width: auto;
+            top: 0;
+            bottom: 0;
+            overflow-y: scroll;
+            display: block;
+        }
     }
 
     &__content{
@@ -150,13 +168,30 @@ main{
     }
     &__item{
         @include col();
-        // @include size(2.6);
-        
-        @include size-xl(2.6);
-        @include size-lg(4);
-        @include size-md(6);
-        @include size-sm(6);
-        @include size-xs(12);
+        @include size-full(2.4);
+
+        @media screen and (max-width: 1770px) {
+            @include size-full(3);
+        }
+
+        @media screen and (max-width: 1620px) {
+            & .minicard__action-tofav span {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: $w1280) {
+            @include size-full(4);
+        }
+
+        @media screen and (max-width: $w1024) {
+            @include size-full(6);
+        }
+
+        @media screen and (max-width: $w480) {
+            @include size-full(12);
+        }
+    
 
         margin-left: -1px;
         margin-right: 0;

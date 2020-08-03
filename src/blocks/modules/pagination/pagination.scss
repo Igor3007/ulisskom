@@ -4,6 +4,15 @@
     padding-top: rem(40);
     padding-bottom: rem(40);
 
+    @media screen and (max-width: $w480) {
+        flex-direction: column;
+
+        &__all{
+            margin-bottom: rem(15);
+        }
+    }
+    
+
     &__page{
 
         display: flex;
