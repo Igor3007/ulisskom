@@ -16,15 +16,15 @@ block aside
 block content
   .page-info
     .page-info__h1
-      h1 Бренды
+      h1 Новости
     .page-info__breadcrumb
-      +breadcrumb(['Главная', 'Бренды'])
+      +breadcrumb(['Главная', 'Новости'])
     .page-info__content
       .news
         .news__list
-            each item in news
-                .news__item
-                    +item-news(item)
+          each item in news
+            .news__item
+              +item-news(item)
 
 
   +menu-catalog(menu)

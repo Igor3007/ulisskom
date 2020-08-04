@@ -17,3 +17,54 @@
         margin-top: rem(30);
     }
 }
+
+.news-details{
+
+    &__date{
+        & span {
+            border: 1px solid $lgray;
+            border-radius: rem(5);
+            padding: rem(3) rem(5);
+            display: inline-block;
+            font-size: rem(13);
+        }
+
+        margin-bottom: rem(15);
+    }
+
+    &__image{
+        & span {
+            padding-top: 30%;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+    }
+
+    &__back{
+
+        margin-top: rem(30);
+
+        & a{
+            display: flex;
+            align-items: center;
+        }
+
+        & span {
+            width: rem(40);
+            height: rem(40);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $lgray;
+            border-radius: 50%;
+            margin-right: rem(10);
+        }
+
+        & svg {
+            position: relative;
+            left: rem(-2);
+        }
+    }
+}
