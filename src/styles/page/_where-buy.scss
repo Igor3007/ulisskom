@@ -1,0 +1,131 @@
+.maps-filter{
+
+    &__list{
+        @include row-flex();
+        @include md(justify-content, space-between);
+    }
+    &__item{
+        @include col();
+        @include size(6);
+        
+        @media screen and (max-width: $w760) {
+            @include size(12);
+        }
+
+        margin-bottom: rem(30);
+        border: 1px solid $lgray;
+    }
+
+    &__map {
+        margin-bottom: rem(30);
+        position: relative;
+
+        & span {
+            display: block;
+            height: rem(400);
+        }
+    }
+
+     
+}
+
+.maps-obj{
+
+    display: flex;
+    align-items: stretch;
+
+    &__image{
+
+        min-width: 25%;
+
+        span{
+            @include box-square;
+            padding-top: 125%;
+
+            & img {
+                @include img-contain;
+                max-width: 100%;
+            } 
+        }
+    }
+
+    &__main{
+        flex-grow: 1;
+        padding: 0 rem(20);
+        display: flex;
+        flex-direction: column;
+
+        & ul {
+            list-style-type: none;
+        }
+
+    }
+
+    &__title{
+        font-size: rem(18);
+        padding-top: rem(15);
+    }
+
+    &__address{
+        color: $gray;
+        margin-top: rem(5);
+        margin-bottom: auto;
+    }
+
+    &__onmap{
+        padding: rem(15);
+        padding-left: 0;
+
+        & a {
+            display: block;
+            white-space: nowrap;
+            color: $red;
+            border: 1px solid $red;
+            padding: rem(2) rem(7);
+            border-radius: 5px;
+            font-size: rem(13);
+        }
+    }
+
+    &__time{
+
+        margin-top: rem(20);
+
+        & ul{
+            display: flex;
+            flex-wrap: wrap;
+             & li{
+                 margin-right: rem(10);
+             }
+        }
+    }
+
+    &__phone{
+        padding-bottom: rem(15);
+    }
+
+    &__time,
+    &__phone{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: rem(5);
+        
+        & ul{
+            margin-left: rem(10);
+
+            & li{
+                color: $gray;
+               & span {
+                    color: #000; 
+                    margin-left: rem(7);
+                }
+            }
+        }
+
+        & svg{
+            position: relative;
+            top: rem(3);
+            min-width: rem(13);
+        }
+    }
+}

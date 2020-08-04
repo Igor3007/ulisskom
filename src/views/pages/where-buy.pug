@@ -2,12 +2,15 @@ extends ../layouts/catalog
 
 include ../../blocks/modules/menu-catalog/menu-catalog 
 include ../../blocks/modules/menu-info/menu-info
+include ../../blocks/modules/mapsfilter/mapsfilter
 
 include ../../blocks/components/breadcrumb/breadcrumb 
 
 block variables
+
   include ../../data/menu
   include ../../data/menu-info
+  include ../../data/mapsObj
 
 block aside
   +menu-info(menuInfo, 1)
@@ -18,36 +21,12 @@ block content
     .page-info__breadcrumb
       +breadcrumb(['Главная', 'Где купить'])
     .page-info__content
-      .page-info__text
-        p Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац 
-        p Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац 
-
-        h1 Заголовок Н1
-        h2 Заголовок Н2
-        h3 Заголовок Н3
-        h4 Заголовок Н4
-        h5 Заголовок Н5
-        h6 Заголовок Н6
-
-        ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-
-        ol
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
+      +maps-filter(mapsObj)
 
 
   +menu-catalog(menu)
 
 block scripts
+  script(src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU")
   script(src="js/main.js")
   script(src="js/vendor.js")

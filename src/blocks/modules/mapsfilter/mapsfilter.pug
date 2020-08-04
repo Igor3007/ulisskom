@@ -1,0 +1,28 @@
+mixin maps-filter(data)
+  .maps-filter
+    .maps-filter__map
+      span#map
+    .maps-filter__obj
+      .maps-filter__list
+        each item in mapsObj
+          .maps-filter__item
+            .maps-obj
+              .maps-obj__image
+                span
+                  img(src="/img/shop/"+item.image+"")
+              .maps-obj__main
+                .maps-obj__title!= item.title
+                .maps-obj__address!= item.address
+                .maps-obj__time
+                  +icons('#ic_clock', 13)
+                  ul
+                    each time in item.time
+                      li= time.weekday
+                        span= time.time
+                .maps-obj__phone
+                  +icons('#ic_phone', 13)
+                  ul
+                    each phone in item.phone
+                      li: a(href="#")= phone
+              .maps-obj__onmap
+                a(href="#") На карте
