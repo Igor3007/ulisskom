@@ -14,13 +14,18 @@
 
     & textarea{
         min-height: rem(80);
-        max-width: 100%
+        max-width: 100%;
+        resize: vertical;
     }
 
     &__item{
 
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $w480) {
+            flex-direction: column;
+        }
         
 
         &.column{
@@ -29,6 +34,10 @@
             & .form__subitem {
                 margin-right: 0;
             }
+        }
+
+        &.pull-right{
+            justify-content: flex-end;
         }
     }
     
@@ -45,6 +54,10 @@
 
         & input{
             width: 100%;
+        }
+
+        @media screen and (max-width: $w480) {
+            margin-right: 0;
         }
     }
 }

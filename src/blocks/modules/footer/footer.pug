@@ -1,3 +1,16 @@
+-
+  const menufooter = [
+    ['Акции','action.html'],
+    ['Услуги','services.html'],
+    ['Где купить','where-buy.html'],
+    ['О компании','about.html'],
+    ['Партнерам','partners.html'],
+    ['Гарантии','warranty.html'],
+    ['Бренды','brands.html'],
+    ['Полезно знать','moreinfo.html'],
+
+  ];
+
 .footer
   .container-1510
     .footer__nav
@@ -9,9 +22,9 @@
         .nav__catalog Каталог фурнитуры
       .footer__link
         ul
-          each link in ['Акции', 'Услуги', 'Где купить', 'О компании', 'Партнерам', 'Гарантии', 'Бренды', 'Полезно знать']
+          each link in menufooter
             li
-              a(href="#")= link
+              a(href=""+link[1]+"")= link[0]
 .footer-copyright
   .container-1510
     .footer-copyright__info © ЧТУП "УлиссКом", 2007 - 2020. Все права защищены

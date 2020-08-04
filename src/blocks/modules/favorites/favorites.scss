@@ -1,4 +1,6 @@
 .favorites{
+
+
     &__list{
         @include row-flex();
         @include md(justify-content, flex-start);
@@ -9,10 +11,6 @@
         @include col();
         @include size-full(2.4);
 
-        @media screen and (max-width: 1770px) {
-            @include size-full(3);
-        }
-
         @media screen and (max-width: 1620px) {
             & .minicard__action-tofav span {
                 display: none;
@@ -20,11 +18,11 @@
         }
 
         @media screen and (max-width: $w1280) {
-            @include size-full(4);
+            @include size-full(3);
         }
 
         @media screen and (max-width: $w1024) {
-            @include size-full(6);
+            @include size-full(4);
         }
 
         @media screen and (max-width: $w760) {

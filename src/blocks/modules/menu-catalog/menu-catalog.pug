@@ -1,10 +1,10 @@
 mixin menu-catalog(data)
-    .menu-catalog
-        .menu-catalog__logo
-            a(href="/")
-                img(src="/img/svg/logo.svg", alt="")
-        .menu-catalog__wrp
-            ul
-                each item in data
-                    li 
-                        a(href="catalog.html")= item
+  .menu-catalog
+    .menu-catalog__logo
+      a(href="/")
+        img(src="/img/svg/logo.svg", alt="")
+    .menu-catalog__wrp
+      ul
+        each item in data
+          li 
+            a(href="catalog.html")= item

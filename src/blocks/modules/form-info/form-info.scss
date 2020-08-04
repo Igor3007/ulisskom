@@ -1,0 +1,15 @@
+.form-info{
+    max-width: rem(600);
+    padding-top: rem(50);
+
+    &__text{
+        margin-top: rem(15);
+        margin-bottom: rem(30);
+        color: $gray;
+    }
+
+    & textarea{
+        min-height: rem(120);
+    }
+    
+}

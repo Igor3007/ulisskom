@@ -102,7 +102,7 @@ main{
             display: none;
         }
 
-        & .open{
+        &.open{
             position: fixed;
             background: #f9f9f9;
             z-index: 10;
@@ -126,6 +126,39 @@ main{
         }
     }
 
+}
+
+/* page info */
+
+.page-info{
+
+    padding-top: rem(0);
+
+    &__h1{
+        margin-bottom: rem(15);
+    }
+
+    &__breadcrumb{
+        padding-bottom: rem(40);
+    }
+
+    &__content{
+        max-width: rem(1200);
+        margin-right: auto;
+    }
+
+    &__text{
+        & ul {
+            margin: rem(15) 0;
+
+            & li {
+                padding: rem(5) 0;
+                background: url(/img/svg/ic_list-type-line.svg) no-repeat left rem(14);
+                list-style-type: none;
+                padding-left: 50px;
+            }
+        }
+    }
 }
 
 

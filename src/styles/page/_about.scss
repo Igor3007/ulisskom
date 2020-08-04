@@ -1,0 +1,95 @@
+.about-quote{
+
+    margin-top: rem(50);
+    margin-bottom: rem(80);
+
+    @media screen and (max-width: $w1280) {
+        margin-top: rem(50);
+        margin-bottom: rem(50);
+    }
+
+    &__text{
+        font-size: rem(36);
+        font-weight: bold;
+        line-height: 120%;
+    }
+
+    &__autor{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray;
+        align-items: center;
+        display: flex;
+        margin-top: rem(20);
+
+        &::before{
+            content: '';
+            width: rem(40);
+            height: 1px;
+            background-color: $red;
+            display: block;
+            margin-right: rem(10);
+        }
+    }
+}
+
+.about-advantages{
+    margin-top: rem(35);
+
+    &__list{
+        @include row-flex();
+        @include md(justify-content, space-between);
+
+        @media screen and (max-width: 650px) {
+            margin: 0;
+        }
+    }
+
+    &__item{
+        @include size(4);
+
+        @media screen and (max-width: $w1100) {
+            @include size(6);
+        }
+
+        @media screen and (max-width: 650px) {
+            @include size(12);
+        }
+
+        margin-top: rem(50);
+    }
+}
+
+/* .about-warranty */
+
+.about-warranty{
+    &__list{
+        @include row-flex();
+        @include md(justify-content, flex-start);
+    }
+    &__item{
+        @include size(3);
+
+        @media screen and (max-width: $w1100) {
+            @include size(4);
+        }
+
+        margin-top: rem(50);
+    }
+
+    &__title{
+        margin-top: rem(20);
+    }
+
+    &__item{
+        & span {
+            @include box-square;
+
+            & img {
+                @include img-contain;
+            }
+        }
+    }
+}

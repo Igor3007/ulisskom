@@ -1,0 +1,7 @@
+mixin menu-info(data, active)
+  .menu-info
+    .menu-info__nav
+      nav
+        ul
+          each item, index in data 
+            li: a(href=""+item.href+"" class=""+(index == active ? 'active':'' )+"")= item.link

@@ -1,0 +1,23 @@
+mixin form-info(data)
+  .form-info
+    .form-info__title 
+      +h2('Заинтересованы в сотрудничестве?')
+    .form-info__text Ждем Ваше обращение:
+    .form-info__form
+      form(method="post")
+        .form
+          .form__item
+            .form__subitem
+              input(type="text" placeholder="Ваше имя")
+            .form__subitem
+              input(type="text" placeholder="Номер телефона")
+            .form__subitem
+              input(type="text" placeholder="Email")
+          .form__item
+            .form__subitem
+              textarea(placeholder="Ваше сообщение")
+          .form__item.pull-right
+            button.btn.btn-red Отправить
+
+
+

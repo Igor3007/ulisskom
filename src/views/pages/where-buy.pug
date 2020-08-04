@@ -1,0 +1,28 @@
+extends ../layouts/catalog
+
+include ../../blocks/modules/menu-catalog/menu-catalog 
+include ../../blocks/modules/menu-info/menu-info
+
+include ../../blocks/components/breadcrumb/breadcrumb 
+
+block variables
+  include ../../data/menu
+  include ../../data/menu-info
+
+block aside
+  +menu-info(menuInfo, 1)
+block content
+  .page-info
+    .page-info__h1
+      h1 Где купить
+    .page-info__breadcrumb
+      +breadcrumb(['Главная', 'Где купить'])
+    .page-info__content
+
+
+
+  +menu-catalog(menu)
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

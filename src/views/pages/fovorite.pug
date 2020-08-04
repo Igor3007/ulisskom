@@ -2,16 +2,23 @@ extends ../layouts/home
 
 include ../../blocks/modules/favorites/favorites
 include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/modules/menu-catalog/menu-catalog
 
 block variables
-    - const title = "Ulisskom";
-    include ../../data/catalog 
+  - const title = "Избранное";
+  include ../../data/catalog 
+  include ../../data/menu
 
 block content
-    .container
-        .page-favorit
-            .page-favorit__h1
-                h1 Дверные замки
-            .page-favorit__breadcrumb
-                +breadcrumb(['Главная', 'Каталог фурнитуры'])
-            +favorites(catalog)
+  .container
+    .page-favorite
+      .page-favorite__h1
+        h1 Избранное
+      .page-favorite__breadcrumb
+        +breadcrumb(['Главная', 'Избранное'])
+      +favorites(catalog)
+      +menu-catalog(menu)
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

@@ -1,2 +1,50 @@
-extends ../layouts/home
+extends ../layouts/catalog
 
+include ../../blocks/modules/menu-catalog/menu-catalog 
+include ../../blocks/modules/menu-info/menu-info
+include ../../blocks/modules/about-item/about-item 
+include ../../blocks/modules/form-info/form-info
+
+include ../../blocks/components/breadcrumb/breadcrumb 
+
+block variables
+  include ../../data/menu
+  include ../../data/menu-info
+  include ../../data/about-company
+
+block aside
+  +menu-info(menuInfo, 0)
+block content
+  .page-info
+    .page-info__h1
+      h1 О компании
+    .page-info__breadcrumb
+      +breadcrumb(['Главная', 'О компании'])
+    .page-info__content
+      .about-quote
+        .about-quote__text “ Мы не можем направить ветер... <br> Но мы можем развернуть паруса!” 
+        .about-quote__autor ”Чарльз Улисс Порше
+      .about-text
+        |Улисс - ветер. Ветер, который наполняет паруса и дает им движение. Движение к цели! Стремление к росту и развитию заложено в названии компании. Мы дорожим нашими покупателями и стремимся, чтобы наши партнёры развивались и росли профессионально вместе с нами.
+      .about-advantages
+        .about-advantages__list
+          each item in about
+            .about-advantages__item
+              +about-item(item)
+      .about-warranty
+        .about-warranty__title
+          +h2('Гарантии')
+        .about-warranty__list
+          each item in [1,2,3]
+            .about-warranty__item
+              span
+                a(href="#"): img(src="/img/info/wr"+item+".jpg")
+      +form-info()
+
+  +menu-catalog(menu)
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")
