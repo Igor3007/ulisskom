@@ -1,0 +1,34 @@
+extends ../layouts/catalog
+
+include ../../blocks/modules/menu-catalog/menu-catalog 
+include ../../blocks/modules/menu-info/menu-info
+include ../../blocks/modules/item-news/item-news
+
+include ../../blocks/components/breadcrumb/breadcrumb  
+
+block variables
+  include ../../data/menu
+  include ../../data/menu-info
+  include ../../data/news
+
+block aside
+  +menu-info(menuInfo, 5)
+block content
+  .page-info
+    .page-info__h1
+      h1 Бренды
+    .page-info__breadcrumb
+      +breadcrumb(['Главная', 'Бренды'])
+    .page-info__content
+      .news
+        .news__list
+            each item in news
+                .news__item
+                    +item-news(item)
+
+
+  +menu-catalog(menu)
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

@@ -1,0 +1,19 @@
+.news{
+
+    max-width: rem(1140);
+
+    &__list{
+        @include row-flex();
+        @include md(justify-content, flex-start);
+    }
+    &__item{
+        @include col();
+        @include size-xl(6);
+        @include size-lg(6);
+        @include size-md(6);
+        @include size-sm(12);
+        @include size-xs(12);
+
+        margin-top: rem(30);
+    }
+}
