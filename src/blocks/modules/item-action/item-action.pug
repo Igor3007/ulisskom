@@ -1,0 +1,16 @@
+mixin item-action(data)
+  .item-action
+    .item-action__image
+      +bgimage(""+data.image+"")
+      .layer
+
+        if data.image == '/img/news/act2.jpg'
+          a.sticker-notactive Завершена
+        else
+          a.sticker-active Дейстует до 17.05.2020
+
+    .item-action__date
+      | Проводится 
+      span= data.date
+    .item-action__title 
+      a(href="news-details.html")= data.title

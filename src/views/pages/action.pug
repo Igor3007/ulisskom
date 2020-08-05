@@ -2,7 +2,7 @@ extends ../layouts/catalog
 
 include ../../blocks/modules/menu-catalog/menu-catalog 
 include ../../blocks/modules/menu-info/menu-info
-include ../../blocks/modules/item-news/item-news
+include ../../blocks/modules/item-action/item-action
 
 include ../../blocks/components/breadcrumb/breadcrumb  
 
@@ -12,19 +12,19 @@ block variables
   include ../../data/news
 
 block aside
-  +menu-info(menuInfo, 6)
+  +menu-info(menuInfo, 7)
 block content
   .page-info
     .page-info__h1
-      h1 Новости
+      h1 Акции
     .page-info__breadcrumb
-      +breadcrumb(['Главная', 'Новости'])
+      +breadcrumb(['Главная', 'Акции'])
     .page-info__content
       .news
         .news__list
-          each item in news
+          each item in action
             .news__item
-              +item-news(item)
+              +item-action(item)
 
 
   +menu-catalog(menu)
