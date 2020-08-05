@@ -1,5 +1,6 @@
 .order-create{
 
+    padding: rem(30) 0;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -9,6 +10,11 @@
         font-weight: bold;
         font-size: rem(36);
         line-height: rem(47);
+
+        @media screen and (max-width: $w760) {
+            font-size: rem(24);
+            line-height: 120%;
+        }
     }
     &__subtitle{
         font-size: rem(14);
@@ -19,6 +25,15 @@
     &__action{
         display: flex;
         max-width: rem(600);
+
+        @media screen and (max-width: $w480) {
+            flex-direction: column;
+
+            & a {
+                width: 100%;
+                margin-bottom: rem(10);
+            }
+        }
 
         & a {
             flex-grow: 1;

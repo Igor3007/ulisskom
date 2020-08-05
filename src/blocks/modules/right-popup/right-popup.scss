@@ -1,0 +1,28 @@
+.right-popup {
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    
+    
+    &__main {
+        position: relative;
+        background: #fff;
+        max-width: rem(350);
+        width: rem(350);
+        flex-basis: rem(350);
+        padding: rem(40);
+    }
+
+    &__close {
+        text-align: right;
+    }
+}
