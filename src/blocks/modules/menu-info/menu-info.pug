@@ -4,4 +4,4 @@ mixin menu-info(data, active)
       nav
         ul
           each item, index in data 
-            li: a(href=""+item.href+"" class=""+(index == active ? 'active':'' )+"")= item.link
+            li: a(href=""+item.href+"" class=""+(index == active ? 'active':'' )+"")!= item.link

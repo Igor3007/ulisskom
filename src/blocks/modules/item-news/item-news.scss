@@ -28,7 +28,10 @@
         padding: rem(15) 0;
 
         & a {
-            @include h2
+            @include h2;
+            line-height: 120%;
+            
+             
 
             &:hover{
                 color: $red
