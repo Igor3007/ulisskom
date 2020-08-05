@@ -5,6 +5,10 @@ mixin catatog-subcat(data)
         .catatog-subcat__item
           .subcat-item
             .subcat-item__img
-              a(href="#"): img(src="/img/catalog/cat"+index+".png")
-            .subcat-item__title
-              a(href="#")= item   
+              if item.image
+                a(href="#"): img(src=""+item.image+"")
+              else
+                a(href="#"): img(src="/img/catalog/cat"+index+".png")
+            if !item.name
+              .subcat-item__title
+                a(href="#")= item   

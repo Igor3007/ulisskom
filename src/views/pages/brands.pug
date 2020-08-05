@@ -1,52 +1,48 @@
 extends ../layouts/catalog
 
-include ../../blocks/modules/menu-catalog/menu-catalog 
-include ../../blocks/modules/menu-info/menu-info
+include ../../blocks/modules/catalog-filter/catalog-filter
+include ../../blocks/modules/catatog-subcat/catatog-subcat
+include ../../blocks/modules/minicard/minicard
+include ../../blocks/modules/pagination/pagination
+include ../../blocks/modules/pagedesc/pagedesc
+include ../../blocks/modules/menu-catalog/menu-catalog
 
-include ../../blocks/components/breadcrumb/breadcrumb 
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/components/select/select
 
-block variables
+block variables 
+  include ../../data/catalog 
+  include ../../data/filter 
   include ../../data/menu
-  include ../../data/menu-info
+  include ../../data/brands 
+
+
 
 block aside
-  +menu-info(menuInfo, 3)
+  +catalog-filter(filter) 
 block content
-  .page-info
-    .page-info__h1
-      h1 Бренды
-    .page-info__breadcrumb
-      +breadcrumb(['Главная', 'Бренды'])
-    .page-info__content
-      .page-info__text
-        p Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац 
-        p Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац Обзац 
-
-        h1 Заголовок Н1
-        h2 Заголовок Н2
-        h3 Заголовок Н3
-        h4 Заголовок Н4
-        h5 Заголовок Н5
-        h6 Заголовок Н6
-
-        ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-          li Список ul
-
-        ol
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-          li Список нумерованный
-
-
+  .page-catalog
+    .page-catalog__h1
+      h1 Дверные замки
+    .page-catalog__breadcrumb
+      +breadcrumb(['Главная', 'Каталог фурнитуры'])
+    .page-catalog__catig
+      +catatog-subcat(brands)
+    .page-catalog__sort
+      .page-catalog__sort-item
+        span Сортировать:
+        +select(['по умолчанию', 'по цене(по возростанию)', 'по цене(по убыванию)'])
+    .page-catalog__list
+      each item in catalog
+        .page-catalog__item
+          +minicard(item, true)
+    .page-catalog__pagination
+      +pagination()
+    .page-catalog__desc
+      +pagedesc()
   +menu-catalog(menu)
+
+
 
 block scripts
   script(src="js/main.js")
