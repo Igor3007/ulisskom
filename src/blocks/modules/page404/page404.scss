@@ -1,0 +1,44 @@
+.page404{
+
+    max-width: rem(500);
+    width: 100%;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    padding: rem(15);
+
+    &__title{
+        font-weight: bold;
+        font-size: rem(96);
+        line-height: 140%;
+        text-align: center;
+    }
+
+    &__subtitle{
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        color: $gray;
+    }
+
+    &__active{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn{
+        flex-grow: 1;
+        margin-top: rem(30);
+        margin-right: rem(10);
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        & button{
+            width: calc(100%);
+        }
+    }
+
+
+}

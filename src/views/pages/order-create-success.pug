@@ -1,0 +1,14 @@
+extends ../layouts/card
+
+include ../../blocks/modules/order-create/order-create 
+
+block content
+  .container-1310
+    +order-create()
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

@@ -85,6 +85,13 @@ main{
     transition: margin 0.3s ease;
 }
 
+.page-notfound {
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+	min-height: 60vh;
+}
+
 
 
 .main-container{

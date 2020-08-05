@@ -16,6 +16,11 @@
         background-color: $red;
     }
 
+    &.btn-dark{
+        color: #fff;
+        background-color: $dark;
+    }
+
     &.btn-line{
         border: 1px solid #000000;
         background: none;

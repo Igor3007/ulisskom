@@ -1,0 +1,36 @@
+.order-create{
+
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title{
+        font-weight: bold;
+        font-size: rem(36);
+        line-height: rem(47);
+    }
+    &__subtitle{
+        font-size: rem(14);
+        line-height: rem(20);
+        margin-top: rem(20);
+        margin-bottom: rem(40);
+    }
+    &__action{
+        display: flex;
+        max-width: rem(600);
+
+        & a {
+            flex-grow: 1;
+            width: 50%;
+
+            &:first-child{
+                margin-right: rem(10);
+            }
+
+            & .btn {
+                width: 100%;
+            }
+        }
+    }
+}
