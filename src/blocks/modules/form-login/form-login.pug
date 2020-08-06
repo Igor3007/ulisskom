@@ -1,0 +1,54 @@
+mixin form-login()
+  .form-login
+    .form-login__slider.owl-carousel
+      .form-login__item 
+        .form-login__title: +h2('Вход')
+        .form-login__form
+          form
+            .form
+              .form__item: .form__subitem: input(type="text" placeholder="Ваше имя")
+              .form__item: .form__subitem: input(type="email" placeholder="Email")
+              .form__item
+                .form__subitem
+                  button.btn.btn-red.btn-full Войти
+        .form-login__info
+          |У меня нет аккаунта. 
+          a(href="#" id="register") Регистрация <br>
+          a(href="#" id="recovery") Забыли пароль?
+
+      .form-login__item 
+        .form-login__title: +h2('Регистрация')
+        .form-login__form
+          form
+            .form
+              .form__item: .form__subitem: input(type="email" placeholder="Email")
+              .form__item: .form__subitem: input(type="password" placeholder="Пароль")
+              .form__item: .form__subitem: input(type="password" placeholder="Повторить пароль")
+
+              .form__item: .form__subitem 
+                span Длина пароля 8 символов (буквы и цифры)
+
+              .form__item: .form__subitem: input(type="text" placeholder="Наименование юр. лица")  
+              .form__item: .form__subitem: input(type="text" placeholder="УНП")  
+              .form__item: .form__subitem: input(type="text" placeholder="Контактное лицо")  
+              .form__item: .form__subitem: input(type="tel" placeholder="Телефон")  
+
+              .form__item
+                .form__subitem
+                  button.btn.btn-red.btn-full Регистрация
+
+      .form-login__item 
+        .form-login__title: +h2('Восстановление пароля')
+        .form-login__info Новый пароль будет отправлен вам на почту
+        .form-login__form
+          form
+            .form
+              .form__item: .form__subitem: input(type="email" placeholder="Email")
+
+              .form__item
+                .form__subitem
+                  button.btn.btn-red.btn-full Восстановить
+        .form-login__info
+          |У меня нет аккаунта.
+          a(href="#" id="register") Регистрация <br>
+          a(href="#" id="signin") Войти

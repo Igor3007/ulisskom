@@ -17,4 +17,5 @@ import "%modules%/mapsfilter/mapsfilter";
 
 /* popup */
 
-import "%modules%/right-popup/right-popup";  
+import "%modules%/right-popup/right-popup";
+import "%modules%/form-login/form-login";  

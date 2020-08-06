@@ -5,18 +5,22 @@ $(document).ready(function () {
     const popupContainer = $('.right-popup');
     const popupOpen = $('[data-modal-open=right]');
     const popupClose = $('[data-modal-close=right]');
+    const popupContent = $('.right-popup__main');
 
     function modal(params) {
         this.container = params.container;
         this.elemOpen = params.container;
         this.elemClose = params.container;
+        this.elemContent = params.elemContent;
 
         this.onOpen = function () {
-            this.container.addClass('open')
+            this.container.addClass('open');
+            $('body').addClass('hidden')
         }
 
         this.onClose = function () {
-            this.container.removeClass('open')
+            this.container.removeClass('open');
+            $('body').removeClass('hidden')
         }
     }
 
@@ -26,6 +30,7 @@ $(document).ready(function () {
         'container': popupContainer,
         'elemOpen': popupOpen,
         'elemClose': popupClose,
+        'elemContent': popupContent,
     });
 
 

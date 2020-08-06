@@ -48,6 +48,12 @@
         margin-right: rem(10);
         width: 100%;
 
+        & span {
+            color: $gray;
+            padding: rem(10) rem(5);
+            display: block;
+        }
+
         &:last-child{
             margin-right: 0 !important;
         }

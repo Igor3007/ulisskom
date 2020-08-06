@@ -1,0 +1,31 @@
+.form-login{
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__title{
+        margin-bottom: rem(30);
+    }
+
+    &__info{
+        margin-top: rem(30);
+        color: $gray;
+
+        & a {
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+
+    &__item{
+        padding: rem(40) rem(5) rem(40) rem(5);
+        display: none;
+    }
+
+    & .owl-item.active .form-login__item{
+        display: block;
+        max-height: none;
+    }
+
+}
