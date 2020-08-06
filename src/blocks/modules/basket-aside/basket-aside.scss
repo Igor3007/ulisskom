@@ -20,4 +20,49 @@
     &__form{
         margin-top: rem(20);
     }
+
+    &__edit-order{
+        padding: rem(20) 0;
+
+        & a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.basket-minicard{
+    display: flex;
+    align-items: stretch;
+    margin-top: rem(15);
+
+    &__image{
+        width: 30%;
+        min-width: 30%;
+        flex-basis: 30%;
+        margin-right: rem(15);
+
+        & span{
+            @include box-square;
+            background-color: #fff;
+
+            & img {
+                @include img-contain;
+            }
+        }
+    }
+
+    &__title,
+    &__count,
+    &__cost{
+        font-size: 12px;
+        color: $gray;
+        line-height: 140%;
+
+        & span {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
+    
 }

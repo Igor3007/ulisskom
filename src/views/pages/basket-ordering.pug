@@ -1,6 +1,7 @@
 extends ../layouts/card
 
 include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/modules/basket-aside/basket-aside
 
 block variables
   include ../../data/catalog 
@@ -15,8 +16,68 @@ block content
         +breadcrumb(['Главная','Оформление заказа'])
       .page-basket__content
         .page-basket__main
+            .page-basket__list
+                .basket-ordering
+                    .basket-ordering__wrp
+                        form
+                            .form
+                                fieldset
+                                    legend: +h2('Данные юридического лица')
+                                    .form__item
+                                        .form__subitem: input(type="text" placeholder="Алексей Петров")
+                                        .form__subitem: input(type="tel" placeholder="+375 (29) 165-65-86")
+                                    .form__item
+                                        .form__subitem: textarea(name="" placeholder="Комментарий к заказу")
 
-        .page-basket__aside asise
+                                fieldset
+                                    legend: +h2('Доставка')
+                                    .form__item
+                                        .form__subitem: input(type="text" placeholder="Могилев")
+                                        .form__subitem: input(type="tel" placeholder="Адрес доставки")
+                                    .form__item
+                                        .form__subitem
+                                            .form__select
+                                                select(name="")
+                                                    option(value="0" ) Дата доставки
+                                                    option(value="0" ) Дата доставки2
+                                                    option(value="0" ) Дата доставки3
+                                        .form__subitem
+                                            .form__select
+                                                select(name="")
+                                                    option(value="0" ) Интервал доставки
+                                                    option(value="0" ) Интервал доставки2
+                                                    option(value="0" ) Интервал доставки3
+                                    .form__item
+                                        .radio-max
+                                            .radio-max__input
+                                                +radio-desc('Самовывоз со склада', 'Вы можете самостоятельно забрать заказ из нашего магазина.')
+                                            .radio-max__desc В день заказа
+                                            .radio-max__price 15 BYN 
+                                    .form__item
+                                        .radio-max
+                                            .radio-max__input
+                                                +radio-desc('Доставка белпочтой', 'Классическая доставка по Беларуси документов и грузов')
+                                            .radio-max__desc от 2 до 5 дней
+                                            .radio-max__price 0 BYN 
+                                    .form__item
+                                        .radio-max
+                                            .radio-max__input
+                                                +radio-desc('Доставка курьерской службой', 'Доставка осуществляется в течение дня в удобное для вас время на следующий день после заказа.')
+                                            .radio-max__desc  от 1 до 3 дней
+                                            .radio-max__price 5 BYN 
+                                
+                                fieldset
+                                    legend: +h2('Оплата')
+                                    .form__item
+                                        .form__subitem
+                                            +radio-desc('Наличный расчет', 'Вы можете самостоятельно забрать заказ из нашего магазина.')
+                                        .form__subitem
+                                            +radio-desc('Онлайн оплата картой', 'Вы можете самостоятельно забрать заказ из нашего магазина.') 
+                                    
+                                        
+
+            .page-basket__aside 
+                +basket-aside-ordering(catalog)
 
 
 

@@ -16,3 +16,35 @@ mixin basket-aside()
           .form__item: .form__subitem: button.btn.btn-red.btn-full Оформить заказ
     .basket-aside__button
       button.btn.btn-red.btn-full Оформить заказ
+
+mixin basket-aside-ordering(data)
+  .basket-aside
+    .basket-aside__title
+      +h2('Ваш заказ')
+    .basket-aside__subtitle 
+      div
+        |10   <span> товаров на </span> 1 230.30 BYN
+      div
+        |<span> Доставка курьерской службой: </span> 10 BYN
+      div
+        |10   <span> Итого: </span> 1 230.30 BYN
+    
+    .basket-aside__button
+      button.btn.btn-red.btn-full Оформить заказ
+    
+    .basket-aside__edit-order
+      a(href="basket.html") Редактировать заказ
+    .basket-aside__goods
+      .basket-aside__goods-list
+        each item, index in data
+          if index < 5
+            .basket-aside__goods-item
+              .basket-minicard
+                .basket-minicard__image
+                  span: img(src=""+item.image+"", alt="")
+                .basket-minicard__desc
+                  .basket-minicard__title!= item.title
+                  .basket-minicard__count Кол-во: 
+                    span 1
+                  .basket-minicard__cost Стоимость: 
+                    span!= item.price

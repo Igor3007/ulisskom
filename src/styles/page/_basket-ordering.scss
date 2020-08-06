@@ -1,0 +1,30 @@
+.basket-ordering{
+    border: 1px solid $lgray;
+    padding: rem(40) rem(43);
+}
+
+.radio-max{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: rem(15);
+
+    &__input{
+        flex-grow: 1;
+        max-width: rem(450);
+    }
+
+    &__desc,
+    &__price{
+        padding: 0 rem(20);
+        color: $gray;
+        white-space: nowrap;
+    }
+
+    &__price{
+        font-weight: bold;
+        color: #000;
+    }
+}
