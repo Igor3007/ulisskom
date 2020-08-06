@@ -1,0 +1,18 @@
+mixin basket-aside()
+  .basket-aside
+    .basket-aside__title
+      +h2('Итого')
+    .basket-aside__subtitle 10   <span> товаров на <span> 1 230.30 BYN
+    .basket-aside__type
+      .basket-aside__radio
+      +radio('Физическое лицо', 'type', '1', true)
+      .basket-aside__radio
+      +radio('Юридическое лицо', 'type', '2') 
+    .basket-aside__form.hide
+      form
+        .form
+          .form__item: .form__subitem: input(type="email" placeholder="Email")  
+          .form__item: .form__subitem: input(type="password" placeholder="Пароль")  
+          .form__item: .form__subitem: button.btn.btn-red.btn-full Оформить заказ
+    .basket-aside__button
+      button.btn.btn-red.btn-full Оформить заказ

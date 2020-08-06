@@ -1,0 +1,23 @@
+
+.basket-aside{
+    &__subtitle{
+        padding: rem(15) 0;
+        font-weight: bold;
+
+        & span{
+            font-weight: normal;
+        }
+    }
+
+    &__button{
+        margin-top: rem(20);
+    }
+
+    &__radio{
+        margin-top: rem(5);
+    }
+
+    &__form{
+        margin-top: rem(20);
+    }
+}

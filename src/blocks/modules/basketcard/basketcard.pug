@@ -5,10 +5,13 @@ mixin basketcard(item)
     .basketcard__main
       .basketcard__title: a(href="card.html")= item.title
       .basketcard__price
-      .basketcard__price-current= item.price
-      .basketcard__price-old= item.price
+        .basketcard__price-current= item.price+" BYN"
+        .basketcard__price-old= item.price+" BYN"
       .basketcard__state
-      span В наличии
+        span.card-details__state-present 
+          +icons('#ic_arrow-ok', 12)
+          |В наличии
+        //- span.card-details__state-toorder - под заказ
     .basketcard__count
       .basketcard__title Количество
       .basketcard__count-wrp
@@ -19,6 +22,6 @@ mixin basketcard(item)
 
     .basketcard__cost
       .basketcard__title Стоимость
-      .basketcard__price-current= item.price
+      .basketcard__price-current= item.price+" BYN"
     .basketcard__remove
       +icons('#ic_close', 22)

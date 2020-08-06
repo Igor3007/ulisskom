@@ -9,17 +9,22 @@
 
     &__list{
         @include col();
-        @include size-xl(9);
-        @include size-lg(9);
+        @include size-xl(8.5);
+        @include size-lg(8.5);
         @include size-md(8);
         @include size-sm(12);
         @include size-xs(12);
+
+        @media screen and (min-width: $w760){
+            padding-right: rem(15);
+        }
     }
+
     &__aside{
 
         @include col();
-            @include size-xl(3);
-            @include size-lg(3);
+            @include size-xl(3.5);
+            @include size-lg(3.5);
             @include size-md(4);
             @include size-sm(12);
             @include size-xs(12);
@@ -31,7 +36,13 @@
     }
 
     &__breadcrumb{
-        padding-bottom: rem(15);
+        padding-bottom: rem(30);
+    }
+
+    &__aside{
+        background: #f9f9f9;
+        padding: rem(35);
+        align-self: flex-start;
     }
 
     

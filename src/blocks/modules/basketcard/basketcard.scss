@@ -1,16 +1,120 @@
 .basketcard{
     display: flex;
     border: 1px solid $lgray;
-    padding: rem(20);
+    margin-top: -1px;
+    position: relative;
+
+    @media screen and (max-width: $w580){ 
+        flex-direction: column;
+    }
+
+    &__main,
+    &__count,
+    &__cost{
+        padding: rem(25) rem(12);
+
+        @media screen and (max-width: $w580){
+            padding: rem(0) rem(12) rem(25) rem(12);
+        }
+    }
+
+    &__count,
+    &__cost{
+        @media screen and (max-width: $w580){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__title{
+        color: $gray;
+        margin-bottom: rem(20);
+
+        @media screen and (max-width: $w580){
+            margin-bottom: rem(0);
+            margin-right: rem(15);
+        }
+
+        & a {
+            color: inherit;
+            
+            @media screen and (max-width: $w580){
+               font-weight: bold;
+               font-size: 16px;
+               color: #000;
+            }
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__remove{
+        padding-top: rem(12);
+        padding-right: rem(12);
+        
+        & svg {
+            cursor: pointer;
+        }
+
+       @media screen and (max-width: $w580){
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__price{
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $w580){
+            margin-top: rem(20)
+        }
+
+    }
+
+    &__price-current{
+        font-weight: bold;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    &__price-old{
+        color: $gray;
+        text-decoration: line-through;
+        margin-left: rem(15);
+    }
+
+    &__state{
+
+        margin-top: rem(10);
+
+        & span {
+            display: flex;
+            align-items: center;
+
+            & svg {
+                margin-right: rem(5);
+            }
+        }
+    }
 
     &__image{
 
-        width: 15%;
-        min-width: 15%;
-        flex-basis: 15%;
+        @media screen and (min-width: $w580){
+            width: 15%;
+            min-width: 15%;
+            flex-basis: 15%;
+         }
 
         & span {
             @include box-square;
+
+            @media screen and (max-width: $w580){ 
+                padding-top: 70%;
+            }
         }
         & img{
             @include img-contain;
@@ -25,7 +129,10 @@
        
         display: flex;
         align-items: stretch;
-        justify-content: center;
+
+        @media screen and (min-width: $w580){
+            justify-content: center;
+         }
          
     
         & .basketcard__count-dec,
@@ -61,4 +168,6 @@
             }
         }
     }
+
+    
 }

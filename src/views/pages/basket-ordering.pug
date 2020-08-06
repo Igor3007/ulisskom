@@ -1,0 +1,26 @@
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+  include ../../data/catalog 
+
+block content
+
+  .page-basket
+    .container-1310
+      .page-basket__h1
+        h1 Оформление заказа
+      .page-basket__breadcrumb
+        +breadcrumb(['Главная','Оформление заказа'])
+      .page-basket__content
+        .page-basket__main
+
+        .page-basket__aside asise
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")
