@@ -1,0 +1,64 @@
+.basketcard{
+    display: flex;
+    border: 1px solid $lgray;
+    padding: rem(20);
+
+    &__image{
+
+        width: 15%;
+        min-width: 15%;
+        flex-basis: 15%;
+
+        & span {
+            @include box-square;
+        }
+        & img{
+            @include img-contain;
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+    }
+
+    &__count-wrp{
+       
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+         
+    
+        & .basketcard__count-dec,
+        & .basketcard__count-inc{
+            width: rem(30);
+            height: rem(30);
+            border: 1px solid $lgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+    
+            &:hover{
+                border-color: $red;
+                color: $red;
+            }
+        }
+    
+        & .basketcard__count-num{
+            width: rem(30);
+            height: rem(30);
+            display: block;
+    
+            & input{
+                border: 1px solid $lgray;
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-align: center;
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+}

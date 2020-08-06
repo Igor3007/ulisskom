@@ -1,0 +1,38 @@
+.page-basket{
+
+    padding-top: rem(50);
+
+    &__main{
+        @include row-flex();
+        @include md(justify-content, flex-start);
+    }
+
+    &__list{
+        @include col();
+        @include size-xl(9);
+        @include size-lg(9);
+        @include size-md(8);
+        @include size-sm(12);
+        @include size-xs(12);
+    }
+    &__aside{
+
+        @include col();
+            @include size-xl(3);
+            @include size-lg(3);
+            @include size-md(4);
+            @include size-sm(12);
+            @include size-xs(12);
+
+    }
+
+    &__h1{
+        margin-bottom: rem(30);
+    }
+
+    &__breadcrumb{
+        padding-bottom: rem(15);
+    }
+
+    
+}

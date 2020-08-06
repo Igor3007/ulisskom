@@ -3,18 +3,37 @@ extends ../layouts/card
 include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/modules/card-moreinfo/card-moreinfo
 include ../../blocks/modules/cart-similar/cart-similar 
+include ../../blocks/modules/basketcard/basketcard
 
 block variables
-  - const title = "Ulisskom";
   include ../../data/catalog 
 
 block content
 
   .page-basket
     .container-1310
+      .page-basket__h1
+        h1 Корзина
       .page-basket__bareadcrumb
         +breadcrumb(['Главная','Корзина'])
-      .page-basket__info
+      .page-basket__content
+        .page-basket__main
+          .page-basket__list
+            each item in catalog
+              +basketcard(item)
+          .page-basket__aside
+            .basket-aside__title
+              +h2('Итого')
+            .basket-aside__subtitle: span 10: товаров на
+              span 1 230.30 BYN
+            .basket-aside__type
+              .basket-aside__radio
+                +radio('Физическое лицо')
+              .basket-aside__radio
+                +radio('Юридическое лицо')
+            .basket-aside__button
+              button.btn.btn-red.btn-full Оформить заказ
+
 
 
 

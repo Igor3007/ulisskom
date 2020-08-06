@@ -15,7 +15,6 @@ button.addEventListener('click', event => {
     elemMenu.classList.toggle('open');
 
 
-
     if (document.querySelector('body').clientWidth > 1024 && !document.querySelector('.main-container__aside')) {
         if (elemMenu.classList.contains('open')) {
             elemMain.style.marginLeft = elemMenu.clientWidth + 'px'

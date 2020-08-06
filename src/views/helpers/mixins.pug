@@ -20,6 +20,15 @@ mixin checkbox(label, name, check)
     span.checkbox__elem
     span.checkbox__text= label
 
+mixin radio(label, name, check)
+  label.checkbox
+    if check
+      input(type="checkbox" name=""+name+"" checked="")
+    else
+      input(type="checkbox" name=""+name+"" )
+    span.checkbox__elem
+    span.checkbox__text= label
+
 
 
 
