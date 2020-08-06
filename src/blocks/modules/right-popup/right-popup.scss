@@ -6,12 +6,19 @@
 	right: 0;
 	bottom: 0;
     z-index: 100;
-
     display: flex;
     align-items: stretch;
     justify-content: flex-end;
+    display: none;
 
-    
+    &.open {
+        display: flex;
+
+        .right-popup__main{
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
     
     &__main {
         position: relative;
@@ -20,6 +27,9 @@
         width: rem(350);
         flex-basis: rem(350);
         padding: rem(40);
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: 0.3s ease;
     }
 
     &__close {

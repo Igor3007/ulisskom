@@ -13,4 +13,8 @@ import "%modules%/catalog-filter/catalog-filter";
 /* card */
 import "%modules%/card-moreinfo/card-moreinfo";
 import "%modules%/cart-similar/cart-similar";
-import "%modules%/mapsfilter/mapsfilter";  
+import "%modules%/mapsfilter/mapsfilter";
+
+/* popup */
+
+import "%modules%/right-popup/right-popup";  

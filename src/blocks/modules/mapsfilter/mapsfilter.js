@@ -72,7 +72,10 @@ const mapsObj = [
 
 
 // Дождёмся загрузки API и готовности DOM.
-ymaps.ready(init);
+if (document.querySelector('#map')) {
+    ymaps.ready(init);
+}
+
 
 function init() {
 
