@@ -56,6 +56,11 @@
 
         & .details_fav{
             margin-top: rem(10);
+            cursor: pointer;
+
+            &.active svg {
+                fill: $red
+            }
         }
     }
 
@@ -197,6 +202,11 @@
             @media screen and (max-width: $w480) {
                 width: 100%;
                 justify-content: center;
+            }
+
+            & svg {
+                fill: #fff;
+                margin-right: rem(10);
             }
         }
     }

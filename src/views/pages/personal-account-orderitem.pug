@@ -1,0 +1,70 @@
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/modules/basketcard/basketcard
+
+block variables
+  include ../../data/catalog 
+
+block content
+
+  .page-personal
+    .container-1310
+      .page-personal__h1
+        h1 Личный кабинет
+      .page-personal__breadcrumb
+        +breadcrumb(['Главная','Личный кабинет', 'Заказы', 'Заказ № 49830498'])
+      .page-personal__content
+        .page-personal__aside
+          .personal-menu
+            ul
+              li.active: a(href="personal-account-company.html") Карточка компании
+              li: a(href="personal-account-orderlist.html") Заказ 
+              li.fill-red: a(href="dl.html")
+                +icons('#ic_exel')
+                |Скачать прайс-лист
+              li: a(href="dl.html") 
+                +icons('#ic_close')
+                |Выйти из кабинета
+        .page-personal__main
+          .page-personal__title
+            .page-personal__number
+              +h2('Заказ № 49830498')
+            .page-personal__cost 2 <span>товара на</span> 48.30 BYN
+          .page-personal__order
+            .company-data
+              .company-data__item
+                .company-data__subitem
+                  .company-data__title Контактное лицо
+                  .company-data__text Иванов Петр Петрович
+                .company-data__subitem
+                  .company-data__title Телефон
+                  .company-data__text +375 (29) 165-65-86
+              .company-data__item
+                .company-data__subitem
+                  .company-data__title Компания
+                  .company-data__text Строительная компания
+                .company-data__subitem
+                  .company-data__title УНП
+                  .company-data__text 453737545373783
+              .company-data__item
+                .company-data__subitem
+                  .company-data__title Способ доставки
+                  .company-data__text Самовывоз
+                .company-data__subitem
+                  .company-data__title Способ оплаты
+                  .company-data__text Наличными 
+          .page-personal__title.mrgt30
+            +h2('Товары')
+          .page-personal__order
+            each item in catalog
+              +basketcard(item, true) 
+
+
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

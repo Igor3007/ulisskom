@@ -125,6 +125,13 @@
         flex-grow: 1;
     }
 
+    &__count{
+        & strong{
+            display: block;
+            text-align: center;
+        }
+    }
+
     &__count-wrp{
        
         display: flex;

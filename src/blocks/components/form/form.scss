@@ -5,6 +5,7 @@
         border: 1px solid $lgray;
         padding: rem(10) rem(15);
         font-style: italic;
+        outline: none !important;
 
         &:focus{
             border: 1px solid $red;

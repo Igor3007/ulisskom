@@ -1,0 +1,58 @@
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+  include ../../data/catalog 
+
+block content
+
+  .page-personal
+    .container-1310
+      .page-personal__h1
+        h1 Личный кабинет
+      .page-personal__breadcrumb
+        +breadcrumb(['Главная','Личный кабинет', 'Заказы'])
+      .page-personal__content
+        .page-personal__aside
+          .personal-menu
+            ul
+              li.active: a(href="personal-account-company.html") Карточка компании
+              li: a(href="personal-account-orderlist.html") Заказы
+              li.fill-red: a(href="dl.html")
+                +icons('#ic_exel')
+                |Скачать прайс-лист
+              li: a(href="dl.html") 
+                +icons('#ic_close')
+                |Выйти из кабинета
+        .page-personal__main
+          +h2('Заказы')
+          .page-personal__order
+            .table
+              .table__th
+                .table__td Номер заказа
+                .table__td Дата заказа
+                .table__td Позиций 
+                .table__td Статус
+                .table__td Сумма заказа
+              .table__tr
+                .table__td(data-title="Номер заказа"): a(href='personal-account-orderitem.html') Заказ №3058952128
+                .table__td(data-title="Дата заказа") 16.07.2020 в 15.44
+                .table__td(data-title="Позиций ") 3 
+                .table__td(data-title="Статус") В обработке
+                .table__td(data-title="Сумма заказа") 70.60 BYN
+              .table__tr
+                .table__td(data-title="Номер заказа"): a(href='personal-account-orderitem.html') Заказ №3058958
+                .table__td(data-title="Дата заказа")  05.07.2020 в 10.23
+                .table__td(data-title="Позиций ") 8 
+                .table__td(data-title="Статус") Отправлен
+                .table__td(data-title="Сумма заказа") 120.90 BYN
+
+
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

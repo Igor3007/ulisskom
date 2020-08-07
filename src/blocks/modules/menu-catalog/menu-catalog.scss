@@ -14,9 +14,37 @@
         padding-top: rem(25);
     }
 
+    
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background: #eee;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        cursor: pointer;
+        z-index: 1
+    }
+  
+  
+
 
     &.open{
         transform: translateX(0);
+
+        
+            @media screen and (max-width: $w1024) {
+                & .menu-catalog__close {
+                    visibility: visible;
+                    transform: translateX(100%);
+                    transition:  0.3s ease 0.5s;
+            }
+         
+        }
     } 
 
     

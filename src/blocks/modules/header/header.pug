@@ -49,7 +49,8 @@
           li
             a(href="#") Услуги
       .nav__search
-        +icons('#ic_search', 17)
+        span: +icons('#ic_search', 17)
+        form.form.hide: input(type="text" placeholder="Найти...")
     .header-main__action
       .header-main__fav
         a(href="fovorite.html")

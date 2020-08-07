@@ -1,0 +1,66 @@
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+  include ../../data/catalog 
+
+block content
+
+  .page-personal
+    .container-1310
+      .page-personal__h1
+        h1 Личный кабинет
+      .page-personal__breadcrumb
+        +breadcrumb(['Главная','Личный кабинет'])
+      .page-personal__content
+        .page-personal__aside
+          .personal-menu
+            ul
+              li.active: a(href="personal-account-company.html") Карточка компании
+              li: a(href="personal-account-orderlist.html") Заказы
+              li.fill-red: a(href="dl.html")
+                +icons('#ic_exel')
+                |Скачать прайс-лист
+              li: a(href="dl.html") 
+                +icons('#ic_close')
+                |Выйти из кабинета
+        .page-personal__main
+          +h2('Карточка компании')
+          .page-personal__name
+            +h3('companyname@mail.ru')
+          .edit-company
+            .edit-company__form
+              form
+                .form
+                  fieldset
+                    .form__item
+                      .form__subitem: input(type="email" placeholder="Email")
+                    .form__item
+                      .form__subitem: input(type="text" placeholder="Наименование юр. лица")
+                      .form__subitem: input(type="text" placeholder="УНП")
+                    .form__item
+                      .form__subitem: input(type="text" placeholder="Контактное лицо")
+                      .form__subitem: input(type="text" placeholder="Телефон")
+                    .form__item
+                      .form__subitem: textarea( placeholder="Реквизиты")
+                  fieldset
+                    legend: +h2('Адрес доставки') 
+                    .form__item
+                      .form__subitem: input(type="text" placeholder="Город")
+                      .form__subitem: input(type="text" placeholder="Адрес")
+                  fieldset
+                    legend: +h2('Сменить пароль')
+                    .form__item
+                      .form__subitem: input(type="text" placeholder="Пароль")
+                      .form__subitem: input(type="text" placeholder="Новый пароль")
+                  .form__item.mrgt30
+                    .form__subitem: button.btn.btn-red.btn-full Сохранить
+                    .form__subitem
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

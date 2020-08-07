@@ -1,4 +1,4 @@
-mixin basketcard(item)
+mixin basketcard(item, min)
   .basketcard
     .basketcard__image
       a(href="card.html"): span: img(src=""+item.image+"")
@@ -7,18 +7,22 @@ mixin basketcard(item)
       .basketcard__price
         .basketcard__price-current= item.price+" BYN"
         .basketcard__price-old= item.price+" BYN"
-      .basketcard__state
-        span.card-details__state-present 
-          +icons('#ic_arrow-ok', 12)
-          |В наличии
-        //- span.card-details__state-toorder - под заказ
+      if !min  
+        .basketcard__state
+          span.card-details__state-present 
+            +icons('#ic_arrow-ok', 12)
+            |В наличии
+          //- span.card-details__state-toorder - под заказ
     .basketcard__count
       .basketcard__title Количество
-      .basketcard__count-wrp
-        span.basketcard__count-dec -
-        span.basketcard__count-num 
-          input(type="text" value="1")
-        span.basketcard__count-inc +
+      if min
+        strong 1
+      else
+        .basketcard__count-wrp
+          span.basketcard__count-dec -
+          span.basketcard__count-num 
+            input(type="text" value="1")
+          span.basketcard__count-inc +
 
     .basketcard__cost
       .basketcard__title Стоимость
