@@ -1,0 +1,79 @@
+extends ../layouts/card
+
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+  include ../../data/catalog 
+
+block content
+
+  .page-personal
+    .container-1310
+      .page-personal__h1
+        h1 Личный кабинет
+      .page-personal__breadcrumb
+        +breadcrumb(['Главная','Личный кабинет'])
+      .page-personal__content
+        .page-personal__aside
+          .personal-menu
+            ul
+              li.active: a(href="personal-account-company.html") Карточка компании
+              li: a(href="personal-account-orderlist.html") Заказы
+              li.fill-red: a(href="dl.html")
+                +icons('#ic_exel')
+                |Скачать прайс-лист
+              li: a(href="dl.html") 
+                +icons('#ic_close')
+                |Выйти из кабинета
+        .page-personal__main
+          +h2('Карточка компании')
+          .page-personal__name
+            +h3('companyname@mail.ru')
+          .company-data
+            .company-data__item
+              .company-data__subitem
+                .company-data__title Наименование юр. лица
+                .company-data__text Сompany Name inc.
+              .company-data__subitem
+                .company-data__title УНП
+                .company-data__text Сompany Name inc.
+            .company-data__item
+              .company-data__subitem
+                .company-data__title Контактное лицо
+                .company-data__text Денисов Виктор Петрович
+              .company-data__subitem
+                .company-data__title Телефон
+                .company-data__text +375 (44) 258-57-52
+            .company-data__item
+              .company-data__subitem
+                .company-data__title Реквизиты
+                .company-data__text Юридический адрес: Республика Беларусь, 220002, г. Минск, ул. Коммунистическая, 49, пом.1. Дата регистрации: 24 октября 2007 г.
+            .company-data__item
+              .company-data__subitem: +h2('Адрес доставки')
+            .company-data__item
+              .company-data__subitem
+                .company-data__title Город
+                .company-data__text г. Минск
+              .company-data__subitem
+                .company-data__title Адрес
+                .company-data__text ул. Коммунистическая, 49
+            .company-data__item
+              .company-data__subitem: button.btn.btn-red.btn-full Редактировать данные
+              .company-data__subitem 
+            .company-data__item
+              .company-data__subitem: +h2('Сменить пароль')
+            .company-data__item
+              .company-data__subitem: input(type="password" placeholder="Пароль")
+              .company-data__subitem
+                input(type="password" placeholder="Новый пароль")
+                p Длина пароля 8 символов (буквы и цифры)
+            .company-data__item.notoffset
+              .company-data__subitem: button.btn.btn-red.btn-full Сохранить
+              .company-data__subitem
+
+
+
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")
