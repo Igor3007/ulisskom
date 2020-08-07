@@ -9,13 +9,13 @@ mixin basket-aside()
       .basket-aside__radio
       +radio('Юридическое лицо', 'type', '2') 
     .basket-aside__form.hide
-      form
+      form(action="basket-ordering.html")
         .form
           .form__item: .form__subitem: input(type="email" placeholder="Email")  
           .form__item: .form__subitem: input(type="password" placeholder="Пароль")  
           .form__item: .form__subitem: button.btn.btn-red.btn-full Оформить заказ
     .basket-aside__button
-      button.btn.btn-red.btn-full Оформить заказ
+      a(href="basket-ordering-i.html"): button.btn.btn-red.btn-full Оформить заказ
 
 mixin basket-aside-ordering(data)
   .basket-aside
@@ -28,10 +28,10 @@ mixin basket-aside-ordering(data)
         |<span> Доставка курьерской службой: </span> 10 BYN
       div
         |10   <span> Итого: </span> 1 230.30 BYN
-    
+
     .basket-aside__button
-      button.btn.btn-red.btn-full Оформить заказ
-    
+      a(href="#"): button.btn.btn-red.btn-full Оформить заказ
+
     .basket-aside__edit-order
       a(href="basket.html") Редактировать заказ
     .basket-aside__goods
@@ -41,9 +41,10 @@ mixin basket-aside-ordering(data)
             .basket-aside__goods-item
               .basket-minicard
                 .basket-minicard__image
-                  span: img(src=""+item.image+"", alt="")
+                  a(href="card.html"): span: img(src=""+item.image+"", alt="")
                 .basket-minicard__desc
-                  .basket-minicard__title!= item.title
+                  .basket-minicard__title
+                    a(href="card.html")!= item.title
                   .basket-minicard__count Кол-во: 
                     span 1
                   .basket-minicard__cost Стоимость: 

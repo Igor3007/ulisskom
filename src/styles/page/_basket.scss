@@ -9,13 +9,12 @@
 
     &__list{
         @include col();
-        @include size-xl(8.5);
         @include size-lg(8.5);
-        @include size-md(8);
+        @include size-md(12);
         @include size-sm(12);
         @include size-xs(12);
 
-        @media screen and (min-width: $w760){
+        @media screen and (min-width: $w1280){
             padding-right: rem(15);
         }
     }
@@ -23,11 +22,10 @@
     &__aside{
 
         @include col();
-            @include size-xl(3.5);
-            @include size-lg(3.5);
-            @include size-md(4);
-            @include size-sm(12);
-            @include size-xs(12);
+        @include size-lg(3.5);
+        @include size-md(12);
+        @include size-sm(12);
+        @include size-xs(12);
 
     }
 
@@ -43,6 +41,14 @@
         background: #f9f9f9;
         padding: rem(35);
         align-self: flex-start;
+
+        @media screen and (max-width: $w940) {
+            margin-top: rem(30);
+        }
+
+        @media screen and (max-width: $w1280) {
+            padding: rem(20);
+        }
     }
 
     

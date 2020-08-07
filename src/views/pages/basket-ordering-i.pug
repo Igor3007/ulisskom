@@ -13,7 +13,7 @@ block content
       .page-basket__h1
         h1 Оформление заказа
       .page-basket__breadcrumb
-        +breadcrumb(['Главная','Оформление заказа', 'Данные юридического лица'])
+        +breadcrumb(['Главная','Оформление заказа', 'Данные физического лица'])
       .page-basket__content
         .page-basket__main
           .page-basket__list
@@ -22,10 +22,13 @@ block content
                 form
                   .form
                     fieldset
-                      legend: +h2('Данные юридического лица')
+                      legend: +h2('Данные физического лица')
                       .form__item
                         .form__subitem: input(type="text" placeholder="Алексей Петров")
-                        .form__subitem: input(type="tel" placeholder="+375 (29) 165-65-86")
+                        .form__subitem: input(type="email" placeholder="Ваш номер телефона")
+                      .form__item
+                        .form__subitem: input(type="tel" placeholder="Ваш номер телнфона")
+                        .form__subitem
                       .form__item
                         .form__subitem: textarea(name="" placeholder="Комментарий к заказу")
 

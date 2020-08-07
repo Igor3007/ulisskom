@@ -16,12 +16,20 @@
     @media screen and (max-width: $w1376) {
         font-size: 20px;
     }
+
+    @media screen and (max-width: $w760) {
+        font-size: 18px;
+    }
 }
 
-h1{
+h1 {
     font-size: rem(36);
 
     @media screen and (max-width: 1440px) {
         font-size: rem(30);
+    }
+
+    @media screen and (max-width: $w760) {
+        font-size: rem(26);
     }
 }
