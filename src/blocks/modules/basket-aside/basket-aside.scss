@@ -43,6 +43,11 @@
             text-decoration: underline;
         }
     }
+
+    & .total-price-aside {
+        padding: 0 5px;
+        font-weight: bold !important;
+    }
 }
 
 .basket-minicard{
@@ -87,3 +92,4 @@
 
     
 }
+

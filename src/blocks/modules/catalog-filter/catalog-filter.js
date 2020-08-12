@@ -6,6 +6,8 @@ if(document.getElementById('slider-price')){
     const startSider = handlesSlider.getAttribute('data-nouislider-start').split(',');
     const rangeSider = handlesSlider.getAttribute('data-nouislider-range').split(',');
 
+   
+
 
     noUiSlider.create(handlesSlider, {
         start: startSider,
@@ -33,6 +35,8 @@ if(document.getElementById('slider-price')){
             elem.target.innerText = 'Показать все';
         }
     })
+
+    
 }
 
 

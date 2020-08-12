@@ -2,7 +2,10 @@ mixin basket-aside()
   .basket-aside
     .basket-aside__title
       +h2('Итого')
-    .basket-aside__subtitle 10   <span> товаров на <span> 1 230.30 BYN
+    .basket-aside__subtitle 10
+      span товаров на
+      span.total-price-aside  0
+      | BYN
     .basket-aside__type
       .basket-aside__radio
       +radio('Физическое лицо', 'type', '1', true)

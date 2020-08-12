@@ -48,4 +48,10 @@
     &.btn-full{
         width: 100%;
     }
+
+    &.btn-bold{
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: rem(1)
+    }
 }

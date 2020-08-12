@@ -38,12 +38,6 @@
         & a {
             color: inherit;
             
-            @media screen and (max-width: $w580){
-               font-weight: bold;
-               font-size: 16px;
-               color: #000;
-            }
-
             &:hover{
                 text-decoration: underline;
             }

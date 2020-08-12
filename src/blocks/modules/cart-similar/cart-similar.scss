@@ -1,0 +1,16 @@
+
+.card-similar{
+    &.owl-carousel.owl-loaded.owl-drag .owl-stage-outer {
+        border: 1px solid $lgray;
+    }
+
+    &.owl-carousel.owl-loaded.owl-drag .owl-stage-outer .minicard {
+        border: none;
+        border-right: 1px solid $lgray;
+    }
+}
+
+
+
+
+

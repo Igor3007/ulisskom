@@ -5,6 +5,7 @@ mixin last-news(data)
     .container-1510
       +h1('Новости')
       .last-news__list
-        each item in data
-          .last-news__item
-            +item-news(item)
+        each item, index in data
+          if index < 3
+            .last-news__item
+              +item-news(item)

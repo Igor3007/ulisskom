@@ -17,6 +17,32 @@
         @media screen and (min-width: $w1280){
             padding-right: rem(15);
         }
+
+        @media screen and (max-width: $w580) {
+            flex-wrap: wrap;
+            display: flex;
+            align-items: stretch;
+            @media screen and (min-width: 400px) and (max-width: $w580) {
+                & .basketcard{
+                    border: none;
+                }
+            }
+        } 
+
+    }
+
+    &__item{
+
+        width: 100%;
+
+        @media screen and (min-width: 400px) and (max-width: $w580) {
+            width: 50%;
+            max-width: 50%;
+            flex-basis: 50%;
+            border: 1px solid $lgray;
+            margin-right: -1px;
+            margin-top: -1px;
+        }
     }
 
     &__aside{

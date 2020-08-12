@@ -47,9 +47,11 @@ button.addEventListener('click', function () {
     openMenu();
 });
 
-buttonMobile.addEventListener('click', function () {
+if (buttonMobile){
+    buttonMobile.addEventListener('click', function () {
     openMenu();
 });
+}
 
 buttonFooter.addEventListener('click', function () {
     openMenu();

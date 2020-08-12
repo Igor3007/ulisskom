@@ -3,6 +3,7 @@ extends ../layouts/catalog
 include ../../blocks/modules/menu-catalog/menu-catalog 
 include ../../blocks/modules/menu-info/menu-info
 include ../../blocks/modules/item-news/item-news
+include ../../blocks/modules/mobile-menu-button/mobile-menu-button
 
 include ../../blocks/components/breadcrumb/breadcrumb  
 
@@ -28,6 +29,7 @@ block content
 
 
   +menu-catalog(menu)
+  +mobile-menu-button('Меню', '#ic_menu')
 
 block scripts
   script(src="js/main.js")

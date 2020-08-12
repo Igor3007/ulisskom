@@ -5,7 +5,9 @@ mixin basketcard(item, min)
     .basketcard__main
       .basketcard__title: a(href="card.html")= item.title
       .basketcard__price
-        .basketcard__price-current= item.price+" BYN"
+        .basketcard__price-current
+          span= item.price
+          |  BYN
         .basketcard__price-old= item.price+" BYN"
       if !min  
         .basketcard__state
@@ -26,6 +28,8 @@ mixin basketcard(item, min)
 
     .basketcard__cost
       .basketcard__title Стоимость
-      .basketcard__price-current= item.price+" BYN"
+      .basketcard__price-current
+        span= item.price
+        |  BYN
     .basketcard__remove
       +icons('#ic_close', 22)

@@ -19,8 +19,10 @@ import "%modules%/mapsfilter/mapsfilter";
 
 import "%modules%/right-popup/right-popup";
 import "%modules%/form-login/form-login";  
+import "%modules%/basketcard/basketcard";  
 
 /* basket */
 
 import "%modules%/basket-aside/basket-aside"; 
+import "%modules%/mobile-menu-button/mobile-menu-button"; 
  
