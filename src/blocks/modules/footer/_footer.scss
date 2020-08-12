@@ -24,6 +24,11 @@
             margin-bottom: rem(30);
         }
 
+        & .nav__catalog{
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: -1px;
+        }
 
         & .nav__hamburger i{
             background: #fff;
@@ -41,7 +46,9 @@
             list-style-type: none;
             width: 100%;
             justify-content: space-between;
-            width: 100%;
+            /* width: 100%; */
+            max-width: 1150px;
+            margin-left: auto;
 
             @media screen and (max-width: $w760) {
                 display: block;
@@ -53,6 +60,8 @@
 
             & a {
                 color: #fff;
+                font-size: 16px;
+                font-weight: bold;
             }
         }
 

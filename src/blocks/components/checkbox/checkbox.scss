@@ -60,6 +60,10 @@
            
         }
 
+        &:checked~.checkbox__text {
+            color: $gray
+        }
+
         &:checked~.checkbox__elem:after {
             opacity: 1;
             background: #000;

@@ -30,6 +30,9 @@
 
     &__info {
         & .header-info{
+
+            cursor: pointer;
+
             &:first-child{
                 @media screen and (max-width: $w1280) {
                     display: none;
@@ -50,8 +53,6 @@
         display: flex;
         align-items: center;
         margin-right: rem(30);
-
-        
 
         & > div {
             display: flex;
@@ -92,11 +93,10 @@
         }
     }
 
-
-
     & .header-phone{
         display: flex;
         margin-right: rem(30);
+        cursor: pointer;
 
         @media screen and (max-width: 1210px) {
             justify-content: flex-end;
@@ -276,9 +276,15 @@
             display: flex;
             align-items: center;
             color: $red;
+            font-size: rem(15);
 
             & span{
                 padding: 0 5px ;
+            }
+
+            & svg {
+                fill: $red;
+                margin-right: rem(10);
             }
         }
     }
@@ -288,6 +294,7 @@
         & a{
             display: flex;
             align-items: center;
+            font-size: rem(15);
 
             & svg{
                 margin-right: 10px;
@@ -309,6 +316,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: pointer;
         }
         
 

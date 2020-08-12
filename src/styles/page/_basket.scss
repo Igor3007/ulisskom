@@ -75,6 +75,68 @@
         @media screen and (max-width: $w1280) {
             padding: rem(20);
         }
+
+        @media screen and (max-width: $w760) {
+            margin: 0;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: auto;
+            width: 100%;
+            box-shadow: 0 0 15px 0 rgba(0,0,0, 0.5);
+            background: $red;
+            color: #fff;
+            z-index: 50;
+
+            /* &::before  {
+                content: 'Подробнее';
+                color: #000;
+                background: #fff;
+                padding: 7px 20px 6px;
+                border-radius: 50px;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -16px;
+                font-weight: bold;
+                text-transform: uppercase;
+            } */
+
+            & .basket-aside__type,
+            & .basket-aside__edit-order,
+            & .basket-aside__goods,
+            & .basket-aside__button {
+            & .basket-aside__title::after {
+              display: none;
+            }
+
+            & .basket-aside__subtitle {
+                padding-bottom: 0;
+                padding-top: rem(5);
+              }
+
+            &.open {
+
+                background: #f5f5f5;
+                color: #000;
+                max-height: 100%;
+                overflow-y: scroll;
+
+                & .basket-aside__type,
+                & .basket-aside__edit-order,
+                & .basket-aside__goods,
+                & .basket-aside__title::after,
+                & .basket-aside__button {
+                    display: block;
+                }
+            }
+        }
+
+         
+          
+          
+          
     }
 
     

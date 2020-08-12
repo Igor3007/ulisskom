@@ -58,7 +58,8 @@
             margin-top: rem(10);
             cursor: pointer;
 
-            &.active svg {
+            &.active svg,
+            &:hover svg {
                 fill: $red
             }
         }

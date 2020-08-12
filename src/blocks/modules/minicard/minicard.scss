@@ -87,8 +87,11 @@
         display: flex;
         align-items: stretch;
         justify-content: space-between;
-        display: none;
         margin-top: rem(15);
+
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
     }
 
     &__action-tofav {

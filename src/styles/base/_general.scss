@@ -85,6 +85,11 @@ main{
     transition: margin 0.3s ease;
 }
 
+.tooltip-content {
+	display: none !important;
+	max-width: 300px;
+}
+
 .page-notfound {
 	height: 100%;
 	display: flex;

@@ -17,6 +17,12 @@
 
     }
 
+    &__btn{
+        & a {
+            display: block;
+        }
+    }
+
     &__slide-wrp{
         position: absolute;
         top: 0;

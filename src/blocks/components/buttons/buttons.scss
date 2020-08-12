@@ -21,6 +21,10 @@
     &.btn-red{
         color: #fff;
         background-color: $red;
+
+        &:hover{
+            background-color: #d31417;
+        }
     }
 
     &.btn-dark{

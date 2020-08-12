@@ -1,13 +1,13 @@
 .header-top
   .container-1770
-
     .header-top__info
-      .header-info
+      .header-info(data-tooltip="content")
         .header-info__icon 
           +icons('#ic_info', 15)
         .header-info__text Информация для покупателей 
         .header-info__arr
           +icons('#ic_arr-down', 8)
+        .tooltip-content Оптовая и розничная продажа дверной фурнитуры в Беларуси 
       .header-info
         .header-info__icon
           +icons('#ic_clock', 15)
@@ -15,18 +15,26 @@
           span 9:00 - 17:15
 
     .header-top__phones
-      .header-phone
+      .header-phone(data-tooltip="content")
         .header-phone__text Розничные продажи
         .header-phone__number  
           a(href="tel:+375(44)788-88-52") +375 (44) 788-88-52
         .header-phone__arr
           +icons('#ic_arr-down', 8)
-      .header-phone
+        .tooltip-content 
+          ul
+            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+      .header-phone(data-tooltip="content")
         .header-phone__text Оптовые продажи: 
         .header-phone__number 
           a(href="tel:+375(29)688-88-96") +375 (29) 688-88-96
         .header-phone__arr
           +icons('#ic_arr-down', 8)
+        .tooltip-content
+          ul
+            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
 
 .header-main
   .container-1770
