@@ -4,6 +4,12 @@
         overflow: hidden;
         position: relative;
 
+        &:hover{
+            & span {
+                transform: scale(1.05);
+            }
+        }
+
         & span {
             padding-top: 65%;
             @include bgimage_cover;

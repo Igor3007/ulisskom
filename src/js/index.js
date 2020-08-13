@@ -2,8 +2,10 @@ import "./import/modules";
 import "./import/components";
 import svgPolyfill from "../../node_modules/svg4everybody/dist/svg4everybody.js";
 
+
 import $ from 'jquery';
 import 'tooltipster';
+import 'jquery.inputmask/dist/jquery.inputmask.bundle';
 
 /* init svgPolyfill */
 svgPolyfill();
@@ -59,4 +61,11 @@ $(document).ready(function () {
             interactive: true,
             delay: 100,
         });
-});
+
+
+    /* init inputmask */
+
+    $("input[type=tel]").inputmask("+375(99) 999-99-99");
+
+
+}); 

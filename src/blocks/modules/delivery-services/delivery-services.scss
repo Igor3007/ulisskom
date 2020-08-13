@@ -1,0 +1,25 @@
+.delivery-services{
+    &__item{
+        margin-bottom: rem(30);
+    }
+
+    &__title{
+
+        display: flex;
+        align-items: center;
+
+        &::before{
+            content: '';
+            border: rem(8) solid transparent; 
+            border-left: rem(8) solid $red;  
+            display: inline-block;
+            margin-right: rem(5);
+        }
+
+        font-size: rem(18);
+        margin-bottom: rem(10);
+    }
+    &__desc{
+        color: $gray;
+    }
+}

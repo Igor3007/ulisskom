@@ -3,6 +3,10 @@
     border: 1px solid $lgray;
     padding: rem(20) rem(20);
     background: #fff;
+
+    @media screen and (max-width: $w760) {
+        padding: rem(15) rem(15) rem(15) rem(15);
+    }
     
 
     &__header{
@@ -116,6 +120,12 @@
             fill: $gray;
             margin-right: rem(10);
         }
+
+        & span{
+            @media screen and (max-width: $w760) {
+                display: none;
+            }
+        }
     }
 
     &__action-tobasket {
@@ -127,6 +137,24 @@
         & svg{
             fill: #fff;
             margin-right: rem(10);
+        }
+
+        @media screen and (max-width: $w760) {
+            & .btn{
+                background: transparent;
+                color: $red;
+                font-weight: bold;
+                height: 30px;
+                padding: 0;
+
+                &:hover{
+                    background: transparent;
+                }
+            }
+    
+            & svg{
+                fill: $red;
+            } 
         }
     }
 
@@ -148,7 +176,13 @@
         padding: 0 rem(10);
         text-align: center;
         height: rem(25);
-        line-height: rem(25)
+        line-height: rem(25);
+
+        @media screen and (max-width: $w760) {
+            font-size: 10px;
+            height: rem(20);
+            line-height: rem(20);
+        }
     }
 
     &__new{

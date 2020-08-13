@@ -4,6 +4,12 @@
     margin-top: -1px;
     position: relative;
 
+    &:hover{
+        border-color: $mgray;
+        position: relative;
+        z-index: 1;
+    }
+
     @media screen and (max-width: $w580){ 
         flex-direction: column;
     }

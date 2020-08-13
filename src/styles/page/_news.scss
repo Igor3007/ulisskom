@@ -107,6 +107,15 @@
         & a{
             display: flex;
             align-items: center;
+
+            &:hover{
+
+                text-decoration: underline;
+
+                & span{
+                    border-color: $red;
+                }
+            }
         }
 
         & span {

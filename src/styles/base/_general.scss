@@ -143,6 +143,22 @@ main{
             bottom: 0;
             overflow-y: scroll;
             display: block;
+
+
+            & .menu-info {
+
+                margin: 0 rem(-30);
+
+                & li {
+                    border-bottom: 1px solid #ddd;
+                    padding: rem(10) rem(30);
+    
+                    & a {
+                        font-weight: bold;
+                        font-size: rem(16);
+                    }
+                }
+            }
         }
     }
 
@@ -213,8 +229,8 @@ main{
             margin: rem(15) 0;
 
             & li {
-                padding: rem(5) 0;
-                background: url(/img/svg/ic_list-type-line.svg) no-repeat left rem(14);
+                padding: rem(8) 0;
+                background: url(/img/svg/ic_list-type-line.svg) no-repeat left rem(17);
                 list-style-type: none;
                 padding-left: 50px;
             }

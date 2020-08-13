@@ -3,6 +3,7 @@ extends ../layouts/home
 include ../../blocks/modules/favorites/favorites
 include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/modules/menu-catalog/menu-catalog
+include ../../blocks/modules/pagination/pagination
 
 block variables
   - const title = "Избранное";
@@ -18,6 +19,7 @@ block content
         +breadcrumb(['Главная', 'Избранное'])
       +favorites(catalog)
       +menu-catalog(menu)
+      +pagination()
 
 block scripts
   script(src="js/main.js")

@@ -61,6 +61,10 @@
 
         &__icon{
             margin-right: rem(10);
+
+            & svg {
+                fill: #bbb;
+            }
         }
 
         &__text{
@@ -500,5 +504,32 @@ button.main-menu__hamburger:active,
 button.main-menu__hamburger:focus {
     border: none !important;
     outline: none !important;
+}
+
+.phone-list {
+    & li {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: rem(10) 0;
+    }
+
+    &>* {
+        display: block;
+    }
+
+    & span{
+        color: $gray;
+        margin-bottom: rem(5);
+    }
+
+    & a{
+         
+        font-weight: bold;
+        font-size: rem(16);
+        font-weight: bold;
+        font-weight: bold;
+         
+    }
 }
 

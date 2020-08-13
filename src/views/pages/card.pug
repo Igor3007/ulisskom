@@ -4,6 +4,8 @@ include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/modules/card-moreinfo/card-moreinfo
 include ../../blocks/modules/cart-similar/cart-similar 
 include ../../blocks/modules/menu-catalog/menu-catalog
+include ../../blocks/modules/right-popup/right-popup
+include ../../blocks/modules/form-login/form-login
 
 block variables
   - const title = "Ulisskom";
@@ -30,7 +32,6 @@ block content
                   each item in [1,2,3,4,1,2,3,4]
                     .card-slider__item
                       span: img(src="/img/minicard/img"+item+".png")
-
         .page-card__details
           .card-details
             .card-details__h1
@@ -79,6 +80,7 @@ block content
         .page-card__similar-h2 Похожие товары
         +card-similar(catalog)
   +menu-catalog(menu)
+  +right-popup() 
 
 
 

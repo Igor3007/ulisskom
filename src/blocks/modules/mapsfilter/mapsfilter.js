@@ -132,16 +132,8 @@ function init() {
 
 
 
-        pinCoordints = getPinCoordinats(),
+        pinCoordints = getPinCoordinats();
 
-
-
-        pinBaloon = [
-            '<div class="yamp_baloon" > <h3>Улисском</h3> <p>Ежедневно 10:00 — 22:00</p> <p>+37529 667 78 41 <br> +37529 737 78 41</p> </div>',
-            '<div class="yamp_baloon" > <h3>Улисском</h3> <p>Ежедневно 10:00 — 22:00</p> <p>+37529 603 30 55<br> +37529 733 30 55</p> </div>',
-            '<div class="yamp_baloon" > <h3>Улисском</h3> <p>Ежедневно 10:00 — 22:00</p> <p>+375296311855<br> +375297011855</p> </div>',
-            '<div class="yamp_baloon" > <h3>Улисском</h3> <p>Ежедневно 10:00 — 22:00</p> <p>+375 29 660-67-95 <br> +375 29 776-69-96</p> </div>',
-        ];
 
     function baloonSetting(index) {
 
@@ -216,7 +208,7 @@ function init() {
         var index = $('.maps-filter__item').index($(this));
 
         $('html').animate({
-            scrollTop: $('#map').offset().top
+            scrollTop: $('main').offset().top
         }, 100);
 
         myMap.setCenter(pinCoordints[index], 16, {

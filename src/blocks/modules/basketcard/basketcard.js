@@ -6,6 +6,8 @@ $(document).ready(function () {
     function totalPrice() {
 
         const cardElem = $('.page-basket__list > div');
+        const totalPriceElem = $('.total-price-aside');
+        const totalCountElem = $('.total-count-aside');
         var total = 0;
 
         cardElem.each(function (index) {
@@ -16,14 +18,15 @@ $(document).ready(function () {
             $(this).find('.basketcard__cost .basketcard__price-current span').text((count * price).toFixed(2))
 
             total = total + (count * price);
-
+            totalCountElem.text(index + 1);
         })
 
-        $('.total-price-aside').text(total.toFixed(2))
+        totalPriceElem.text(total.toFixed(2))
+
 
     }
 
-    totalPrice()
+    totalPrice();
 
     $('.basketcard__count-inc').on('click', function () {
 

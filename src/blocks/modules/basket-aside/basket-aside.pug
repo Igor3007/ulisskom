@@ -2,7 +2,8 @@ mixin basket-aside()
   .basket-aside
     .basket-aside__title
       +h2('Итого')
-    .basket-aside__subtitle 10
+    .basket-aside__subtitle
+      span.total-count-aside 0 
       span товаров на
       span.total-price-aside  0
       | BYN
@@ -26,10 +27,10 @@ mixin basket-aside-ordering(data)
       +h2('Ваш заказ')
     .basket-aside__subtitle 
       div
-        |10   <span> товаров на </span> 1 230.30 BYN
-      div
+        | 12   <span> товаров на </span> 1 230.30 BYN
+      div.basket-aside__delivery
         |<span> Доставка курьерской службой: </span> 10 BYN
-      div
+      div.basket-aside__total
         |<span> Итого: </span> 1 230.30 BYN
 
     .basket-aside__button

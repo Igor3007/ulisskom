@@ -53,6 +53,11 @@
         @include size-sm(12);
         @include size-xs(12);
 
+        @media screen and (min-width: $w760) {
+            position: sticky;
+            top: 0;
+        }
+
     }
 
     &__h1{
@@ -106,7 +111,9 @@
             & .basket-aside__type,
             & .basket-aside__edit-order,
             & .basket-aside__goods,
-            & .basket-aside__button {
+            & .basket-aside__button,
+            & .basket-aside__total,
+            & .basket-aside__delivery,
             & .basket-aside__title::after {
               display: none;
             }
@@ -114,7 +121,7 @@
             & .basket-aside__subtitle {
                 padding-bottom: 0;
                 padding-top: rem(5);
-              }
+            }
 
             &.open {
 
@@ -126,6 +133,8 @@
                 & .basket-aside__type,
                 & .basket-aside__edit-order,
                 & .basket-aside__goods,
+                & .basket-aside__total,
+                & .basket-aside__delivery,
                 & .basket-aside__title::after,
                 & .basket-aside__button {
                     display: block;
@@ -133,11 +142,9 @@
             }
         }
 
-         
-          
-          
-          
-    }
+        
+
+    }      
 
     
 }

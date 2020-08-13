@@ -4,6 +4,7 @@ include ../../blocks/modules/menu-catalog/menu-catalog
 include ../../blocks/modules/menu-info/menu-info
 include ../../blocks/modules/about-item/about-item 
 include ../../blocks/modules/form-info/form-info
+include ../../blocks/modules/mobile-menu-button/mobile-menu-button
 
 include ../../blocks/components/breadcrumb/breadcrumb 
 
@@ -38,10 +39,11 @@ block content
           each item in [1,2,3]
             .about-warranty__item
               span
-                a(href="#"): img(src="/img/info/wr"+item+".jpg")
+                a(href="/img/info/wr"+item+".jpg" target="_blank"): img(src="/img/info/wr"+item+".jpg")
       +form-info()
 
   +menu-catalog(menu)
+  +mobile-menu-button('Меню', '#ic_menu')
 
 
 

@@ -34,6 +34,10 @@
     display: flex;
     align-items: stretch;
 
+    @media screen and (max-width: $w480) {
+        flex-direction: column;
+    }
+
     &__image{
 
         min-width: 25%;
@@ -41,6 +45,11 @@
         span{
             @include box-square;
             padding-top: 125%;
+
+            @media screen and (max-width: $w480) {
+                padding-top: 60%;
+                background: #eee;
+            }
 
             & img {
                 @include img-contain;
@@ -64,6 +73,8 @@
     &__title{
         font-size: rem(18);
         padding-top: rem(15);
+
+        
     }
 
     &__address{
@@ -74,16 +85,46 @@
 
     &__onmap{
         padding: rem(15);
-        padding-left: 0;
+        @media screen and (min-width: $w480) {
+            padding-left: 0;
+        }
+        
 
         & a {
-            display: block;
+            display: flex;
+            align-items: center;
             white-space: nowrap;
             color: $red;
             border: 1px solid $red;
-            padding: rem(2) rem(7);
+            padding: 0 rem(7);
             border-radius: 5px;
             font-size: rem(13);
+            height: rem(28);
+
+            @media screen and (max-width: $w480) {
+                font-size: rem(14);
+                height: rem(40);
+                display: inline-flex;
+                padding: 0 rem(30);
+
+                & svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            & svg {
+                margin-right: rem(5);
+                fill: $red;
+            }
+
+            &:hover{
+                background: $red;
+                color: #fff;
+                & svg {
+                    fill: #fff;
+                }
+            }
         }
     }
 
@@ -97,6 +138,10 @@
              & li{
                  margin-right: rem(10);
              }
+        }
+
+        & svg {
+            fill: $red;
         }
     }
 

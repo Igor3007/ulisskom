@@ -30,6 +30,10 @@
     &.btn-dark{
         color: #fff;
         background-color: $dark;
+
+        &:hover{
+            opacity: 0.9;
+        }
     }
 
     &.btn-line{

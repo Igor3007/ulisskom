@@ -31,5 +31,6 @@ mixin basketcard(item, min)
       .basketcard__price-current
         span= item.price
         |  BYN
-    .basketcard__remove
-      +icons('#ic_close', 22)
+    if !min
+      .basketcard__remove
+        +icons('#ic_close', 22)

@@ -22,9 +22,13 @@
         .header-phone__arr
           +icons('#ic_arr-down', 8)
         .tooltip-content 
-          ul
-            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
-            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+          ul.phone-list
+            li
+              span Отдел продаж
+              a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+            li
+              span Отдел продаж
+              a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
       .header-phone(data-tooltip="content")
         .header-phone__text Оптовые продажи: 
         .header-phone__number 
@@ -32,9 +36,13 @@
         .header-phone__arr
           +icons('#ic_arr-down', 8)
         .tooltip-content
-          ul
-            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
-            li:a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+          ul.phone-list
+            li
+              span Отдел продаж
+              a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+            li
+              span Отдел продаж
+              a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
 
 .header-main
   .container-1770
@@ -51,9 +59,9 @@
           li
             a(href="catalog.html") Каталог фурнитуры 
           li
-            a(href="#") Акции
+            a(href="action.html") Акции
           li
-            a(href="#") Услуги
+            a(href="about.html") Услуги
       .nav__search
         span: +icons('#ic_search', 17)
         form.form.hide: input(type="text" placeholder="Найти...")

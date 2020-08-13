@@ -1,10 +1,10 @@
 include ../../modules/form-login/form-login 
 
-mixin right-popup(content)
+mixin right-popup()
   .right-popup
     .right-popup__overlay
     .right-popup__main
       .right-popup__close
         span(data-modal-close="right"): +icons('#ic_close', 40)
       .right-popup__content
-        +form-login() 
+        +form-login()
