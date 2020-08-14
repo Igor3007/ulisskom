@@ -14,15 +14,15 @@ import "%modules%/catalog-filter/catalog-filter";
 import "%modules%/card-moreinfo/card-moreinfo";
 import "%modules%/cart-similar/cart-similar";
 import "%modules%/mapsfilter/mapsfilter";
+import "%modules%/card-callback/card-callback";
 
 /* popup */
 
 import "%modules%/right-popup/right-popup";
-import "%modules%/form-login/form-login";  
-import "%modules%/basketcard/basketcard";  
+import "%modules%/form-login/form-login";
+import "%modules%/basketcard/basketcard";
 
 /* basket */
 
-import "%modules%/basket-aside/basket-aside"; 
-import "%modules%/mobile-menu-button/mobile-menu-button"; 
- 
+import "%modules%/basket-aside/basket-aside";
+import "%modules%/mobile-menu-button/mobile-menu-button";

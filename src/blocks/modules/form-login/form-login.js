@@ -21,10 +21,7 @@ $(document).ready(function () {
         onDragged: function () {
             loginPanel.removeAttr('style')
         },
-        onInitialize: function () {
-            $('.right-popup__main').css({
-                overflow: 'auto'
-            })
+        onInitialized: function () {
         }
 
     })

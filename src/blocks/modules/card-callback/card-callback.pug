@@ -1,0 +1,22 @@
+
+mixin card-callback()
+  .right-popup(data-modal="callback")
+    .right-popup__overlay
+    .right-popup__main
+      .right-popup__close
+        span(data-modal-close="callback"): +icons('#ic_close', 40)
+      .right-popup__content 
+        .form-callback
+          .form-callback__wrp
+            .form-callback__title: +h2('Задать вопрос')
+            .form-callback__form
+              form(action="")
+                .form
+                  .form__item
+                    .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__item
+                    .form__subitem: input(type="Email" placeholder="Email")
+                  .form__item
+                    .form__subitem: textarea(placeholder="Ваш вопрос")
+                  .form__item
+                    .form__subitem: button.btn.btn-red.btn-full Отправить

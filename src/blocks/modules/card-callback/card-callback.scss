@@ -1,0 +1,14 @@
+.form-callback{
+
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    &__form{
+        margin-top: rem(30);
+    }
+
+    &__wrp{
+        width: 100%;
+    }
+}

@@ -2,20 +2,21 @@ import $ from 'jquery';
 
 $(document).ready(function () {
 
-    const popupContainer = $('.right-popup');
-    const popupOpen = $('[data-modal-open=right]');
-    const popupClose = $('[data-modal-close=right]');
-    const popupContent = $('.right-popup__main');
+
+    /* 
+    =====================================================    
+    */
+
 
     function modal(params) {
         this.container = params.container;
-        this.elemOpen = params.container;
-        this.elemClose = params.container;
-        this.elemContent = params.elemContent;
 
         this.onOpen = function () {
-            this.container.addClass('open');
-            $('body').addClass('hidden')
+            if ($('div').is('[data-modal=login]')) {
+                this.container.addClass('open');
+                $('body').addClass('hidden');
+            }
+
         }
 
         this.onClose = function () {
@@ -24,13 +25,16 @@ $(document).ready(function () {
         }
     }
 
+
+
     // init
+
+    const popupContainer = $('.right-popup[data-modal=login]');
+    const popupOpen = $('[data-modal-open=login]');
+    const popupClose = $('[data-modal-close=login]');
 
     const rightModal = new modal({
         'container': popupContainer,
-        'elemOpen': popupOpen,
-        'elemClose': popupClose,
-        'elemContent': popupContent,
     });
 
 

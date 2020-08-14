@@ -9,6 +9,8 @@
     max-width: rem(300);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (max-width: $w1500) {
         padding-top: rem(25);
@@ -30,21 +32,43 @@
         z-index: 1
     }
   
-  
+    &__wrp{
+        flex-grow: 1;
+        overflow-y: auto;
+    }
 
 
     &.open{
         transform: translateX(0);
-
         
-            @media screen and (max-width: $w1024) {
-                & .menu-catalog__close {
-                    visibility: visible;
-                    transform: translateX(100%);
-                    transition:  0.3s ease 0.5s;
+        @media screen and (max-width: $w1024) {
+            & .menu-catalog__close {
+                visibility: visible;
+                transform: translateX(100%);
+                transition:  0.3s ease 0.5s;
             }
-         
+            
         }
+
+        @media screen and (max-width: $w760) {
+
+
+            & .menu-catalog__wrp {
+
+                margin: 0 rem(-35) rem(14) rem(-35);
+    
+                & li {
+                    border-bottom: 1px solid #ddd;
+                    padding: rem(15) rem(35);
+    
+                    & a {
+                        font-weight: bold;
+                        font-size: rem(16);
+                    }
+                }
+            }
+        }
+
     } 
 
     

@@ -15,17 +15,17 @@
         & a {
             color: $red;
             text-decoration: underline;
-        }
+        } 
     }
 
     &__item{
         padding: rem(40) rem(5) rem(40) rem(5);
-        display: none;
+        //display: none;
     }
 
-    & .owl-item.active .form-login__item{
+    /* & .owl-item.active .form-login__item{
         display: block;
         max-height: none;
-    }
+    } */
 
 }

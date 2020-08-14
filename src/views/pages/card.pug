@@ -4,8 +4,7 @@ include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/modules/card-moreinfo/card-moreinfo
 include ../../blocks/modules/cart-similar/cart-similar 
 include ../../blocks/modules/menu-catalog/menu-catalog
-include ../../blocks/modules/right-popup/right-popup
-include ../../blocks/modules/form-login/form-login
+include ../../blocks/modules/card-callback/card-callback
 
 block variables
   - const title = "Ulisskom";
@@ -70,7 +69,7 @@ block content
                   +icons('#ic_cart', 21) 
                   |В корзину
               .details-action__quest
-                button.btn.btn-line Задать вопроос
+                button.btn.btn-line(data-modal-open="callback") Задать вопроос
             .card-details__desc Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
     .page-card__moreinfo
       .container-1310
@@ -80,7 +79,7 @@ block content
         .page-card__similar-h2 Похожие товары
         +card-similar(catalog)
   +menu-catalog(menu)
-  +right-popup() 
+  +card-callback()
 
 
 
