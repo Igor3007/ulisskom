@@ -41,6 +41,12 @@
         background: none;
         text-transform: uppercase;
         font-weight: bold;
+
+        &:hover{
+            background-color: #d31417;
+            color: #fff !important;
+            border-color: #d31417;
+        }
     }
 
     &.btn-line-radius{

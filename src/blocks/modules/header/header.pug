@@ -1,3 +1,14 @@
+-
+  const menuInfo2 = [
+    {link: 'О компании', href: 'about.html'},
+    {link: 'Где купить', href: 'where-buy.html'},
+    {link: 'Партнерам', href: 'partners.html'},
+    {link: 'Бренды', href: 'brands.html'},
+    {link: 'Доставка и оплата', href: 'delivery.html'},
+    {link: 'Как оформить заказ', href: 'how-order.html'},
+    {link: 'Новости', href: 'news.html'},
+  ];
+
 .header-top
   .container-1770
     .header-top__info
@@ -7,7 +18,12 @@
         .header-info__text Информация для покупателей 
         .header-info__arr
           +icons('#ic_arr-down', 8)
-        .tooltip-content Оптовая и розничная продажа дверной фурнитуры в Беларуси 
+        .tooltip-content
+          nav 
+            ul.header-menu-info
+              each item in menuInfo2
+                li: a(href=""+item.href+"")= item.link
+
       .header-info
         .header-info__icon
           +icons('#ic_clock', 15)
@@ -16,7 +32,7 @@
 
     .header-top__phones
       .header-phone(data-tooltip="content")
-        .header-phone__text Розничные продажи
+        .header-phone__text Розничные продажи:
         .header-phone__number  
           a(href="tel:+375(44)788-88-52") +375 (44) 788-88-52
         .header-phone__arr
@@ -56,12 +72,9 @@
         i
       nav
         ul
-          li
-            a(href="catalog.html") Каталог фурнитуры 
-          li
-            a(href="action.html") Акции
-          li
-            a(href="about.html") Услуги
+          li: a(href="catalog.html") Каталог фурнитуры 
+          li: a(href="action.html") Акции
+          li: a(href="about.html") Услуги
       .nav__search
         span: +icons('#ic_search', 17)
         form.form.hide: input(type="text" placeholder="Найти...")

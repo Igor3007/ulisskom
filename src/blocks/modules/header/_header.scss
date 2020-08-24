@@ -555,3 +555,32 @@ button.main-menu__hamburger:focus {
     }
 }
 
+
+.header-menu-info {
+    list-style-type: none;
+
+    & li {
+        & a{
+            padding: 10px 0;
+            display: block;
+            border-bottom: 1px solid #eee;
+
+            &.active,
+            &:hover{
+                border-color: $red;
+            }
+
+          }
+
+          &:last-child a{
+            border-color: transparent;
+
+            &:hover{
+                border-color: $red;
+            }
+         }
+    }
+  }
+  
+  
+

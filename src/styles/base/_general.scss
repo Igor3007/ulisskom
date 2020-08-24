@@ -99,6 +99,9 @@ main{
 
 .hidden{
     overflow: hidden;
+    @media screen and (min-width: $w1024) {
+        margin-right: 17px;
+    }
 }
 .hide{
     display: none;

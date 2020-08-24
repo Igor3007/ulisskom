@@ -278,6 +278,8 @@
         flex-basis: 20%;
         position: relative;
         padding-right: rem(27);
+        display: flex;
+        flex-direction: column;
 
         @media screen and (max-width: $w760) {
             padding-right: rem(12);
@@ -287,6 +289,7 @@
             height: 100%;
             overflow-x: hidden;
             position: relative;
+            margin-bottom: rem(12);
 
             &.topshw::after {
                 content: '';
@@ -329,7 +332,7 @@
         & li {
 
             border: 1px solid $mgray;
-            margin-bottom: 12px;
+            margin-bottom: rem(12);
             cursor: pointer;
 
             &:hover{
@@ -345,6 +348,10 @@
                 & img{
                     @include img-contain
                 }
+            }
+
+            &:last-child{
+                margin-bottom: 0;
             }
         }
     }
@@ -366,6 +373,17 @@
             & img{
                 @include img-contain
             }
+        }
+    }
+}
+
+.card-schema{
+    & a {
+        @include box-square;
+        border: 2px solid $red;
+
+        & img{
+            @include img-contain
         }
     }
 }

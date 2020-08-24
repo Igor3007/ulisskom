@@ -53,19 +53,19 @@ block content
                       .form__item
                         .radio-max
                           .radio-max__input
-                            +radio-desc('Самовывоз со склада', 'Вы можете самостоятельно забрать заказ из нашего магазина.')
+                            +radio-desc('Самовывоз со склада', 'Вы можете самостоятельно забрать заказ из нашего магазина.', 'delivery', '0', true)
                           .radio-max__desc В день заказа
                           .radio-max__price 15 BYN 
                       .form__item
                         .radio-max
                           .radio-max__input
-                            +radio-desc('Доставка белпочтой', 'Классическая доставка по Беларуси документов и грузов')
+                            +radio-desc('Доставка белпочтой', 'Классическая доставка по Беларуси документов и грузов', 'delivery')
                           .radio-max__desc от 2 до 5 дней
                           .radio-max__price 0 BYN 
                       .form__item
                         .radio-max
                           .radio-max__input
-                            +radio-desc('Доставка курьерской службой', 'Доставка осуществляется в течение дня в удобное для вас время на следующий день после заказа.')
+                            +radio-desc('Доставка курьерской службой', 'Доставка осуществляется в течение дня в удобное для вас время на следующий день после заказа.', 'delivery')
                           .radio-max__desc  от 1 до 3 дней
                           .radio-max__price 5 BYN 
 
@@ -73,18 +73,11 @@ block content
                       legend: +h2('Оплата')
                       .form__item
                         .form__subitem
-                          +radio-desc('Наличный расчет', 'Вы можете самостоятельно забрать заказ из нашего магазина.')
+                          +radio-desc('Наличный расчет', 'Вы можете самостоятельно забрать заказ из нашего магазина.', 'payment', '0', true)
                         .form__subitem
-                          +radio-desc('Онлайн оплата картой', 'Вы можете самостоятельно забрать заказ из нашего магазина.') 
-
-
-
+                          +radio-desc('Онлайн оплата картой', 'Вы можете самостоятельно забрать заказ из нашего магазина.', 'payment') 
           .page-basket__aside 
             +basket-aside-ordering(catalog)
-
-
-
-
 block scripts
   script(src="js/main.js")
   script(src="js/vendor.js")

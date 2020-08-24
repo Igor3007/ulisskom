@@ -19,18 +19,19 @@ block content
         +breadcrumb(['Главная','Каталог фурнитуры','Замок врезной Kale 152 3MR'])
       .page-card__info
         .page-card__image
-          div
-            .card-slider
-              .card-slider__thumb
-                .scroll-overlay
-                  ul
-                    each item in [1,2,3,4,1,2,3,4]
-                      li: span: img(src="/img/minicard/img"+item+".png")
-              .card-slider__main
-                .card-slider__list.owl-carousel
+          .card-slider
+            .card-slider__thumb
+              .scroll-overlay
+                ul
                   each item in [1,2,3,4,1,2,3,4]
-                    .card-slider__item
-                      span: img(src="/img/minicard/img"+item+".png")
+                    li: span: img(src="/img/minicard/img"+item+".png")
+              .card-schema 
+                a(href="/img/home/schema.png" target="_blank"): img(src="/img/home/schema.png")
+            .card-slider__main
+              .card-slider__list.owl-carousel
+                each item in [1,2,3,4,1,2,3,4]
+                  .card-slider__item
+                    span: img(src="/img/minicard/img"+item+".png")
         .page-card__details
           .card-details
             .card-details__h1

@@ -123,8 +123,36 @@ $(document).ready(function () {
     $('.card-slider__thumb ul').on('scroll', function (e) {
         e.preventDefault()
         e.stopPropagation();
-    })
+    });
 
+
+    /* shadow for thumbnail */
+
+    function thumbShadow(elem) {
+        const elemScrollHeight = elem.find('li').outerHeight();
+        const countScrollElement = elem.find('li').length;
+        const scrollElem = $('.scroll-overlay');
+
+        if (elem.scrollTop() > 0) {
+            scrollElem.addClass('topshw');
+        } else {
+            scrollElem.removeClass('topshw');
+        }
+
+        if (elem.scrollTop() + 15 < (elemScrollHeight * (countScrollElement + 1)) - elem.height()) {
+            scrollElem.addClass('btmshw');
+        } else {
+            scrollElem.removeClass('btmshw');
+        }
+    }
+
+    //init scroll
+    $('.scroll-overlay ul').on('scroll', function (e) {
+        thumbShadow($(this));
+    });
+
+    //init onload
+    thumbShadow($('.scroll-overlay ul'));
 
 })//ready
 
