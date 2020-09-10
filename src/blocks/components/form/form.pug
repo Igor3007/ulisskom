@@ -1,6 +1,10 @@
+include ../star-rating/star-rating 
+
 mixin form ()
   form(action="" id="reviewForm")
     .form
+      .form__item
+        .form__subitem: +star-rating()
       .form__item.column
         .form__subitem: input(type='text' placeholder="Ваше имя")
         .form__subitem: input(type='email' placeholder="Ваш email")

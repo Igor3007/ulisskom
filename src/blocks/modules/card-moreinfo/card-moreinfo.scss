@@ -92,6 +92,10 @@
     &__rating{
         margin-left: rem(15);
         @include rating
+
+        & svg {
+            fill: #fff;
+        }
     }
 
     &__name{
@@ -110,7 +114,7 @@
 .review-add{
     &__info{
         color: $gray;
-        margin-bottom: rem(20);
+        margin-bottom: rem(15);
     }
 
     &__form {
