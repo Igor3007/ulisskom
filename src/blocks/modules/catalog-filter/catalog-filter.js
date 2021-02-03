@@ -24,6 +24,9 @@ if(document.getElementById('slider-price')){
 
         document.querySelector('#min-price').innerText = Number(res[0])
         document.querySelector('#max-price').innerText = Number(res[1])
+
+        document.querySelector('#price-start').value = Number(res[0])
+        document.querySelector('#price-end').value = Number(res[1])
     });
 
     /* button view all */

@@ -13,6 +13,8 @@ mixin catalog-filter(data)
           .catalog-filter-slider__val
             span#min-price
             span#max-price
+            input(type="hidden" id="price-start" value="")
+            input(type="hidden" id="price-end" value="")
 
       each item in data
         .catalog-filter__aside
