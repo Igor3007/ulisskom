@@ -30,13 +30,37 @@
         .header-info__text Понедельник - Пятница 
           span 9:00 - 17:15
 
-
-      .header-top__find
-        +icons('#ic_search', 15)
-        span Поиск 
-      .header-top__wishlist
-        +icons('#ic_heart', 15)
-        span Избранное
+    .header-top__phones
+      .header-phone
+        .header-phone__wrp(data-tooltip="content")
+          .header-phone__text Розничные продажи:
+          .header-phone__number  
+            a(href="tel:+375(44)788-88-52") +375 (44) 788-88-52
+          .header-phone__arr
+            +icons('#ic_arr-down', 8)
+          .tooltip-content 
+            ul.phone-list
+              li
+                span Отдел продаж
+                a(href="tel:+375 (44) 000-00-00") +375 (44) 000-00-00
+              li
+                span Отдел продаж
+                a(href="tel:+375 (44) 000-00-00") +375 (44) 000-00-00
+      .header-phone
+        .header-phone__wrp(data-tooltip="content")
+          .header-phone__text Оптовые продажи: 
+          .header-phone__number 
+            a(href="tel:+375(29)688-88-96") +375 (29) 688-88-96
+          .header-phone__arr
+            +icons('#ic_arr-down', 8)
+          .tooltip-content
+            ul.phone-list
+              li
+                span Отдел продаж
+                a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
+              li
+                span Отдел продаж
+                a(href="tel:+375 (44) 788-88-52") +375 (44) 788-88-52
 
 .header-main
   .container-1770
@@ -53,18 +77,20 @@
           li: a(href="catalog.html") Каталог фурнитуры 
           li: a(href="action.html") Акции
           li: a(href="about.html") Услуги
-
-    .header-main__phone
-      .header-phone
-        .header-phone__title Узнайте про двери:
-        .header-phone__number: a(href=':tel375296988425') +375 (29) 698-84-25
-
-    .header-main__phone
-      .header-phone
-        .header-phone__title Получите консультацию:
-        .header-phone__number: a(href=':tel375296143896') +375 (29) 614-38-96
-
-    .header-main__btn
-      button.btn.btn-red Вызвать замерщика
-
-
+      .nav__search
+        span: +icons('#ic_search', 17)
+        form.form.hide: input(type="text" placeholder="Найти...")
+    .header-main__action
+      .header-main__fav
+        a(href="fovorite.html")
+          +icons('#ic_heart', 17)
+      .header-main__cart
+        a(href="/basket.html")
+          +icons('#ic_cart', 20)
+          span.cart-count 10 
+          span.cart-text товаров на
+          span.cart-price 1230 BYN
+      .header-main__login
+        a(href="#" data-modal-open='login')
+          +icons('#ic_user', 17) 
+          span Войти

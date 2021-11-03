@@ -393,26 +393,6 @@
         align-items: center;
     }
 
-    &__phone,
-    &__btn {
-        margin-left: 30px;
-    }
-
-
-
-}
-
-.header-phone {
-
-    &__number {
-        & a {
-            font-size: rem(18);
-        }
-    }
-
-    &__title {
-        color: $gray;
-    }
 }
 
 .cart-text,
