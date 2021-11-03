@@ -215,52 +215,45 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 /*!*****************************************************!*\
   !*** ./src/blocks/modules/basketcard/basketcard.js ***!
   \*****************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  function totalPrice() {
-    var cardElem = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.page-basket__list > div');
-    var totalPriceElem = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.total-price-aside');
-    var totalCountElem = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.total-count-aside');
-    var total = 0;
-    cardElem.each(function (index) {
-      var count = Number(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.basketcard__count input').val());
-      var price = Number(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.basketcard__price .basketcard__price-current span').text());
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.basketcard__cost .basketcard__price-current span').text((count * price).toFixed(2));
-      total = total + count * price;
-      totalCountElem.text(index + 1);
-    });
-    totalPriceElem.text(total.toFixed(2));
-  }
-
-  totalPrice();
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basketcard__count-inc').on('click', function () {
-    var total = Number(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find('input').val());
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find('input').val(total + 1);
-    totalPrice();
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basketcard__count-dec').on('click', function () {
-    var total = Number(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find('input').val());
-
-    if (total > 1) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find('input').val(total - 1);
-    }
-
-    totalPrice();
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basketcard__count-num input').on('blur', function () {
-    var regEx = /[^\d\+]/g;
-    var value = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val().replace(regEx, '');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val(value ? value : 1);
-    totalPrice();
-  });
-});
+// import $ from 'jquery';
+// $(document).ready(function () {
+//     function totalPrice() {
+//         const cardElem = $('.page-basket__list > div');
+//         const totalPriceElem = $('.total-price-aside');
+//         const totalCountElem = $('.total-count-aside');
+//         var total = 0;
+//         cardElem.each(function (index) {
+//             let count = Number($(this).find('.basketcard__count input').val());
+//             let price = Number($(this).find('.basketcard__price .basketcard__price-current span').text());
+//             $(this).find('.basketcard__cost .basketcard__price-current span').text((count * price).toFixed(2))
+//             total = total + (count * price);
+//             totalCountElem.text(index + 1);
+//         })
+//         totalPriceElem.text(total.toFixed(2))
+//     }
+//     totalPrice();
+//     $('.basketcard__count-inc').on('click', function () {
+//         var total = Number($(this).parent().find('input').val());
+//         $(this).parent().find('input').val(total + 1)
+//         totalPrice()
+//     })
+//     $('.basketcard__count-dec').on('click', function () {
+//         var total = Number($(this).parent().find('input').val());
+//         if (total > 1) {
+//             $(this).parent().find('input').val(total - 1)
+//         }
+//         totalPrice()
+//     })
+//     $('.basketcard__count-num input').on('blur', function () {
+//         const regEx = /[^\d\+]/g;
+//         const value = $(this).val().replace(regEx, '');
+//         $(this).val(value ? value : 1);
+//         totalPrice()
+//     })
+// })
 
 /***/ }),
 
@@ -1202,6 +1195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_right_popup_right_popup__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/right-popup/right-popup */ "./src/blocks/modules/right-popup/right-popup.js");
 /* harmony import */ var _modules_form_login_form_login__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/form-login/form-login */ "./src/blocks/modules/form-login/form-login.js");
 /* harmony import */ var _modules_basketcard_basketcard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/basketcard/basketcard */ "./src/blocks/modules/basketcard/basketcard.js");
+/* harmony import */ var _modules_basketcard_basketcard__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_basketcard_basketcard__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _modules_basket_aside_basket_aside__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/basket-aside/basket-aside */ "./src/blocks/modules/basket-aside/basket-aside.js");
 /* harmony import */ var _modules_mobile_menu_button_mobile_menu_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %modules%/mobile-menu-button/mobile-menu-button */ "./src/blocks/modules/mobile-menu-button/mobile-menu-button.js");
 

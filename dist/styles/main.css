@@ -2508,6 +2508,19 @@ h1 {
   align-items: center;
 }
 
+.header-main__phone,
+.header-main__btn {
+  margin-left: 30px;
+}
+
+.header-phone__number a {
+  font-size: 1.28571rem;
+}
+
+.header-phone__title {
+  color: #6D6D6D;
+}
+
 /* burger */
 
 .nav__hamburger {
