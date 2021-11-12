@@ -6,9 +6,20 @@ import svgPolyfill from "../../node_modules/svg4everybody/dist/svg4everybody.js"
 import $ from 'jquery';
 import 'tooltipster';
 import 'jquery.inputmask/dist/jquery.inputmask.bundle';
+import WishList from "./import/wishList";
+import lazysizes from "lazysizes"
+
 
 /* init svgPolyfill */
 svgPolyfill();
+
+//add simple support for background images:
+document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+  });
 
 $(document).ready(function () {
     $('[data-tooltip=text]').tooltipster({
@@ -67,5 +78,86 @@ $(document).ready(function () {
 
     $("input[type=tel]").inputmask("+375(99) 999-99-99");
 
+    
+    $('.cm-item__title').on('click', function(event){
+        
+        $(this).parent().toggleClass('open')
+        
+    })
+
+    /* 
+    * wishlist
+    */
+
+    /* init wishList  */
+
+    const WL = new WishList(); 
+    WL.init()
+
+    const wishlist = document.querySelectorAll('[data-wishlist]');
+    const arrayWishList = WL.getArray()
+
+    wishlist.forEach(function(item, index){
+
+        const product_id = item.dataset.wishlist;
+
+        if(arrayWishList.lastIndexOf(product_id) !== -1 ){
+           item.classList.add('active')
+        }
+
+        item.addEventListener('click', function(event){
+            if(this.classList.contains('active')){
+                WL.remove(product_id)
+                this.classList.remove('active')
+            }else{
+                WL.add(product_id)
+                this.classList.add('active')
+            }
+        })
+    })
+
+    $('[data-minicard-colorpicker]').on('mouseenter', function(event){
+        
+        var colorActive = $(this).data('minicard-colorpicker');
+        $(this).parents('.minicard').find('[data-minicard-colorpicker]').removeClass('active')
+        $(this).addClass('active')
+
+        $(this).parents('.minicard').find('.minicard__image span img').removeClass('active')
+        $(this).parents('.minicard').find('[data-minicard-color='+colorActive+']').addClass('active')
+        
+    })
+
+
+    // close popup
+
+    $(document).on('click', '.right-popup.open',function(event){
+        $(this).removeClass('open')
+        $('body').removeClass('hidden')
+    })
+    $(document).on('click', '.right-popup__main',function(event){
+        event.stopPropagation(true)
+    })
+
+    //скролл до отзывов
+
+    $(document).on('click', '[data-review="showlist"]', function (event) {
+
+        var offsetTop = $('.page-card__moreinfo').offset().top
+
+        $('body,html').animate({
+            scrollTop: offsetTop
+        }, 300);
+
+        $('.card-moreinfo__tabs').find('li[data-filter-id="1"]').trigger('click')
+
+    })
+
+    $('[data-card="select-price"]').on('click', function(event){
+        
+        $('[data-card="select-price"]').removeClass('active');
+        $(this).addClass('active')
+        $(this).find('input').prop('checked', true)
+        
+    })
 
 }); 

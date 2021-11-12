@@ -1,0 +1,90 @@
+mixin catalog-filter-main()
+  .cm-filter
+    .cm-filter__wrp
+
+      +cm-filter__item({
+        title: 'Материал:',
+        props: ['МДФ','Эмаль','Деревянные(массив)','Экошпон','Шпонированые',],
+      })
+
+      +cm-filter__item({
+        title: 'Конструкция:',
+        props: ['Распашные','Раздвижные'],
+      })
+
+      +cm-filter__item({
+        title: 'Остекление:',
+        props: ['Без остекления','С остеклением'],
+      })
+
+      +cm-filter__item({
+        title: 'По помещению:',
+        props: ['В ванну','В зал','В кухню','В туалет'],
+      })
+
+      +cm-filter__item-color({
+        title: 'По цвету:',
+        props: [
+          {
+            img: 'img/catalog/color_0.png',
+            title: 'Венге'
+          },
+          {
+            img: 'img/catalog/color_1.png',
+            title: 'Дуб'
+          },
+          {
+            img: 'img/catalog/color_2.png',
+            title: 'Серый'
+          },
+          {
+            img: 'img/catalog/color_3.png',
+            title: 'Белый'
+          },
+          {
+            img: 'img/catalog/color_4.png',
+            title: 'Сосна'
+          },
+          ]
+      })
+
+
+
+
+
+
+mixin cm-filter__item(data)
+  .cm-filter__item
+    .cm-item
+      .cm-item__title= data.title
+      .cm-item__props
+        ul
+          each item in data.props
+            li: +cm-checkbox(item)
+
+mixin cm-filter__item-color(data)
+  .cm-filter__item
+    .cm-item
+      .cm-item__title= data.title
+      .cm-item__props
+        ul
+          each item in data.props
+            li
+              .cm-checkbox-color
+                label
+                  input(type="checkbox")
+                  span(style="background-image: url("+item.img+")" title=""+item.title+"")
+
+
+
+mixin cm-checkbox(data, type)
+  .cm-checkbox
+    label
+      input(type=""+(type ? type : 'checkbox')+"" name=""+(type ? type : 'name')+"")
+      span= data
+
+mixin cm-checkbox-color(item, type)
+  .cm-checkbox-color
+    label
+      input(type=""+(type ? type : 'checkbox')+"" name=""+(type ? type+'-3' : 'name-2')+"")
+      span(style="background-image: url("+item.img+")" title=""+item.title+"")

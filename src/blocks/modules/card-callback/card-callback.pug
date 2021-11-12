@@ -20,3 +20,63 @@ mixin card-callback()
                     .form__subitem: textarea(placeholder="Ваш вопрос")
                   .form__item
                     .form__subitem: button.btn.btn-red.btn-full Отправить
+
+
+mixin card-one-click()
+  .right-popup(data-modal="oneclick")
+    .right-popup__overlay
+    .right-popup__main
+      .right-popup__close
+        span(data-modal-close="oneclick"): +icons('#ic_close', 40)
+      .right-popup__content 
+        .form-callback
+          .form-callback__wrp
+            .form-callback__title: +h2('Купить в один клик')
+            .form-callback__product
+              .oneclick-product
+                .oneclick-product__image: +bgimage('/img/minicard/img10.png') 
+                .oneclick-product__title ПОРТА-22 Light Sonoma
+                .oneclick-product__props
+                  ul
+                    li
+                      span Размер
+                      span 190x55
+                    li
+                      span Цвет
+                      span Венге
+                    li
+                      span Цена
+                      span 210 BYN
+
+            .form-callback__form
+              form(action="")
+                .form
+                  .form__item
+                    .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__item
+                    .form__subitem: input(type="tel" placeholder="Ваш номер телефона")
+                  .form__item
+                    .form__subitem: textarea(placeholder="Примечание к заказу")
+                  .form__item
+                    .form__subitem: button.btn.btn-red.btn-full Отправить
+
+mixin card-one-call()
+  .right-popup(data-modal="call")
+    .right-popup__overlay
+    .right-popup__main
+      .right-popup__close
+        span(data-modal-close="call"): +icons('#ic_close', 40)
+      .right-popup__content 
+        .form-callback
+          .form-callback__wrp
+            .form-callback__title: +h2('Вызвать замерщика')
+            .form-callback__desc Наша компания ценит своих покупателей и прилагает максимум усилий, чтобы сделать покупки в наших магазинах выгодными и удобными для Вас. 
+            .form-callback__form
+              form(action="")
+                .form
+                  .form__item
+                    .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__item
+                    .form__subitem: input(type="tel" placeholder="Ваш номер телефона")
+                  .form__item
+                    .form__subitem: button.btn.btn-red.btn-full Отправить

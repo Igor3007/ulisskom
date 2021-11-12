@@ -105,13 +105,16 @@ $(document).ready(function () {
     cardSlider.on('changed.owl.carousel', function (event) {
 
         var indexElemSlider = event.item.index;
-
         let elemActive = cardThunb.find('li').eq(indexElemSlider)
 
         cardThunb.find('li').removeClass('active');
         elemActive.addClass('active');
 
         scrollToElementTop(elemActive, cardThunb.find('ul'));
+
+        
+        var activeColor = elemActive.data('color');
+        $('[data-colorpicker='+activeColor+']').find('input').prop('checked', true)
 
     })
 
@@ -153,6 +156,21 @@ $(document).ready(function () {
 
     //init onload
     thumbShadow($('.scroll-overlay ul'));
+
+    //color click
+    $('[data-colorpicker]').on('click', function(event){
+        
+        let color = $(this).data('colorpicker');
+        let index = $('.card-slider__thumb ul').find('[data-color='+color+']').first().index()
+
+       
+
+        if(index >= 0){
+            //alert(index)
+            cardSlider.trigger('to.owl.carousel', [index, 300, true]);
+        }
+        
+    })
 
 })//ready
 

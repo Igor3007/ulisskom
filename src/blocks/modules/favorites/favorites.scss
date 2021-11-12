@@ -1,13 +1,14 @@
-.favorites{
+.favorites {
 
 
-    &__list{
+    &__list {
         @include row-flex();
         @include md(justify-content, flex-start);
 
         margin: 0;
     }
-    &__item{
+
+    &__item {
         @include col();
         @include size-full(2.4);
 
@@ -36,7 +37,7 @@
         @media screen and (max-width: $w360) {
             @include size-full(12);
         }
-    
+
 
         margin-left: -1px;
         margin-right: 0;
@@ -44,10 +45,10 @@
         margin-bottom: 0;
         position: relative;
 
-        
 
-        &:hover{
-            z-index: 111;
+
+        &:hover {
+            z-index: 10;
         }
     }
 }

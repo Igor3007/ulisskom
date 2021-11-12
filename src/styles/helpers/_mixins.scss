@@ -1,4 +1,4 @@
-@mixin img-contain{
+@mixin img-contain {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -11,13 +11,22 @@
     margin: auto;
 }
 
-@mixin box-square{
+@mixin box-square {
     padding-top: 100%;
     position: relative;
     display: flex;
 }
 
-@mixin bgimage_cover{
+@mixin line-clamp($number) {
+    letter-spacing: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+@mixin bgimage_cover {
     position: relative;
     background-size: cover;
     background-position: center;
@@ -25,9 +34,26 @@
     display: block;
     transition: 0.3s ease;
 
-    &:hover{
-        transform: scale(1.05) ;
+    &:hover {
+        transform: scale(1.05);
     }
+}
+
+@mixin layer($z) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $z;
+}
+
+@mixin bgimage_contain {
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
 }
 
 @mixin h2 {
@@ -50,12 +76,15 @@
         list-style-type: none;
     }
 
-    & li{
+    & li {
         margin-right: rem(5);
     }
 }
 
-@mixin size-full($n){
+@mixin size-full($n) {
     $val: 100% / $columns * $n;
-    width: #{calc(#{$val} )};
+    width: #{calc(#{$val})
+}
+
+;
 }

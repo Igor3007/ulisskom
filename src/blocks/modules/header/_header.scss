@@ -1,9 +1,12 @@
 .header-top {
     border-bottom: 1px solid $lgray;
 
-    @media screen and (max-width: $w360) {
-        display: none;
+    @media screen and (max-width: $w760) {
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
+
+
 
     & .container-1770 {
         display: flex;
@@ -26,6 +29,33 @@
         /* @media screen and (max-width: 1210px) {
             flex-direction: column;
         } */
+    }
+
+    &__wishlist,
+    &__find {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        cursor: pointer;
+
+
+        &:hover {
+
+            color: $red;
+
+            & svg {
+                fill: $red;
+            }
+        }
+
+        & svg {
+            fill: $gray;
+            margin-right: rem(10);
+        }
+    }
+
+    &__find {
+        margin-left: auto;
     }
 
     &__info {
@@ -393,9 +423,36 @@
         align-items: center;
     }
 
-    &__phone,
+    &__phone {
+        margin-right: rem(55);
+
+
+        @media screen and (max-width: $w1280) {
+            margin-right: 30px;
+        }
+
+        @media screen and (max-width: $w760) {
+            margin-right: 0;
+            margin-left: 25px;
+
+            &--consult {
+                display: none;
+            }
+        }
+    }
+
     &__btn {
-        margin-left: 30px;
+
+        @media screen and (max-width: $w1024) {
+            display: none;
+        }
+
+        & .btn {
+            @media screen and (min-width: $w1280) {
+                min-width: rem(245);
+                height: 44px;
+            }
+        }
     }
 
 
@@ -405,13 +462,28 @@
 .header-phone {
 
     &__number {
+
+        text-align: right;
+
         & a {
             font-size: rem(18);
+
+            @media screen and (max-width: $w1100) {
+                font-size: 14px;
+                font-weight: 600;
+            }
         }
     }
 
     &__title {
         color: $gray;
+        text-align: right;
+        margin-bottom: 5px;
+
+        @media screen and (max-width: $w1100) {
+            margin-bottom: 3px;
+
+        }
     }
 }
 

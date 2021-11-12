@@ -1,5 +1,9 @@
-.pagedesc{
-    &__text{
+.pagedesc {
+    &__text {
         color: $gray
+    }
+
+    &__title {
+        padding-bottom: rem(20);
     }
 }

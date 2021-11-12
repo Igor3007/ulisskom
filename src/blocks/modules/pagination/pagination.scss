@@ -1,19 +1,12 @@
-.pagination{
+.pagination {
     display: flex;
     justify-content: space-between;
-    padding-top: rem(40);
-    padding-bottom: rem(40);
+    padding-top: rem(55);
+    padding-bottom: rem(30);
 
-    @media screen and (max-width: $w480) {
-        flex-direction: column;
 
-        &__all{
-            margin-bottom: rem(15);
-        }
-    }
-    
 
-    &__page{
+    &__page {
 
         display: flex;
         align-items: center;
@@ -26,7 +19,7 @@
 
                 margin-left: rem(10);
 
-                &.active a{
+                &.active a {
                     color: $mgray;
                 }
 
@@ -39,14 +32,31 @@
                     justify-content: center;
                     border-radius: 50%;
 
-                    &:hover{
+                    &:hover {
                         border-color: $red;
                         color: $red;
                     }
                 }
-                
+
             }
         }
 
+    }
+
+    &__all {
+        margin-bottom: rem(15);
+        width: 100%;
+
+        @media screen and (max-width: $w480) {
+            margin-bottom: rem(15);
+        }
+
+        & .btn {
+            @media screen and (min-width: $w1280) {
+                width: 100%;
+                max-width: 200px;
+                height: 38px;
+            }
+        }
     }
 }

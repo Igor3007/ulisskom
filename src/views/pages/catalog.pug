@@ -7,6 +7,10 @@ include ../../blocks/modules/pagination/pagination
 include ../../blocks/modules/pagedesc/pagedesc
 include ../../blocks/modules/menu-catalog/menu-catalog
 include ../../blocks/modules/mobile-menu-button/mobile-menu-button
+include ../../blocks/modules/catalog-filter-main/catalog-filter-main
+include ../../blocks/modules/card-callback/card-callback
+include ../../blocks/modules/minicard-banner/minicard-banner
+
 
 include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/components/select/select
@@ -24,23 +28,41 @@ block content
     .page-catalog__h1
       h1 Дверные замки
     .page-catalog__breadcrumb
-      +breadcrumb(['Главная', 'Каталог фурнитуры'])
+      +breadcrumb(['Главная', 'Каталог дверей'])
     .page-catalog__catig
-      +catatog-subcat(subcat)
+      +catalog-filter-main()
     .page-catalog__sort
+      .page-catalog__sort-item
+        .catalog-tag
+          .catalog-tag__wrp
+            ul
+              li
+                span МДФ
+                span.tag-remove: +icons('#ic_cross', 11)
+              li
+                span Раздвижные
+                span.tag-remove: +icons('#ic_cross', 11)
+              li
+                span Венге
+                span.tag-remove: +icons('#ic_cross', 11)
       .page-catalog__sort-item
         span Сортировать:
         +select(['по умолчанию', 'по цене(по возростанию)', 'по цене(по убыванию)'])
     .page-catalog__list
-      each item in catalog
-        .page-catalog__item
-          +minicard(item, true)
+      each item, index in catalog
+        if(index == 5)
+          .page-catalog__item: +minicard-banner()
+        else
+          .page-catalog__item: +minicard(item, true)
+
+
     .page-catalog__pagination
       +pagination()
     .page-catalog__desc
       +pagedesc()
   +menu-catalog(menu)
   +mobile-menu-button('фильтр','#ic_filter')
+
 
 
 

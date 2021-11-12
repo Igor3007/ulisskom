@@ -1,0 +1,123 @@
+.section-four-step {
+    padding: 50px 0;
+}
+
+.four-step {
+
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 18px;
+    padding: 0 35px;
+
+
+    @media screen and (max-width: $w580) {
+        padding-bottom: 35px;
+    }
+
+
+    &__wrp {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: rem(35) 0;
+        margin: 0 rem(30);
+        position: relative;
+        width: calc(25% - 45px);
+
+        @media screen and (max-width: 992px) {
+            width: calc(50% - 45px);
+        }
+
+        @media screen and (max-width: $w760) {
+            width: calc(100% - 45px);
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: $w580) {
+            margin-right: 0;
+            width: 100%;
+        }
+
+
+
+        &:first-child {
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: attr(data-number);
+            font-family: PT Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 96px;
+            line-height: 80%;
+            color: #F7F7F7;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            width: rem(35);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: rem(-35);
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xIDFsMzAgODkuNUwxIDE4MCIgc3Ryb2tlPSIjQzRDNEM0IiBzdHJva2UtZGFzaGFycmF5PSIzIDMiLz48L3N2Zz4=);
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-size: rem(18);
+        line-height: 23px;
+        color: #000000;
+        padding-bottom: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__desc {
+        color: $gray;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image {
+
+        padding-bottom: rem(10);
+        position: relative;
+        z-index: 2;
+
+        & span {
+            width: rem(30);
+            height: rem(30);
+
+            @include bgimage-contain;
+        }
+    }
+
+
+}

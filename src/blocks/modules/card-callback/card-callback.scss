@@ -1,14 +1,18 @@
-.form-callback{
+.form-callback {
 
     display: flex;
     height: 100%;
     align-items: center;
 
-    &__form{
+    &__form {
         margin-top: rem(30);
     }
 
-    &__wrp{
+    &__wrp {
         width: 100%;
+    }
+
+    &__desc {
+        padding-top: rem(20);
     }
 }

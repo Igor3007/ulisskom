@@ -36,6 +36,7 @@
         span Поиск 
       .header-top__wishlist
         +icons('#ic_heart', 15)
+        i.total-wishlist.hide( data-totalwishlist="")
         span Избранное
 
 .header-main
@@ -50,21 +51,21 @@
         i
       nav
         ul
-          li: a(href="catalog.html") Каталог фурнитуры 
+          li: a(href="catalog.html") Каталог дверей 
           li: a(href="action.html") Акции
           li: a(href="about.html") Услуги
 
-    .header-main__phone
+    .header-main__phone.header-main__phone--door
       .header-phone
         .header-phone__title Узнайте про двери:
         .header-phone__number: a(href=':tel375296988425') +375 (29) 698-84-25
 
-    .header-main__phone
+    .header-main__phone.header-main__phone--consult
       .header-phone
         .header-phone__title Получите консультацию:
         .header-phone__number: a(href=':tel375296143896') +375 (29) 614-38-96
 
     .header-main__btn
-      button.btn.btn-red Вызвать замерщика
+      button.btn.btn-red(data-modal-open="call") Вызвать замерщика
 
 

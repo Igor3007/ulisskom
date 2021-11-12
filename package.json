@@ -71,6 +71,8 @@
     "dependencies": {
         "jquery": "^3.5.1",
         "jquery.inputmask": "^3.3.4",
+        "js-cookie": "^3.0.1",
+        "lazysizes": "^5.3.2",
         "nouislider": "^14.6.0",
         "owl.carousel2": "^2.2.1",
         "smart-grid": "^2.1.2",

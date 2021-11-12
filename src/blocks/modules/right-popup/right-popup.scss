@@ -1,27 +1,27 @@
 .right-popup {
-	background: rgba(0,0,0,0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 100;
     display: flex;
     align-items: stretch;
     justify-content: flex-end;
     display: none;
 
-    
+
 
     &.open {
         display: flex;
 
-        .right-popup__main{
+        .right-popup__main {
             transform: translateX(0);
             visibility: visible;
         }
     }
-    
+
     &__main {
         position: relative;
         background: #fff;
@@ -37,11 +37,12 @@
 
         overflow-y: scroll;
         overflow-x: hidden;
+        animation: slide-right-popup 0.3s ease forwards;
 
     }
 
-    &__content{
-      flex-grow: 1;
+    &__content {
+        flex-grow: 1;
     }
 
     &__close {
@@ -52,4 +53,75 @@
             stroke: $dark;
         }
     }
+}
+
+@keyframes slide-right-popup {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.oneclick-product {
+    &__image {
+
+        padding-bottom: 20px;
+        max-width: 200px;
+        margin: 0 auto;
+
+        & .bgimage {
+            padding-top: 100%;
+            @include bgimage-contain;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 20px;
+
+    }
+
+    &__props {
+        padding-bottom: 20px;
+
+        & ul {
+            list-style-type: none;
+            margin: 0 -5px;
+
+            & li {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dotted #777;
+                margin: 10px auto;
+
+                & span {
+                    background-color: #fff;
+                    margin-bottom: -4px;
+                    padding: 0px 5px 0px 5px;
+
+                    &:last-child {
+                        font-weight: bold;
+                    }
+
+                    &:first-child {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[data-modal="oneclick"] .form-callback__title {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+div[data-modal="oneclick"] .form-callback__form {
+    margin-top: 0;
 }

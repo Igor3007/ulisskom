@@ -73,7 +73,7 @@
             <div class="header-top__wishlist">
               <svg width="15" height="15">
                 <use xlink:href="/img/sprites/sprite.svg#ic_heart"></use>
-              </svg><span>Избранное</span>
+              </svg><i class="total-wishlist hide" data-totalwishlist=""></i><span>Избранное</span>
             </div>
           </div>
         </div>
@@ -85,26 +85,26 @@
             <div class="nav__hamburger"><i></i><i></i><i></i></div>
             <nav>
               <ul>
-                <li><a href="catalog.html">Каталог фурнитуры </a></li>
+                <li><a href="catalog.html">Каталог дверей </a></li>
                 <li><a href="action.html">Акции</a></li>
                 <li><a href="about.html">Услуги</a></li>
               </ul>
             </nav>
           </div>
-          <div class="header-main__phone">
+          <div class="header-main__phone header-main__phone--door">
             <div class="header-phone">
               <div class="header-phone__title">Узнайте про двери:</div>
               <div class="header-phone__number"><a href=":tel375296988425">+375 (29) 698-84-25</a></div>
             </div>
           </div>
-          <div class="header-main__phone">
+          <div class="header-main__phone header-main__phone--consult">
             <div class="header-phone">
               <div class="header-phone__title">Получите консультацию:</div>
               <div class="header-phone__number"><a href=":tel375296143896">+375 (29) 614-38-96</a></div>
             </div>
           </div>
           <div class="header-main__btn">
-            <button class="btn btn-red">Вызвать замерщика</button>
+            <button class="btn btn-red" data-modal-open="call">Вызвать замерщика</button>
           </div>
         </div>
       </div>
@@ -129,16 +129,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img1.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img1.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img1.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной Kale 152 3MR</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,13 +160,24 @@
                       <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img2.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img2.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img2.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Гранит 1.06.02</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,16 +185,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img3.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img3.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img3.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,16 +213,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img4.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img4.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Кремень</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current red-price">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -197,16 +241,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img1.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img1.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img1.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной Kale 152 3MR</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,16 +269,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img2.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img2.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img2.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Гранит 1.06.02</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -231,16 +297,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img3.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img3.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img3.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -248,16 +325,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img4.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img4.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Кремень</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -265,16 +353,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img1.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img1.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img1.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной Kale 152 3MR</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -282,16 +381,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img2.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img2.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img2.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Гранит 1.06.02</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -299,16 +409,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img3.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img3.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img3.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,16 +437,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img4.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img4.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Кремень</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -333,16 +465,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img1.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img1.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img1.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной Kale 152 3MR</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -350,16 +493,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img2.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img2.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img2.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор Гранит 1.06.02</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -367,16 +521,27 @@
                 <div class="minicard">
                   <div class="minicard__wrp">
                     <div class="minicard__header">
-                      <div class="minicard__status minicard__status--toorder"><span>Под заказ</span></div>
+                      <div class="minicard__status minicard__status--instock"><span>В наличии</span></div>
                       <div class="minicard__brand"><span style="background-image: url(/img/brands/img3.png)"></span></div>
                     </div>
-                    <div class="minicard__image">
-                      <ul class="stickers">
-                        <li class="stickers__new">Новинка</li>
-                      </ul><a href="/card.html"><span><img src="/img/minicard/img3.png"/></span></a>
-                    </div>
+                    <div class="minicard__image"><a href="/card.html"><span><img class="active lazyload" data-minicard-color="red" data-src="/img/minicard/img3.png"/><img class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png"/><img class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png"/><img class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png"/></span></a></div>
                     <div class="minicard__title"> <a href="/card.html">Замок врезной сувальдный Эльбор</a></div>
-                    <div class="minicard__price">21.50<span class="currency">BYN</span></div>
+                    <div class="minicard__price">
+                      <div class="minicard__price-current">21.50<span class="currency">BYN</span></div>
+                      <div class="minicard__price-old">21.50<span class="currency">BYN</span></div>
+                    </div>
+                    <div class="minicard__colors">
+                      <ul>
+                        <li data-minicard-colorpicker="red"><span class="bgimage" style="background-image: url(img/catalog/color_0.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="white"><span class="bgimage" style="background-image: url(img/catalog/color_1.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="black"><span class="bgimage" style="background-image: url(img/catalog/color_2.png)"></span>
+                        </li>
+                        <li data-minicard-colorpicker="orange"><span class="bgimage" style="background-image: url(img/catalog/color_3.png)"></span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -429,7 +594,7 @@
           <div class="footer__nav">
             <div class="footer__catalog">
               <div class="nav__hamburger"><i></i><i></i><i></i></div>
-              <div class="nav__catalog">Каталог фурнитуры</div>
+              <div class="nav__catalog">Каталог дверей</div>
             </div>
             <div class="footer__link">
               <ul>
@@ -455,6 +620,104 @@
               </svg></a></div>
         </div>
       </div>
+            <div class="right-popup" data-modal="oneclick">
+              <div class="right-popup__overlay"></div>
+              <div class="right-popup__main">
+                <div class="right-popup__close"><span data-modal-close="oneclick">
+                    <svg width="40" height="40">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_close"></use>
+                    </svg></span></div>
+                <div class="right-popup__content"> 
+                  <div class="form-callback">
+                    <div class="form-callback__wrp">
+                      <div class="form-callback__title">
+                        <div class="section-h2">Купить в один клик</div>
+                      </div>
+                      <div class="form-callback__product">
+                        <div class="oneclick-product">
+                          <div class="oneclick-product__image"><span class="bgimage" style="background-image: url(/img/minicard/img10.png)"></span>
+                          </div>
+                          <div class="oneclick-product__title">ПОРТА-22 Light Sonoma</div>
+                          <div class="oneclick-product__props">
+                            <ul>
+                              <li><span>Размер</span><span>190x55</span></li>
+                              <li><span>Цвет</span><span>Венге</span></li>
+                              <li><span>Цена</span><span>210 BYN</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-callback__form">
+                        <form action="">
+                          <div class="form">
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <input type="text" placeholder="Ваше имя">
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <input type="tel" placeholder="Ваш номер телефона">
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <textarea placeholder="Примечание к заказу"></textarea>
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <button class="btn btn-red btn-full">Отправить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-popup" data-modal="call">
+              <div class="right-popup__overlay"></div>
+              <div class="right-popup__main">
+                <div class="right-popup__close"><span data-modal-close="call">
+                    <svg width="40" height="40">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_close"></use>
+                    </svg></span></div>
+                <div class="right-popup__content"> 
+                  <div class="form-callback">
+                    <div class="form-callback__wrp">
+                      <div class="form-callback__title">
+                        <div class="section-h2">Вызвать замерщика</div>
+                      </div>
+                      <div class="form-callback__desc">Наша компания ценит своих покупателей и прилагает максимум усилий, чтобы сделать покупки в наших магазинах выгодными и удобными для Вас. </div>
+                      <div class="form-callback__form">
+                        <form action="">
+                          <div class="form">
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <input type="text" placeholder="Ваше имя">
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <input type="tel" placeholder="Ваш номер телефона">
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <button class="btn btn-red btn-full">Отправить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>

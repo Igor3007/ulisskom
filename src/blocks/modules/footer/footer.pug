@@ -1,3 +1,5 @@
+include ../../modules/card-callback/card-callback.pug
+
 -
   const menufooter = [
     ['Акции','action.html'],
@@ -9,7 +11,7 @@
     ['Бренды','brands.html'],
     ['Полезно знать','moreinfo.html'],
 
-  ];
+  ]; 
 
 .footer
   .container-1510
@@ -19,7 +21,7 @@
           i
           i
           i
-        .nav__catalog Каталог фурнитуры
+        .nav__catalog Каталог дверей
       .footer__link
         ul
           each link in menufooter
@@ -32,3 +34,6 @@
       a(href="https://promicom.ru" target="_blank") Digital-агентство
         svg(width='150px' height='20px')
           use(xlink:href="/img/sprites/sprite.svg#logodev")
+
++card-one-click()
++card-one-call()

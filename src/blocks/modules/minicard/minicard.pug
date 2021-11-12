@@ -2,28 +2,41 @@ mixin minicard(data, action)
   .minicard
     .minicard__wrp
       .minicard__header
-        .minicard__status.minicard__status--toorder
-          span Под заказ
+        .minicard__status(class=""+(data.stock ? 'minicard__status--instock': 'minicard__status--toorder')+"")
+          span= (data.stock ? 'В наличии': 'Под заказ')
         .minicard__brand
           span(style="background-image: url("+data.brand+")")
 
       .minicard__image
-        ul.stickers
-          li.stickers__new Новинка
-          //- li.stickers__top хит продаж
+        //- ul.stickers
+        //- li.stickers__new Новинка
+        //- li.stickers__top хит продаж
         a(href="/card.html")
           span
-            img(src=""+data.image+"")
+            img.active( class="lazyload" data-minicard-color="red" data-src=""+data.image+"")
+            img( class="lazyload" data-minicard-color="white" data-src="/img/minicard/img4.png")
+            img( class="lazyload" data-minicard-color="black" data-src="/img/minicard/img5.png")
+            img( class="lazyload" data-minicard-color="orange" data-src="/img/minicard/img2.png")
       .minicard__title 
         a(href="/card.html")= data.title
-      .minicard__price= data.price
-        span.currency BYN
+
+      .minicard__price
+        .minicard__price-current(class=""+(data.sale ? 'red-price':'')+"")= data.price
+          span.currency BYN
+        .minicard__price-old= data.price
+          span.currency BYN
+
+      .minicard__colors
+        ul
+          li(data-minicard-colorpicker="red"): +bgimage('img/catalog/color_0.png')
+          li(data-minicard-colorpicker="white"): +bgimage('img/catalog/color_1.png')
+          li(data-minicard-colorpicker="black"): +bgimage('img/catalog/color_2.png')
+          li(data-minicard-colorpicker="orange"): +bgimage('img/catalog/color_3.png')
+
       if action
         .minicard__action
-          .minicard__action-tofav
-            +icons('#ic_heart', 17)
+          .minicard__action-tofav(data-wishlist=""+data.id+"")
+            +icons('#ic_heart-solid', 17)
             span В избранное
           .minicard__action-tobasket
-            button.btn.btn-red
-              +icons('#ic_cart', 21)
-              |В корзину
+            button.btn.btn-red(data-modal-open="oneclick") Заказ в 1 клик

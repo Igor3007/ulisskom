@@ -5,39 +5,40 @@ include ../../blocks/modules/card-moreinfo/card-moreinfo
 include ../../blocks/modules/cart-similar/cart-similar 
 include ../../blocks/modules/menu-catalog/menu-catalog
 include ../../blocks/modules/card-callback/card-callback
+include ../../blocks/modules/catalog-filter-main/catalog-filter-main
+include ../../blocks/modules/four-step/four-step
 
 block variables
   - const title = "Ulisskom";
   include ../../data/catalog 
   include ../../data/menu 
 
-block content
+block content 
 
-  .page-card
+  .page-card 
     .container-1310
       .page-card__bareadcrumb
-        +breadcrumb(['Главная','Каталог фурнитуры','Замок врезной Kale 152 3MR'])
+        +breadcrumb(['Главная','Каталог дверей','Замок врезной Kale 152 3MR'])
       .page-card__info
         .page-card__image
           .card-slider
             .card-slider__thumb
               .scroll-overlay
                 ul
-                  each item in [1,2,3,4,1,2,3,4]
-                    li: span: img(src="/img/minicard/img"+item+".png")
-              .card-schema 
-                a(href="/img/home/schema.png" target="_blank"): img(src="/img/home/schema.png")
+                  each item in [10,5,1,3,4]
+                    li(data-color=""+colorsNumber[item]+""): span: img( class="lazyload" data-src="/img/minicard/img"+item+".png")
+
             .card-slider__main
               .card-slider__list.owl-carousel
-                each item in [1,2,3,4,1,2,3,4]
+                each item in [10,5,1,3,4]
                   .card-slider__item
-                    span: img(src="/img/minicard/img"+item+".png")
+                    span: img( class="lazyload" data-src="/img/minicard/img"+item+".png")
         .page-card__details
           .card-details
             .card-details__h1
-              h1 Замок врезной Kale 152 3MR
-              span.details_fav
-                +icons('#ic_heart', 17)
+              h1 ПОРТА-22 Light Sonoma
+              span.details_fav(data-wishlist="155")
+                +icons('#ic_heart-solid', 17)
             .card-details__rating
               ul
                 li: +icons('#ic_star-solid', 15)
@@ -45,7 +46,11 @@ block content
                 li: +icons('#ic_star-solid', 15)
                 li: +icons('#ic_star-solid', 15)
                 li: +icons('#ic_star', 15)
-              a(href="#review") 3 отзыва
+              a(href="#review" data-review="showlist") 3 отзыва
+              span.card-details__state-present 
+                +icons('#ic_arrow-ok', 12)
+                |В наличии
+              //- span.card-details__state-toorder - под заказ
             .card-details__info
               ul
                 li Артикул: 
@@ -53,25 +58,49 @@ block content
                 li Производитель:  
                   span Kale Kilit:
 
-            .card-details__state
-              span.card-details__state-present 
-                +icons('#ic_arrow-ok', 12)
-                |В наличии
-              //- span.card-details__state-toorder - под заказ
-            .card-details__price 21.10 BYN
-            .card-details__action
-              .details-action__count
-                span.details-action__count-dec -
-                span.details-action__count-num 
-                  input(type="text" value="1")
-                span.details-action__count-inc +
-              .details-action__tobasket
-                button.btn.btn-red
-                  +icons('#ic_cart', 21) 
-                  |В корзину
-              .details-action__quest
-                button.btn.btn-line(data-modal-open="callback") Задать вопроос
-            .card-details__desc Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
+
+
+            .card-details__colors
+              .details-title Цвета:
+              ul
+                li(data-colorpicker="red"): +cm-checkbox-color({img: 'img/catalog/color_0.png', title: ''}, 'radio')
+                li(data-colorpicker="white"): +cm-checkbox-color({img: 'img/catalog/color_1.png', title: ''}, 'radio')
+                li(data-colorpicker="orange"): +cm-checkbox-color({img: 'img/catalog/color_2.png', title: ''}, 'radio')
+                li(data-colorpicker="gray"): +cm-checkbox-color({img: 'img/catalog/color_3.png', title: ''}, 'radio')
+                li(data-colorpicker="black"): +cm-checkbox-color({img: 'img/catalog/color_4.png', title: ''}, 'radio')
+            .card-details__sizes
+              .details-title Размер:
+              ul
+                li: +cm-checkbox('190x55', 'radio')
+                li: +cm-checkbox('190x60', 'radio')
+                li: +cm-checkbox('200x35', 'radio')
+                li: +cm-checkbox('200x40', 'radio')
+                li: +cm-checkbox('200x60', 'radio')
+                li: +cm-checkbox('200x70', 'radio')
+                li: +cm-checkbox('200x80', 'radio')
+                li: +cm-checkbox('200x90', 'radio')
+
+
+
+            .card-details__cost
+              .details-title Выберите цену:
+              .card-details__price
+                .card-details__price-one(data-card="select-price")
+                  input(type="radio" name="select-price" value="За полотно") 
+                  .card-details__price-title Цена за полотно:
+                  .card-details__price-cost 128.16 BYN
+                .card-details__price-complex(data-card="select-price")
+                  input(type="radio" name="select-price" value="За комплект") 
+                  .card-details__price-left
+                    .card-details__price-title Цена за комплект:
+                    .card-details__price-cost 221 BYN
+                  .card-details__price-right
+                    .card-details__price-text Комплект состоит из двух полотен, стоек, перекладины и наличников с двух сторон.
+            .details-action__quest
+              button.btn.btn-red(data-modal-open="oneclick") Заказать 
+              button.btn.btn-line(data-modal-open="callback") Задать вопроос
+
+            //-.card-details__desc Корпус замок врезной с подшипником 3 ригеля, 1 защёлка. Межосевое расстояние 85 мм. Расстояние от планки до центра цилиндра 45мм. Лицевая пластина шириной 22мм.
     .page-card__moreinfo
       .container-1310
         +card-moreinfo()
@@ -81,6 +110,7 @@ block content
         +card-similar(catalog)
   +menu-catalog(menu)
   +card-callback()
+  +four-step()
 
 
 
