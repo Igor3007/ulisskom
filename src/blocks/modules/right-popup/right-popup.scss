@@ -1,27 +1,27 @@
 .right-popup {
-	background: rgba(0,0,0,0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 100;
     display: flex;
     align-items: stretch;
     justify-content: flex-end;
     display: none;
 
-    
+
 
     &.open {
         display: flex;
 
-        .right-popup__main{
+        .right-popup__main {
             transform: translateX(0);
             visibility: visible;
         }
     }
-    
+
     &__main {
         position: relative;
         background: #fff;
@@ -40,8 +40,8 @@
 
     }
 
-    &__content{
-      flex-grow: 1;
+    &__content {
+        flex-grow: 1;
     }
 
     &__close {
