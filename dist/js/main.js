@@ -398,6 +398,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     scrollToElementTop(elemActive, cardThunb.find('ul'));
     var activeColor = elemActive.data('color');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-colorpicker=' + activeColor + ']').find('input').prop('checked', true);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-colorpicker=' + activeColor + ']').find('input').trigger('change');
   });
   cardThunb.on('click', 'li', function () {
     var indexThumb = cardThunb.find('li').index(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
@@ -443,6 +444,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       cardSlider.trigger('to.owl.carousel', [index, 300, true]);
     }
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('change', '[data-colorpicker] input', function (event) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-price="basis"]').text(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('price'));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-price="complect"]').text(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('price-complect'));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-details__price-one input').val(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('price'));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.card-details__price-complect input').val(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('price-complect'));
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-colorpicker] input').first().trigger('change');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-colorpicker] input').first().prop('checked', true);
 }); //ready
 
 /***/ }),
@@ -1474,12 +1483,25 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()(document).ready(function () {
       }
     });
   });
+
+  function changeColor(elem) {
+    var colorActive = elem.data('minicard-colorpicker');
+    var colorPrice = elem.data('price');
+    elem.parents('.minicard').find('[data-minicard-colorpicker]').removeClass('active');
+    elem.addClass('active');
+    elem.parents('.minicard').find('.minicard__image span img').removeClass('active');
+    elem.parents('.minicard').find('[data-minicard-color=' + colorActive + ']').addClass('active');
+    elem.parents('.minicard').find('.minicard__price-current span.cost').text(colorPrice);
+  }
+
   jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-minicard-colorpicker]').on('mouseenter', function (event) {
-    var colorActive = jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).data('minicard-colorpicker');
-    jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).parents('.minicard').find('[data-minicard-colorpicker]').removeClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).parents('.minicard').find('.minicard__image span img').removeClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).parents('.minicard').find('[data-minicard-color=' + colorActive + ']').addClass('active');
+    changeColor(jquery__WEBPACK_IMPORTED_MODULE_3___default()(this));
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-minicard-colorpicker]').on('click', function (event) {
+    changeColor(jquery__WEBPACK_IMPORTED_MODULE_3___default()(this));
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()('.minicard__colors').each(function () {
+    changeColor(jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).find('li').first());
   }); // close popup
 
   jquery__WEBPACK_IMPORTED_MODULE_3___default()(document).on('click', '.right-popup.open', function (event) {

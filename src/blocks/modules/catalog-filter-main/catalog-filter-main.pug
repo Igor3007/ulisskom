@@ -83,8 +83,8 @@ mixin cm-checkbox(data, type)
       input(type=""+(type ? type : 'checkbox')+"" name=""+(type ? type : 'name')+"")
       span= data
 
-mixin cm-checkbox-color(item, type)
+mixin cm-checkbox-color(item, type, cost)
   .cm-checkbox-color
     label
-      input(type=""+(type ? type : 'checkbox')+"" name=""+(type ? type+'-3' : 'name-2')+"")
+      input( data-price=(cost ? cost.price : '') data-price-complect=(cost ? cost.priceComplect : '') type=""+(type ? type : 'checkbox')+"" name=""+(type ? type+'-3' : 'name-2')+"")
       span(style="background-image: url("+item.img+")" title=""+item.title+"")

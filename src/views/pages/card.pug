@@ -63,11 +63,11 @@ block content
             .card-details__colors
               .details-title Цвета:
               ul
-                li(data-colorpicker="red"): +cm-checkbox-color({img: 'img/catalog/color_0.png', title: ''}, 'radio')
-                li(data-colorpicker="white"): +cm-checkbox-color({img: 'img/catalog/color_1.png', title: ''}, 'radio')
-                li(data-colorpicker="orange"): +cm-checkbox-color({img: 'img/catalog/color_2.png', title: ''}, 'radio')
-                li(data-colorpicker="gray"): +cm-checkbox-color({img: 'img/catalog/color_3.png', title: ''}, 'radio')
-                li(data-colorpicker="black"): +cm-checkbox-color({img: 'img/catalog/color_4.png', title: ''}, 'radio')
+                li(data-colorpicker="red"): +cm-checkbox-color({    img: 'img/catalog/color_0.png', title: ''}, 'radio', {price: 100, priceComplect: 200})
+                li(data-colorpicker="white"): +cm-checkbox-color({  img: 'img/catalog/color_1.png', title: ''}, 'radio', {price: 300, priceComplect: 400})
+                li(data-colorpicker="orange"): +cm-checkbox-color({ img: 'img/catalog/color_2.png', title: ''}, 'radio', {price: 500, priceComplect: 600})
+                li(data-colorpicker="gray"): +cm-checkbox-color({   img: 'img/catalog/color_3.png', title: ''}, 'radio', {price: 700, priceComplect: 800})
+                li(data-colorpicker="black"): +cm-checkbox-color({  img: 'img/catalog/color_4.png', title: ''}, 'radio', {price: 900, priceComplect: 1000})
             .card-details__sizes
               .details-title Размер:
               ul
@@ -88,12 +88,16 @@ block content
                 .card-details__price-one(data-card="select-price")
                   input(type="radio" name="select-price" value="За полотно") 
                   .card-details__price-title Цена за полотно:
-                  .card-details__price-cost 128.16 BYN
+                  .card-details__price-cost
+                    span(data-price="basis") 128.16 
+                    | BYN
                 .card-details__price-complex(data-card="select-price")
                   input(type="radio" name="select-price" value="За комплект") 
                   .card-details__price-left
                     .card-details__price-title Цена за комплект:
-                    .card-details__price-cost 221 BYN
+                    .card-details__price-cost
+                      span(data-price="complect") 221 
+                      | BYN
                   .card-details__price-right
                     .card-details__price-text Комплект состоит из двух полотен, стоек, перекладины и наличников с двух сторон.
             .details-action__quest

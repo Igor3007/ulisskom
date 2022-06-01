@@ -115,6 +115,7 @@ $(document).ready(function () {
         
         var activeColor = elemActive.data('color');
         $('[data-colorpicker='+activeColor+']').find('input').prop('checked', true)
+        $('[data-colorpicker='+activeColor+']').find('input').trigger('change')
 
     })
 
@@ -163,14 +164,28 @@ $(document).ready(function () {
         let color = $(this).data('colorpicker');
         let index = $('.card-slider__thumb ul').find('[data-color='+color+']').first().index()
 
-       
-
         if(index >= 0){
             //alert(index)
             cardSlider.trigger('to.owl.carousel', [index, 300, true]);
+
         }
         
     })
+
+    $(document).on('change', '[data-colorpicker] input', function(event){
+        $('[data-price="basis"]').text($(this).data('price'))
+        $('[data-price="complect"]').text($(this).data('price-complect'))
+        $('.card-details__price-one input').val($(this).data('price'))
+        $('.card-details__price-complect input').val($(this).data('price-complect'))
+    })
+
+    $('[data-colorpicker] input').first().trigger('change')
+    $('[data-colorpicker] input').first().prop('checked', true)
+
+     
+
+    
+
 
 })//ready
 

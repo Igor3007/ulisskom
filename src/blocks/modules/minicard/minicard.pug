@@ -21,17 +21,18 @@ mixin minicard(data, action)
         a(href="/card.html")= data.title
 
       .minicard__price
-        .minicard__price-current(class=""+(data.sale ? 'red-price':'')+"")= data.price
+        .minicard__price-current(class=""+(data.sale ? 'red-price':'')+"")
+          span.cost= data.price
           span.currency BYN
         .minicard__price-old= data.price
           span.currency BYN
 
       .minicard__colors
         ul
-          li(data-minicard-colorpicker="red"): +bgimage('img/catalog/color_0.png')
-          li(data-minicard-colorpicker="white"): +bgimage('img/catalog/color_1.png')
-          li(data-minicard-colorpicker="black"): +bgimage('img/catalog/color_2.png')
-          li(data-minicard-colorpicker="orange"): +bgimage('img/catalog/color_3.png')
+          li(data-minicard-colorpicker="red" data-price="300"): +bgimage('img/catalog/color_0.png')
+          li(data-minicard-colorpicker="white" data-price="400"): +bgimage('img/catalog/color_1.png')
+          li(data-minicard-colorpicker="black" data-price="500"): +bgimage('img/catalog/color_2.png')
+          li(data-minicard-colorpicker="orange" data-price="600"): +bgimage('img/catalog/color_3.png')
 
       if action
         .minicard__action

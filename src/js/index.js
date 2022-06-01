@@ -116,15 +116,29 @@ $(document).ready(function () {
         })
     })
 
-    $('[data-minicard-colorpicker]').on('mouseenter', function(event){
-        
-        var colorActive = $(this).data('minicard-colorpicker');
-        $(this).parents('.minicard').find('[data-minicard-colorpicker]').removeClass('active')
-        $(this).addClass('active')
+    function changeColor (elem){
+        var colorActive = elem.data('minicard-colorpicker');
+        var colorPrice = elem.data('price');
 
-        $(this).parents('.minicard').find('.minicard__image span img').removeClass('active')
-        $(this).parents('.minicard').find('[data-minicard-color='+colorActive+']').addClass('active')
+        elem.parents('.minicard').find('[data-minicard-colorpicker]').removeClass('active')
+        elem.addClass('active')
+
+        elem.parents('.minicard').find('.minicard__image span img').removeClass('active')
+        elem.parents('.minicard').find('[data-minicard-color='+colorActive+']').addClass('active')
+
+        elem.parents('.minicard').find('.minicard__price-current span.cost').text(colorPrice)
         
+    }
+
+    $('[data-minicard-colorpicker]').on('mouseenter', function(event){
+        changeColor($(this))
+    })
+    $('[data-minicard-colorpicker]').on('click', function(event){
+        changeColor($(this))
+    })
+
+    $('.minicard__colors').each(function(){
+        changeColor($(this).find('li').first())
     })
 
 
