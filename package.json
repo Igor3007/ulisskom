@@ -66,16 +66,14 @@
         "stylelint-selector-bem-pattern": "^2.1.0",
         "webpack": "~4.35.0",
         "webpack-stream": "^5.2.1",
-        "yargs": "~13.2.4"
+        "yargs": "~13.2.4",
+        "smart-grid": "^2.1.2"
+
     },
     "dependencies": {
         "jquery": "^3.5.1",
         "jquery.inputmask": "^3.3.4",
-        "nouislider": "^14.6.0",
         "owl.carousel2": "^2.2.1",
-        "smart-grid": "^2.1.2",
-        "svg4everybody": "^2.1.9",
-        "tooltipster": "^4.2.8",
-        "webp-hero": "^0.0.0-dev.24"
+        "tooltipster": "^4.2.8"
     }
 }
