@@ -606,7 +606,7 @@ template {
   width: 100%;
 }
 
-/*! nouislider - 14.6.0 - 6/27/2020 */
+/*! nouislider - 14.7.0 - 4/6/2021 */
 
 /* Functional styling;
  * These styles are required for noUiSlider to function.
@@ -5727,6 +5727,103 @@ div[data-modal="oneclick"] .form-callback__form {
 .maps-filter__map span {
   display: block;
   height: 28.57143rem;
+}
+
+/* .stock ================ */
+
+.stock {
+  width: 100%;
+  overflow: hidden;
+}
+
+.stock .moreinfo-props li {
+  width: calc(100% - 2rem);
+}
+
+.stock__images {
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.stock__images .stock-images {
+  display: flex;
+  margin: -5px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.stock__images .stock-images__item {
+  min-width: 60vw;
+  padding: 5px;
+}
+
+.stock__images .stock-images__item .bgimage {
+  padding-top: 200%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.stock__images .stock-images__item .bgimage:hover {
+  transform: scale(1.05);
+}
+
+.stock__order {
+  margin-bottom: 20px;
+  background-color: #eee;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.stock__order-price {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.stock__order-price small {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.stock__order-price strong {
+  font-size: 32px;
+}
+
+.stock__order-btn {
+  display: flex;
+  align-items: center;
+  margin: -5px;
+}
+
+.stock__order-btn button {
+  margin: 5px;
+}
+
+.stock__order-btn button.btn-line {
+  border-color: #E0171A;
+  color: #E0171A;
+  text-transform: none;
+}
+
+.stock__order-btn button.btn-red {
+  font-weight: 600;
+}
+
+.stock__price {
+  display: flex;
+}
+
+.stock__title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 140%;
 }
 
 .news {

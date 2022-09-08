@@ -1,13 +1,14 @@
-.maps-filter{
+.maps-filter {
 
-    &__list{
+    &__list {
         @include row-flex();
         @include md(justify-content, space-between);
     }
-    &__item{
+
+    &__item {
         @include col();
         @include size(6);
-        
+
         @media screen and (max-width: $w1280) {
             @include size(12);
         }
@@ -26,6 +27,105 @@
         }
     }
 
-     
+
 }
 
+/* .stock ================ */
+
+.stock {
+
+    width: 100%;
+    overflow: hidden;
+
+    & .moreinfo-props {
+        & li {
+            width: calc(100% - 2rem);
+        }
+    }
+
+    &__images {
+
+        padding: 30px 0;
+        width: 100%;
+        overflow: hidden;
+
+        & .stock-images {
+
+            display: flex;
+            margin: -5px;
+            overflow-x: auto;
+            width: 100%;
+
+            &__item {
+                min-width: 60vw;
+                padding: 5px;
+
+                & .bgimage {
+                    padding-top: 200%;
+                    @include bgimage-cover;
+                }
+            }
+        }
+    }
+
+
+
+    &__order {
+        margin-bottom: 20px;
+        background-color: #eee;
+        padding: 15px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+
+        &-price {
+            display: flex;
+            flex-direction: column;
+            margin-right: auto;
+
+            & small {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            & strong {
+                font-size: 32px;
+            }
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            margin: -5px;
+
+            & button {
+                margin: 5px;
+
+                &.btn-line {
+                    border-color: $red;
+                    color: $red;
+                    text-transform: none;
+                }
+
+                &.btn-red {
+                    font-weight: 600;
+                }
+
+            }
+        }
+
+    }
+
+
+
+    &__price {
+        display: flex;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 140%;
+    }
+}
